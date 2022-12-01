@@ -36,15 +36,15 @@ jobs:
           desc: 'this is sample package.'
 
       - name: Deploying repo
-        uses: jrandiny/apt-repo-action@v2.0.1
+        uses: smeinecke/apt-repo-action@v2.1.1
         with:
-          github_token: ${{ secrets.TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           repo_supported_arch: |
             amd64
           repo_supported_version: |
             kinetic
             jammy
-          file: samplescript_0.0.0_amd64.deb
+          file: samplescript*.deb
           file_target_version: kinetic
           public_key: ${{ secrets.PUBLIC }}
           private_key: ${{ secrets.PRIVATE }}
