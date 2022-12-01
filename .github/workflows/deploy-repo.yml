@@ -44,7 +44,7 @@ jobs:
           repo_supported_version: |
             kinetic
             jammy
-          file: samplescript.deb
+          file: samplescript*.deb
           file_target_version: kinetic
           public_key: ${{ secrets.PUBLIC }}
           private_key: ${{ secrets.PRIVATE }}
