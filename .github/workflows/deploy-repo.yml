@@ -25,6 +25,9 @@ jobs:
           mkdir -p .debpkg/DEBIAN
           echo -e "echo postinst" > .debpkg/DEBIAN/postinst
           chmod +x .debpkg/DEBIAN/postinst
+          
+          # copy config file
+          cp control .debpkg/DEBIAN/control
       
       - uses: jiro4989/build-deb-action@v2.7.0
         with:
@@ -34,7 +37,7 @@ jobs:
           version: v1.0.0
           arch: 'amd64'
           depends: 'cgpt, vboot-kernel-util'
-          desc: 'this is sample package.'
+          desc: 'this is a sample package.'
       
       - name: Uploading deb as artifact
         uses: actions/upload-artifact@v2
@@ -42,16 +45,16 @@ jobs:
           name: samplescript_0.0.0_amd64.deb
           path: ./*.deb
 
-#      - name: Deploying repo
-#        uses: Apacelus/apt-repo-action@test
-#        with:
-#          github_token: ${{ secrets.GITHUB_TOKEN }}
-#          repo_supported_arch: amd64
-#          repo_supported_version: |
-#            kinetic
-#            jammy
-#         file: samplescript*.deb
-#          file_target_version: kinetic
-#          public_key: ${{ secrets.PUBLIC }}
-#          private_key: ${{ secrets.PRIVATE }}
-#          key_passphrase: ""
+      - name: Deploying repo
+        uses: Apacelus/apt-repo-action@test
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          repo_supported_arch: amd64
+          repo_supported_version: |
+            kinetic
+            jammy
+          file: samplescript*.deb
+          file_target_version: kinetic
+          public_key: ${{ secrets.PUBLIC }}
+          private_key: ${{ secrets.PRIVATE }}
+          key_passphrase: ""
