@@ -38,7 +38,7 @@ jobs:
       - name: Deploying repo
         uses: jrandiny/apt-repo-action@v2.0.1
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.TOKEN }}
           repo_supported_arch: |
             amd64
           repo_supported_version: |
