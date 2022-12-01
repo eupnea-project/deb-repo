@@ -13,38 +13,6 @@ jobs:
         with:
           fetch-depth: 1
 
-      - name: create sample script
-        run: |
-          mkdir -p .debpkg/usr/bin
-          mkdir -p .debpkg/usr/lib/samplescript
-          echo -e "echo sample" > .debpkg/usr/bin/samplescript
-          chmod +x .debpkg/usr/bin/samplescript
-          echo -e "a=1" > .debpkg/usr/lib/samplescript/samplescript.conf
-
-          # create DEBIAN directory if you want to add other pre/post scripts
-          mkdir -p .debpkg/DEBIAN
-          echo -e "echo postinst" > .debpkg/DEBIAN/postinst
-          chmod +x .debpkg/DEBIAN/postinst
-          
-          # copy config file
-          cp control .debpkg/DEBIAN/control
-      
-      - uses: jiro4989/build-deb-action@v2.7.0
-        with:
-          package: samplescript
-          package_root: .debpkg
-          maintainer: Apacelus
-          version: v1.0.0
-          arch: 'amd64'
-          depends: 'cgpt, vboot-kernel-util'
-          desc: 'this is a sample package.'
-      
-      - name: Uploading deb as artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: samplescript_0.0.0_amd64.deb
-          path: ./*.deb
-
       - name: Deploying repo
         uses: Apacelus/apt-repo-action@test
         with:
@@ -53,7 +21,7 @@ jobs:
           repo_supported_version: |
             kinetic
             jammy
-          file: samplescript*.deb
+          file: test.deb
           file_target_version: kinetic
           public_key: ${{ secrets.PUBLIC }}
           private_key: ${{ secrets.PRIVATE }}
