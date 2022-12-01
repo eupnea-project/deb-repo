@@ -36,7 +36,7 @@ jobs:
           desc: 'this is sample package.'
 
       - name: Deploying repo
-        uses: smeinecke/apt-repo-action@v2.1.1
+        uses: Apacelus/apt-repo-action@test
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           repo_supported_arch: amd64
