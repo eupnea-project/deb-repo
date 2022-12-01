@@ -44,7 +44,7 @@ jobs:
           version: |
             kinetic
             jammy
-          file: my_program_bionic.deb
+          file: samplescript.deb
           file_target_version: kinetic
           public_key: ${{ secrets.PUBLIC }}
           private_key: ${{ secrets.PRIVATE }}
