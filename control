@@ -1,9 +1,0 @@
-Package: samplescript
-Version: 1.0.0
-Installed-Size: 21
-Architecture: amd64
-Maintainer: Apacelus
-Depends: cgpt, vboot-kernel-util
-Section: admin
-Priority: optional
-Description: this is sample package.
