@@ -1,0 +1,29 @@
+name: Deploying apt repo
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  unpack-rootfs:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checking out repository code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 1
+      
+      - name: Deploying repo
+        uses: jrandiny/apt-repo-action@v1
+        with:
+          github_token: ${{ secrets.PAT }}
+          arch: |
+            amd64
+          version: |
+            kinetic
+            jammy
+          file: my_program_bionic.deb
+          file_target_version: kinetic
+          public_key: ${{ secrets.PUBLIC }}
+          private_key: ${{ secrets.PRIVATE }}
+          key_passphrase: ${{ secrets.SECRET }}
