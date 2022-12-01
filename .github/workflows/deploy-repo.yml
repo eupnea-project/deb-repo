@@ -36,7 +36,7 @@ jobs:
           desc: 'this is sample package.'
 
       - name: Deploying repo
-        uses: jrandiny/apt-repo-action@v1
+        uses: jrandiny/apt-repo-action@v2.0.1
         with:
           github_token: ${{ secrets.PAT }}
           arch: |
