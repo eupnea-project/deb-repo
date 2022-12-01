@@ -25,6 +25,7 @@ jobs:
           mkdir -p .debpkg/DEBIAN
           echo -e "echo postinst" > .debpkg/DEBIAN/postinst
           chmod +x .debpkg/DEBIAN/postinst
+      
       - uses: jiro4989/build-deb-action@v2.7.0
         with:
           package: samplescript
@@ -34,6 +35,12 @@ jobs:
           arch: 'amd64'
           depends: 'cgpt, vboot-kernel-util'
           desc: 'this is sample package.'
+      
+      - name: Uploading deb as artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: samplescript_0.0.0_amd64.deb
+          path: ./samplescript_0.0.0_amd64.deb
 
       - name: Deploying repo
         uses: Apacelus/apt-repo-action@test
