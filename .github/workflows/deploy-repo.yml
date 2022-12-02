@@ -14,7 +14,7 @@ jobs:
           fetch-depth: 1
 
       - name: Deploying repo
-        uses: Apacelus/apt-repo-action@test
+        uses: smeinecke/apt-repo-action@v2.1.1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           repo_supported_arch: amd64
