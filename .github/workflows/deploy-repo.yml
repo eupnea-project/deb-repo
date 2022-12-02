@@ -5,13 +5,16 @@ on:
   workflow_dispatch:
 
 jobs:
-  unpack-rootfs:
+  deploy-repo:
     runs-on: ubuntu-22.04
     steps:
       - name: Checking out repository code
         uses: actions/checkout@v3
         with:
           fetch-depth: 1
+
+      - name: Creating debian package
+        run: bash pack-deb.sh
 
       - name: Deploying repo
         uses: smeinecke/apt-repo-action@v2.1.1
@@ -21,8 +24,10 @@ jobs:
           repo_supported_version: |
             kinetic
             jammy
-          file: test.deb
+            stable
+          file: eupnea-utils*.deb
           file_target_version: kinetic
           public_key: ${{ secrets.PUBLIC }}
           private_key: ${{ secrets.PRIVATE }}
           key_passphrase: ""
+          repo_folder: "debian_ubuntu"
