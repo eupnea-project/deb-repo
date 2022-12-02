@@ -20,4 +20,5 @@ mv postinstall-scripts/configs eupnea-utils/etc/eupnea
 cp control eupnea-utils/DEBIAN
 
 # create package
-dpkg-deb --build --root-owner-group eupnea-utils
+# by default dpkg-deb will use zstd compression. The deploy action will fail because the debian tool doesnt support zstd compression in packages.
+dpkg-deb --build --root-owner-group -Z=xz eupnea-utils
