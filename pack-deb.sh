@@ -11,10 +11,10 @@ mkdir -p eupnea-utils/etc
 git clone --depth=1 https://github.com/eupnea-linux/postinstall-scripts.git --branch=move-to-packages
 
 # move postinstall scripts into package
-mv postinstall/scripts eupnea-utils/usr/bin
+mv postinstall-scripts/scripts eupnea-utils/usr/bin
 
 # move postinstall configs into package
-mv postinstall/config eupnea-utils/etc
+mv postinstall-scripts/config eupnea-utils/etc
 
 # copy debian control files into package
 cp control eupnea-utils/DEBIAN
