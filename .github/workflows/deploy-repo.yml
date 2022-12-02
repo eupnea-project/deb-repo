@@ -2,6 +2,8 @@ name: Deploying apt repo
 on:
   push:
     branches: [ "main" ]
+  schedule:
+    - cron: "10 0 * * *" # run at the start of every day after postinstall scripts repo update
   workflow_dispatch:
 
 jobs:
