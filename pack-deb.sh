@@ -7,7 +7,7 @@ mkdir -p eupnea-utils/DEBIAN
 mkdir -p eupnea-utils/usr/bin
 mkdir -p eupnea-utils/etc/eupnea
 
-# Clone the postinstall repo
+# Clone postinstall + audio repo
 git clone --depth=1 https://github.com/eupnea-linux/postinstall-scripts.git --branch=move-to-packages
 git clone --depth=1 https://github.com/eupnea-linux/audio-scripts
 
