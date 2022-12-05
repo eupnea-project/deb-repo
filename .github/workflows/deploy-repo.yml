@@ -15,8 +15,23 @@ jobs:
         with:
           fetch-depth: 1
 
+      - name: Bump version in control file
+        run: |
+          CURRENT_VERSION=$(sed -n '2p' control | sed 's/.*://' | xargs) # get current version from control file
+          NEXTVERSION=$(echo ${CURRENT_VERSION} | awk -F. -v OFS=. '{$NF += 1 ; print}') # bump version
+          sed -i "2s/.*/Version: ${NEXTVERSION}/" control # update version in control file
+
       - name: Creating debian package
         run: bash pack-deb.sh
+
+      - name: Updating control fie
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          # Optional. Commit message for the created commit.
+          # Defaults to "Apply automatic changes"
+          commit_message: Update control file
+          # Only include needed files
+          file_pattern: 'control'
 
       - name: Deploying repo
         uses: smeinecke/apt-repo-action@v2.1.1
