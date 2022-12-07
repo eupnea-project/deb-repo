@@ -19,12 +19,10 @@ jobs:
         id: update-check
         # This oneliner compares the locally stored commit has agains the latest one at the postinstall repo and returns either true or false
         run: |
-          echo "remote_sha=$(curl -s https://api.github.com/repos/eupnea-linux/postinstall-scripts/commits/main | jq -r '.sha')" >> $GITHUB_OUTPUT
-          echo "$(cat last_commit_sha.txt)"
-          echo "${{ env.remote_sha }}"
-          exit 1
-          echo "results_match=$([[ '$(cat latest_commit_sha.txt)' == '${{ env.remote_sha }}' ]] && echo 'true' || echo 'false')"
-        
+          temp_sha=$(curl -s https://api.github.com/repos/eupnea-linux/postinstall-scripts/commits/main | jq -r '.sha')
+          echo "remote_sha=$temp_sha" >> $GITHUB_OUTPUT
+          echo "results_match=$([[ '$(cat latest_commit_sha.txt)' == $temp_sha ]] && echo 'true' || echo 'false')" >> $GITHUB_OUTPUT
+          
       - name: Check results of update check
         if: steps.git-check.outputs.results == 'false'
         run: exit 1 # if results dont match, exit without error to trigger second job
@@ -35,7 +33,7 @@ jobs:
     steps:
       
       - name: Update local commit sha
-        run: echo "${{ env.remote_sha }}" > ./last_commit_sha.txt
+        run: echo "${{ steps.update-check.outputs.remote_sha }}" > ./last_commit_sha.txt
       
       - name: Bump version in control file
         run: |
