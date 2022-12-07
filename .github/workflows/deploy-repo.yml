@@ -14,12 +14,19 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 1
-
-      - name: Check if postinstall scripts had an update
-      # This oneliner compares the locally stored commit has agains the latest one at the postinstall repo. If they match, the rest of the workflow does not execute
-        if: ${{ $(cat last_commit_sha.txt) != $(curl -s https://api.github.com/repos/eupnea-linux/postinstall-scripts/commits/main | jq -r '.sha') }} 
+      
+      - name: Run postinstall scripts update check
+        id: update-check
+        # This oneliner compares the locally stored commit has agains the latest one at the postinstall repo and returns either true or false
+        run: |
+          echo ::set-output name=remote_sha::"$(curl -s https://api.github.com/repos/eupnea-linux/postinstall-scripts/commits/main | jq -r '.sha')"
+          echo ::set-output name=results::$([[ "$(cat latest_commit.sha)" == "$remote_sha" ]] && echo "true" || echo "false")
+        
+      - name: Check results of update check
+        if: steps.git-check.outputs.results == 'true'
         # Update local commit sha
-        run: echo $(curl -s https://api.github.com/repos/eupnea-linux/postinstall-scripts/commits/main | jq -r '.sha') > ./last_commit_sha.txt
+        run: |
+          echo $(steps.git-check.outputs.remote_sha) > ./last_commit_sha.txt
       
       - name: Bump version in control file
         run: |
