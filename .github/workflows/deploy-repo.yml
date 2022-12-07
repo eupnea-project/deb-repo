@@ -21,13 +21,13 @@ jobs:
         run: |
           temp_sha=$(curl -s https://api.github.com/repos/eupnea-linux/postinstall-scripts/commits/main | jq -r '.sha')
           echo "remote_sha=$temp_sha" >> $GITHUB_OUTPUT
-          echo "$(cat last_commit_sha.txt)"
-          echo $temp_sha
           temp_match_results=$([[ "$(cat last_commit_sha.txt)" == "$temp_sha" ]] && echo "true" || echo "false")
+          echo "Match results are:"
+          echo $temp_match_results
           echo "results_match=$temp_match_results" >> $GITHUB_OUTPUT
 
       - name: Check results of update check
-        if: steps.git-check.outputs.results == 'false'
+        if: steps.git-check.outputs.results_match == 'false'
         run: exit 1 # if results dont match, exit without error to trigger second job
       
   deploy-repo:
