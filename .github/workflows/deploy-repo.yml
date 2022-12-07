@@ -28,9 +28,9 @@ jobs:
       
   deploy-repo:
     runs-on: ubuntu-22.04
+    needs: check-sha # only run if check-sha was successfull
     # Only run script when remote sha has changed, aka the results DONT match
     if: ${{ steps.git-check.outputs.results_match == 'false' }}
-    needs: check-sha # only run if check-sha was successfull
     steps:
       - name: Update local commit sha file
         run: echo "${{ steps.update-check.outputs.remote_sha }}" > ./last_commit_sha.txt
