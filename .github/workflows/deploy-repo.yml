@@ -20,8 +20,8 @@ jobs:
         # This oneliner compares the locally stored commit has agains the latest one at the postinstall repo and returns either true or false
         run: |
           echo "remote_sha=$(curl -s https://api.github.com/repos/eupnea-linux/postinstall-scripts/commits/main | jq -r '.sha')" >> $GITHUB_OUTPUT
-          echo '$(cat latest_commit_sha.txt)'
-          echo '${{ env.remote_sha }}'
+          echo "$(cat latest_commit_sha.txt)"
+          echo "${{ env.remote_sha }}"
           echo "results_match=$([[ '$(cat latest_commit_sha.txt)' == '${{ env.remote_sha }}' ]] && echo 'true' || echo 'false')"
         
       - name: Check results of update check
