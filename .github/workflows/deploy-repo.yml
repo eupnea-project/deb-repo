@@ -20,11 +20,11 @@ jobs:
         # This oneliner compares the locally stored commit has agains the latest one at the postinstall repo and returns either true or false
         run: |
           echo "remote_sha=$(curl -s https://api.github.com/repos/eupnea-linux/postinstall-scripts/commits/main | jq -r '.sha')" >> $GITHUB_OUTPUT
-          echo "results_of_check=$([[ '$(cat latest_commit_sha.txt)' == '${{ env.remote_sha }}' ]] && echo 'true' || echo 'false')"
+          echo "results_match=$([[ '$(cat latest_commit_sha.txt)' == '${{ env.remote_sha }}' ]] && echo 'true' || echo 'false')"
         
       - name: Check results of update check
         if: steps.git-check.outputs.results == 'true'
-        run: exit 0 # exit sucessfully
+        run: exit 1 # if results match, exit with error to prevent second job from running
       
   deploy-repo:
     runs-on: ubuntu-22.04
