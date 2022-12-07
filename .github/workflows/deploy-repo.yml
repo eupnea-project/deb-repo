@@ -23,8 +23,8 @@ jobs:
           echo "results_match=$([[ '$(cat latest_commit_sha.txt)' == '${{ env.remote_sha }}' ]] && echo 'true' || echo 'false')"
         
       - name: Check results of update check
-        if: steps.git-check.outputs.results == 'true'
-        run: exit 1 # if results match, exit with error to prevent second job from running
+        if: steps.git-check.outputs.results == 'false'
+        run: exit 1 # if results dont match, exit without error to trigger second job
       
   deploy-repo:
     runs-on: ubuntu-22.04
