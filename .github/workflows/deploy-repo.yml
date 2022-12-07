@@ -15,6 +15,13 @@ jobs:
         with:
           fetch-depth: 1
 
+      - name: Check if postinstall scripts had an update
+      # This oneliner compares the locally stored commit has agains the latest one at the postinstall repo. If they match, the rest of the workflow does not execute
+        if: ${{ "$(cat last_commit_sha.txt)" != "$(curl -s https://api.github.com/repos/eupnea-linux/postinstall-scripts/commits/main | jq -r '.sha')" }} 
+      
+      - name: Update local commit sha
+        run: echo $(curl -s https://api.github.com/repos/eupnea-linux/postinstall-scripts/commits/main | jq -r '.sha') > ./last_commit_sha.txt
+      
       - name: Bump version in control file
         run: |
           CURRENT_VERSION=$(sed -n '2p' control | sed 's/.*://' | xargs) # get current version from control file
@@ -24,14 +31,14 @@ jobs:
       - name: Creating debian package
         run: bash pack-deb.sh
 
-      - name: Updating control fie
+      - name: Updating files in main repo
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           # Optional. Commit message for the created commit.
           # Defaults to "Apply automatic changes"
-          commit_message: Update control file
+          commit_message: Update files in main repo
           # Only include needed files
-          file_pattern: 'control'
+          file_pattern: 'control last_commit_sha.txt'
 
       - name: Deploying repo
         uses: smeinecke/apt-repo-action@v2.1.1
