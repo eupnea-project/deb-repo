@@ -45,7 +45,7 @@ jobs:
     runs-on: ubuntu-22.04
     needs: check-sha # needs for the vars from the previous job
     # Only run script when remote sha has changed, aka the results DON'T match
-    if: needs.check-shas.outputs.match_results == 'false'
+    if: needs.check-sha.outputs.match_results == 'false'
     steps:
       - name: Checking out repository code
         uses: actions/checkout@v3
