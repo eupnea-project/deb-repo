@@ -72,7 +72,7 @@ jobs:
           # Defaults to "Apply automatic changes"
           commit_message: Update files in main branch
           # Only include needed files
-          file_pattern: 'utils-control utils-sha_cache.txt'
+          file_pattern: 'utils-control utils_sha-cache.txt'
 
       - name: Adding util packages
         uses: smeinecke/apt-repo-action@v2.1.1
