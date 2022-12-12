@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# This executes the system-update.py script in /tmp/eupnea-system-update
+/tmp/eupnea-system-update/system-update.py
