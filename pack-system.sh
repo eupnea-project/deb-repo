@@ -20,7 +20,7 @@ cp system-update/depthboot_updates.py eupnea-system/tmp/eupnea-system-update
 cp system-control eupnea-system/DEBIAN/control
 
 # Add postinst script to package
-cp postinst eupnea-system/DEBIAN/postinst
+install -Dm 755 postinst eupnea-system/DEBIAN/postinst
 
 # create package
 # by default dpkg-deb will use zstd compression. The deploy action will fail because the debian tool doesnt support zstd compression in packages.
