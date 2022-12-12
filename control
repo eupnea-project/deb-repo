@@ -1,5 +1,5 @@
 Package: eupnea-utils
-Version: 0.0.22
+Version: 0.0.23
 Architecture: amd64
 Maintainer: The Eupnea Project
 Depends: cgpt, vboot-kernel-utils
