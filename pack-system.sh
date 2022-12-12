@@ -16,6 +16,9 @@ cp system-update/functions.py eupnea-system/tmp/eupnea-system-update
 cp system-update/eupnea_os_updates.py eupnea-system/tmp/eupnea-system-update
 cp system-update/depthboot_updates.py eupnea-system/tmp/eupnea-system-update
 
+# Copy configs
+cp system-update/configs/* eupnea-system/tmp/eupnea-system-update/configs/
+
 # copy debian control files into package
 cp system-control eupnea-system/DEBIAN/control
 
