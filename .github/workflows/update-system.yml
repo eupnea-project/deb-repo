@@ -68,7 +68,9 @@ jobs:
         uses: smeinecke/apt-repo-action@v2.1.1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          repo_supported_arch: amd64
+          repo_supported_arch: |
+            amd64
+            i386
           repo_supported_version: |
             kinetic
             jammy
