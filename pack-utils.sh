@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# This script will pack eupnea-utils into a debian package
 set -e
 
 # create dirs
