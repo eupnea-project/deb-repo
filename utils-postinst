@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# Enable new systemd services
+systemctl enable eupnea-update.timer
+systemctl enable eupnea-postinstall.service

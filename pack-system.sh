@@ -21,9 +21,8 @@ cp system-update/configs/* eupnea-system/tmp/eupnea-system-update/configs/
 
 # copy debian control files into package
 cp system-control eupnea-system/DEBIAN/control
-
 # Add postinst script to package
-install -Dm 755 postinst eupnea-system/DEBIAN/postinst
+install -Dm 755 postinst eupnea-system/DEBIAN/system-postinst
 
 # create package
 # by default dpkg-deb will use zstd compression. The deploy action will fail because the debian tool doesnt support zstd compression in packages.
