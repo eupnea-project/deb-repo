@@ -1,4 +1,4 @@
-name: Updating utils
+name: Deploying utils package
 on:
   push:
     branches: [ "main" ]

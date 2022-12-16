@@ -1,4 +1,4 @@
-name: Updating system package
+name: Deploying system package
 on:
   push:
     branches: [ "main" ]
@@ -68,7 +68,7 @@ jobs:
           # Only include needed files
           file_pattern: 'system-control system_sha-cache.txt'
 
-      - name: Adding system packages
+      - name: Deploying system packages
         uses: smeinecke/apt-repo-action@v2.1.1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
