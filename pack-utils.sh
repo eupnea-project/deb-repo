@@ -35,7 +35,7 @@ mv audio-scripts/configs/* eupnea-utils/etc/eupnea
 # copy debian control files into package
 cp utils-control eupnea-utils/DEBIAN/control
 # Add postinst script to package
-install -Dm 755 utils-postinst eupnea-system/DEBIAN/postinst
+install -Dm 755 utils-postinst eupnea-utils/DEBIAN/postinst
 
 # create package
 # by default dpkg-deb will use zstd compression. The deploy action will fail because the debian tool doesnt support zstd compression in packages.
