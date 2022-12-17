@@ -10,9 +10,9 @@ mkdir -p eupnea-utils/etc/eupnea
 mkdir -p eupnea-utils/etc/systemd/system/
 
 # Clone postinstall + audio repo
-git clone --depth=1 https://github.com/eupnea-linux/postinstall-scripts.git --branch=move-to-packages
+git clone --depth=1 https://github.com/eupnea-linux/postinstall-scripts.git
 git clone --depth=1 https://github.com/eupnea-linux/audio-scripts
-git clone --depth=1 https://github.com/eupnea-linux/systemd-services --branch=move-to-packages
+git clone --depth=1 https://github.com/eupnea-linux/systemd-services
 
 # move scripts into package
 mv postinstall-scripts/user-scripts/* eupnea-utils/usr/bin
