@@ -2,7 +2,7 @@ Package: eupnea-utils
 Version: 0.0.8
 Architecture: amd64
 Maintainer: The Eupnea Project
-Depends: cgpt, vboot-kernel-utils
+Depends: cgpt, vboot-kernel-utils, parted, rsync, cloud-utils
 Section: admin
 Priority: optional
 Description: Eupnea utilities
