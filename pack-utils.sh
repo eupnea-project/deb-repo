@@ -14,23 +14,22 @@ git clone --depth=1 https://github.com/eupnea-linux/postinstall-scripts.git
 git clone --depth=1 https://github.com/eupnea-linux/audio-scripts
 git clone --depth=1 https://github.com/eupnea-linux/systemd-services
 
-# move scripts into package
-mv postinstall-scripts/user-scripts/* eupnea-utils/usr/bin
-mv audio-scripts/setup-audio eupnea-utils/usr/bin
+# Copy scripts into package
+install -Dm 755 postinstall-scripts/user-scripts/* eupnea-utils/usr/bin
+install -Dm 755 audio-scripts/setup-audio eupnea-utils/usr/bin
 
-# Move systemd services into package
+# Copy systemd services into package
 cp systemd-services/eupnea-update.service eupnea-utils/etc/systemd/system/
 cp systemd-services/eupnea-postinstall.service eupnea-utils/etc/systemd/system/
 cp systemd-services/eupnea-update.timer eupnea-utils/etc/systemd/system/
 
-# Move libs into package
-mv postinstall-scripts/system-scripts/* eupnea-utils/usr/lib/eupnea
-mv postinstall-scripts/functions.py eupnea-utils/usr/lib/eupnea
+# Copy libs into package
+cp postinstall-scripts/system-scripts/* eupnea-utils/usr/lib/eupnea
+cp postinstall-scripts/functions.py eupnea-utils/usr/lib/eupnea
 
-# move postinstall configs into package
-mv postinstall-scripts/configs/* eupnea-utils/etc/eupnea
-# move audio config into package
-mv audio-scripts/configs/* eupnea-utils/etc/eupnea
+# Copy configs into package
+cp -r postinstall-scripts/configs/* eupnea-utils/etc/eupnea
+cp -r audio-scripts/configs/* eupnea-utils/etc/eupnea
 
 # copy debian control files into package
 cp utils-control eupnea-utils/DEBIAN/control
