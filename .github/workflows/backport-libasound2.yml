@@ -40,11 +40,12 @@ jobs:
           libasound2_data_match_results=$([[ "$(cat libasound2_sha-cache.txt | tail -1)" == "$libasound2_data_sha" ]] && echo "true" || echo "false")
           
           # Compare results and determine if any of the packages was updated
-          if [[ "$libasound2_normal_match_results" == "true" && "$libasound2_data_match_results" == "true" ]]; then
-            echo "match_results=true" >> $GITHUB_OUTPUT
-          else
-            echo "match_results=false" >> $GITHUB_OUTPUT
-          fi
+          # if [[ "$libasound2_normal_match_results" == "true" && "$libasound2_data_match_results" == "true" ]]; then
+          #  echo "match_results=true" >> $GITHUB_OUTPUT
+          # else
+          #  echo "match_results=false" >> $GITHUB_OUTPUT
+          # fi
+          echo "match_results=false" >> $GITHUB_OUTPUT
           
           # Add shas to output
           echo "libasound2_normal_match_results=$libasound2_normal_sha" >> $GITHUB_OUTPUT

@@ -5,7 +5,7 @@ Maintainer: The Eupnea Project
 Original-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>; Debian ALSA Maintainers <pkg-alsa-devel@lists.alioth.debian.org>
 Depends: libc6 (>= 2.34)
 Provides: libasound2, libasound2-data
-Conflicts: libasound2, libasound2-data
+# Conflicts: libasound2, libasound2-data
 Replaces: libasound2, libasound2-data
 Recommends: alsa-ucm-conf, alsa-topology-conf
 Suggests: libasound2-plugins (>= 1.0.24), alsa-utils
