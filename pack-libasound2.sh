@@ -30,7 +30,7 @@ cp -r libasound2-normal/DEBIAN/symbols libasound2-eupnea/DEBIAN/symbols
 cp -r libasound2-normal/DEBIAN/triggers libasound2-eupnea/DEBIAN/triggers
 
 # copy debian control file into package
-cp libasound2-control eupnea-utils/DEBIAN/control
+cp libasound2-control libasound2-eupnea/DEBIAN/control
 
 # create package
 # by default dpkg-deb will use zstd compression. The deploy action will fail because the debian tool doesnt support zstd compression in packages.
