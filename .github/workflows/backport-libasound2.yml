@@ -32,8 +32,8 @@ jobs:
           apt-get download libasound2 libasound2-data
           
           # Calculate package shas
-          libasound2_normal_sha=$(sha256sum libasound2_.deb | awk '{print $1}')
-          libasound2_data_sha=$(sha256sum libasound2-.deb | awk '{print $1}')
+          libasound2_normal_sha=$(sha256sum libasound2_*.deb | awk '{print $1}')
+          libasound2_data_sha=$(sha256sum libasound2-*.deb | awk '{print $1}')
           
           # Check remote shas against cached ones
           libasound2_normal_match_results=$([[ "$(cat libasound2_sha-cache.txt | head -1)" == "$libasound2_normal_sha" ]] && echo "true" || echo "false")
