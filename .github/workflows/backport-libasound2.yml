@@ -92,7 +92,6 @@ jobs:
             amd64
             i386 #  32 bit systems arent really supported but apt throws a warning otherwise
           repo_supported_version: |
-            kinetic
             jammy
             stable
           file: libasound2-eupnea*.deb
