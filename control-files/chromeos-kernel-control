@@ -2,7 +2,7 @@ Package: eupnea-chromeos-kernel
 Version: 1.1.1
 Architecture: amd64
 Maintainer: The Eupnea Project
-Depends: eupnea-chromeos-kernel-modules eupnea-chromeos-kernel-headers eupnea-utils
+Depends: eupnea-chromeos-kernel-modules, eupnea-chromeos-kernel-headers, eupnea-utils
 Conflicts: eupnea-mainline-kernel
 Section: kernel
 Priority: optional
