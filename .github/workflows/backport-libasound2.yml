@@ -90,7 +90,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           repo_supported_arch: |
             amd64
-            i386
+            i386 #  32 bit systems arent really supported but apt throws a warning otherwise
           repo_supported_version: |
             kinetic
             jammy
