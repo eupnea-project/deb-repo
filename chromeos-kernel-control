@@ -2,8 +2,9 @@ Package: eupnea-chromeos-kernel
 Version: 1.1.-1
 Architecture: amd64
 Maintainer: The Eupnea Project
+Requires: eupnea-chromeos-kernel-modules eupnea-chromeos-kernel-headers eupnea-utils
 Conflicts: eupnea-mainline-kernel
-Section: admin
+Section: kernel
 Priority: optional
 Description: Eupnea ChromeOS kernel
  WARNING: This package will overwrite the first partition of your current drive!

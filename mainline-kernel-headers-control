@@ -3,7 +3,7 @@ Version: 1.1.-1
 Architecture: amd64
 Maintainer: The Eupnea Project
 Requires: eupnea-mainline-kernel-modules
-Section: admin
+Section: kernel
 Priority: optional
 Description: Eupnea Mainline kernel headers
  This package contains the Eupnea Mainline kernel headers. It is only compatible with Eupnea mainline kernels.
