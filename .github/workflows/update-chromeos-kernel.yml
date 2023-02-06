@@ -47,9 +47,6 @@ jobs:
         with:
           fetch-depth: 1
 
-      - name: Installing dependencies
-        run: sudo apt-get install -y rpm createrepo-c
-
       - name: Update local tag releases cache file
         run: |
           echo "${{ needs.check-sha.outputs.remote_tag }}" > chromeos_kernel_tag-cache.txt
