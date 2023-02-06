@@ -28,8 +28,8 @@ tar xfpJ headers.tar.xz -C eupnea-chromeos-kernel-headers/usr/src
 
 # copy debian control files into packages
 cp chromeos-kernel-control eupnea-chromeos-kernel/DEBIAN
-cp chromeos-kernel-control-modules eupnea-chromeos-kernel-modules/DEBIAN
-cp chromeos-kernel-control-headerpack-chromeos-kernel.shs eupnea-chromeos-kernel-headers/DEBIAN
+cp chromeos-kernel-modules-control eupnea-chromeos-kernel-modules/DEBIAN
+cp chromeos-kernel-headers-control eupnea-chromeos-kernel-headers/DEBIAN
 
 # create packages
 # by default dpkg-deb will use zstd compression. The deploy action will fail because the debian tool doesnt support zstd compression in packages.
