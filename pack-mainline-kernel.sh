@@ -36,6 +36,6 @@ install -Dm 755 kernel-postinst eupnea-mainline-kernel/DEBIAN/postinst
 
 # create packages
 # by default dpkg-deb will use zstd compression. The deploy action will fail because the debian tool doesnt support zstd compression in packages.
-dpkg-deb --build --root-owner-group -Z=xz eupnea-mainline
-dpkg-deb --build --root-owner-group -Z=xz eupnea-mainline-headers
-dpkg-deb --build --root-owner-group -Z=xz eupnea-mainline-modules
+dpkg-deb --build --root-owner-group -Z=xz eupnea-mainline-kernel
+dpkg-deb --build --root-owner-group -Z=xz eupnea-mainline-kernel-headers
+dpkg-deb --build --root-owner-group -Z=xz eupnea-mainline-kernel-modules
