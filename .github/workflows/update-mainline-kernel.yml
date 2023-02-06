@@ -1,0 +1,103 @@
+name: Deploying mainline kernel packages
+on:
+  schedule:
+    - cron: "50 0 * * *" # run at the start of every day
+  workflow_dispatch:
+concurrency:
+  group: ${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  public_key: ${{ secrets.PUBLIC }}
+  private_key: ${{ secrets.PRIVATE }}
+
+jobs:
+  check-sha:
+    runs-on: ubuntu-latest
+    outputs:
+      match_results: ${{ steps.check-shas.outputs.match_results }}
+      remote_tag: ${{ steps.check-shas.outputs.remote_tag }}
+    steps:
+      - name: Checking out repository code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 1
+
+      - name: Download remote commit shas
+        id: check-shas
+        run: |
+          # Download remote sha
+          latest_tag=$(curl -s https://api.github.com/repos/eupnea-linux/mainline-kernel/releases/latest | jq -r '.tag_name')
+          
+          # Check remote tag against cached one
+          match_results=$([[ "$(cat mainline_kernel_tag-cache.txt)" == "$latest_tag" ]] && echo "true" || echo "false")
+          echo "match_results=$match_results" >> $GITHUB_OUTPUT
+          
+          # Add sha to output
+          echo "remote_tag=$latest_tag" >> $GITHUB_OUTPUT
+
+  deploy-repo:
+    runs-on: ubuntu-latest
+    needs: check-sha # needs for the vars from the previous job
+    # Only run script when remote sha has changed, aka the results DON'T match
+    if: needs.check-sha.outputs.match_results == 'false'
+    steps:
+      - name: Checking out repository code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 1
+
+      - name: Installing dependencies
+        run: sudo apt-get install -y rpm createrepo-c
+
+      - name: Update local tag releases cache file
+        run: |
+          echo "${{ needs.check-sha.outputs.remote_tag }}" > mainline_kernel_tag-cache.txt
+
+      - name: Bump version in kernel control file
+        run: |
+          CURRENT_VERSION=$(sed -n '2p' mainline-kernel-control | sed 's/.*://' | xargs) # get current version from control file
+          NEXTVERSION=$(echo ${CURRENT_VERSION} | awk -F. -v OFS=. '{$NF += 1 ; print}') # bump version
+          sed -i "2s/.*/Version: ${NEXTVERSION}/" mainline-kernel-control # update version in control file
+
+      - name: Bump version in modules control file
+        run: |
+          CURRENT_VERSION=$(sed -n '2p' mainline-kernel-modules-control | sed 's/.*://' | xargs) # get current version from control file
+          NEXTVERSION=$(echo ${CURRENT_VERSION} | awk -F. -v OFS=. '{$NF += 1 ; print}') # bump version
+          sed -i "2s/.*/Version: ${NEXTVERSION}/" mainline-kernel-modules-control # update version in control file
+
+      - name: Bump version in headers control file
+        run: |
+          CURRENT_VERSION=$(sed -n '2p' mainline-kernel-headers-control | sed 's/.*://' | xargs) # get current version from control file
+          NEXTVERSION=$(echo ${CURRENT_VERSION} | awk -F. -v OFS=. '{$NF += 1 ; print}') # bump version
+          sed -i "2s/.*/Version: ${NEXTVERSION}/" mainline-kernel-headers-control # update version in control file
+
+      - name: Packing kernel packages
+        run: bash pack-mainline-kernel.sh
+
+      - name: Updating files in main branch
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          # Optional. Commit message for the created commit.
+          # Defaults to "Apply automatic changes"
+          commit_message: Update files in main branch
+          # Only include needed files
+          file_pattern: 'mainline-kernel-control mainline-kernel-modules-control mainline-kernel-headers-control mainline_kernel_tag-cache.txt'
+
+      - name: Adding util packages
+        uses: smeinecke/apt-repo-action@v2.1.1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          repo_supported_arch: |
+            amd64
+            i386 #  32 bit systems arent really supported but apt throws a warning otherwise
+          repo_supported_version: |
+            kinetic
+            jammy
+            stable
+          file: eupnea-mainline-kernel*.deb
+          file_target_version: kinetic
+          public_key: ${{ secrets.PUBLIC }}
+          private_key: ${{ secrets.PRIVATE }}
+          key_passphrase: ""
+          repo_folder: "debian_ubuntu"

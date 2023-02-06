@@ -1,0 +1,11 @@
+Package: eupnea-chromeos-kernel
+Version: 1.1.-1
+Architecture: amd64
+Maintainer: The Eupnea Project
+Conflicts: eupnea-mainline-kernel
+Section: admin
+Priority: optional
+Description: Eupnea ChromeOS kernel
+ WARNING: This package will overwrite the first partition of your current drive!
+ Only use it on Chromebooks running Eupnea systems!
+ This package contains the Eupnea ChromeOS kernel. It is only compatible with x86_64 Chromebooks.
