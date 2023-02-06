@@ -27,7 +27,7 @@ jobs:
           latest_sha=$(curl -s https://api.github.com/repos/eupnea-linux/system-update/commits/main | jq -r '.sha')
           
           # Check remote sha against cached one
-          match_results=$([[ "$(cat system_sha-cache.txt)" == "$latest_sha" ]] && echo "true" || echo "false")
+          match_results=$([[ "$(cat cache/system_sha-cache.txt)" == "$latest_sha" ]] && echo "true" || echo "false")
           echo "match_results=$match_results" >> $GITHUB_OUTPUT
           
           # Add sha to output
@@ -46,16 +46,16 @@ jobs:
 
       - name: Update local commits sha file
         run: |
-          echo "${{ needs.check-sha.outputs.remote_sha }}" > system_sha-cache.txt
+          echo "${{ needs.check-sha.outputs.remote_sha }}" > cache/system_sha-cache.txt
 
       - name: Bump version in system control file
         run: |
-          CURRENT_VERSION=$(sed -n '2p' system-control | sed 's/.*://' | xargs) # get current version from control file
+          CURRENT_VERSION=$(sed -n '2p' control-files/system-control | sed 's/.*://' | xargs) # get current version from control file
           NEXTVERSION=$(echo ${CURRENT_VERSION} | awk -F. -v OFS=. '{$NF += 1 ; print}') # bump version
-          sed -i "2s/.*/Version: ${NEXTVERSION}/" system-control # update version in control file
+          sed -i "2s/.*/Version: ${NEXTVERSION}/" control-files/system-control # update version in control file
 
       - name: Creating system deb package
-        run: bash pack-system.sh
+        run: bash pack-scripts/pack-system.sh
 
       - name: Updating files in main branch
         uses: stefanzweifel/git-auto-commit-action@v4

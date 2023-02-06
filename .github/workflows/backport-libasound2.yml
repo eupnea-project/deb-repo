@@ -36,8 +36,8 @@ jobs:
           libasound2_data_sha=$(sha256sum libasound2-*.deb | awk '{print $1}')
           
           # Check remote shas against cached ones
-          libasound2_normal_match_results=$([[ "$(cat libasound2_sha-cache.txt | head -1)" == "$libasound2_normal_sha" ]] && echo "true" || echo "false")
-          libasound2_data_match_results=$([[ "$(cat libasound2_sha-cache.txt | tail -1)" == "$libasound2_data_sha" ]] && echo "true" || echo "false")
+          libasound2_normal_match_results=$([[ "$(cat cache/libasound2_sha-cache.txt | head -1)" == "$libasound2_normal_sha" ]] && echo "true" || echo "false")
+          libasound2_data_match_results=$([[ "$(cat cache/libasound2_sha-cache.txt | tail -1)" == "$libasound2_data_sha" ]] && echo "true" || echo "false")
           
           # Compare results and determine if any of the packages was updated
           # if [[ "$libasound2_normal_match_results" == "true" && "$libasound2_data_match_results" == "true" ]]; then
@@ -64,16 +64,16 @@ jobs:
 
       - name: Update local commits sha file
         run: |
-          echo "${{ needs.check-sha.outputs.libasound2_normal_match_results }}"$'\n'"${{ needs.check-sha.outputs.libasound2_data_match_results }}" > libasound2_sha-cache.txt
+          echo "${{ needs.check-sha.outputs.libasound2_normal_match_results }}"$'\n'"${{ needs.check-sha.outputs.libasound2_data_match_results }}" > cache/libasound2_sha-cache.txt
 
       - name: Bump version in system control file
         run: |
-          CURRENT_VERSION=$(sed -n '2p' libasound2-control | sed 's/.*://' | xargs) # get current version from control file
+          CURRENT_VERSION=$(sed -n '2p' control-files/libasound2-control | sed 's/.*://' | xargs) # get current version from control file
           NEXTVERSION=$(echo ${CURRENT_VERSION} | awk -F. -v OFS=. '{$NF += 1 ; print}') # bump version
-          sed -i "2s/.*/Version: ${NEXTVERSION}/" libasound2-control # update version in control file
+          sed -i "2s/.*/Version: ${NEXTVERSION}/" control-files/libasound2-control # update version in control file
 
       - name: Creating libasound2 deb package
-        run: bash pack-libasound2.sh
+        run: bash pack-scripts/pack-libasound2.sh
 
       - name: Updating files in main branch
         uses: stefanzweifel/git-auto-commit-action@v4

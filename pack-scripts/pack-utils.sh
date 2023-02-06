@@ -29,7 +29,7 @@ cp -r postinstall-scripts/configs/* eupnea-utils/etc/eupnea
 cp -r audio-scripts/configs/* eupnea-utils/etc/eupnea
 
 # copy debian control files into package
-cp utils-control eupnea-utils/DEBIAN/control
+cp control-files/utils-control eupnea-utils/DEBIAN/control
 
 # create package
 # by default dpkg-deb will use zstd compression. The deploy action will fail because the debian tool doesnt support zstd compression in packages.

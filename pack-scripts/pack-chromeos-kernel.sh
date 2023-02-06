@@ -27,12 +27,12 @@ tar xfpJ modules.tar.xz -C eupnea-chromeos-kernel-modules/lib/modules
 tar xfpJ headers.tar.xz -C eupnea-chromeos-kernel-headers/usr/src
 
 # copy debian control files into packages
-cp chromeos-kernel-control eupnea-chromeos-kernel/DEBIAN/control
-cp chromeos-kernel-modules-control eupnea-chromeos-kernel-modules/DEBIAN/control
-cp chromeos-kernel-headers-control eupnea-chromeos-kernel-headers/DEBIAN/control
+cp control-files/chromeos-kernel-control eupnea-chromeos-kernel/DEBIAN/control
+cp control-files/chromeos-kernel-modules-control eupnea-chromeos-kernel-modules/DEBIAN/control
+cp control-files/chromeos-kernel-headers-control eupnea-chromeos-kernel-headers/DEBIAN/control
 
 # Add postinst script to package
-install -Dm 755 kernel-postinst eupnea-chromeos-kernel/DEBIAN/postinst
+install -Dm 755 kernel-postinst postinst-scripts/eupnea-chromeos-kernel/DEBIAN/postinst
 
 # create packages
 # by default dpkg-deb will use zstd compression. The deploy action will fail because the debian tool doesnt support zstd compression in packages.

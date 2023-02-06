@@ -27,12 +27,12 @@ tar xfpJ modules.tar.xz -C eupnea-mainline-kernel-modules/lib/modules
 tar xfpJ headers.tar.xz -C eupnea-mainline-kernel-headers/usr/src
 
 # copy debian control files into packages
-cp mainline-kernel-control eupnea-mainline-kernel/DEBIAN/control
-cp mainline-kernel-modules-control eupnea-mainline-kernel-modules/DEBIAN/control
-cp mainline-kernel-headers-control eupnea-mainline-kernel-headers/DEBIAN/control
+cp control-files/mainline-kernel-control eupnea-mainline-kernel/DEBIAN/control
+cp control-files/mainline-kernel-modules-control eupnea-mainline-kernel-modules/DEBIAN/control
+cp control-files/mainline-kernel-headers-control eupnea-mainline-kernel-headers/DEBIAN/control
 
 # Add postinst script to package
-install -Dm 755 kernel-postinst eupnea-mainline-kernel/DEBIAN/postinst
+install -Dm 755 postinst-scripts/kernel-postinst eupnea-mainline-kernel/DEBIAN/postinst
 
 # create packages
 # by default dpkg-deb will use zstd compression. The deploy action will fail because the debian tool doesnt support zstd compression in packages.

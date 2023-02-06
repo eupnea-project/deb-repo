@@ -30,7 +30,7 @@ jobs:
           latest_tag=$(curl -s https://api.github.com/repos/eupnea-linux/mainline-kernel/releases/latest | jq -r '.tag_name')
           
           # Check remote tag against cached one
-          match_results=$([[ "$(cat mainline_kernel_tag-cache.txt)" == "$latest_tag" ]] && echo "true" || echo "false")
+          match_results=$([[ "$(cat cache/mainline_kernel_tag-cache.txt)" == "$latest_tag" ]] && echo "true" || echo "false")
           echo "match_results=$match_results" >> $GITHUB_OUTPUT
           
           # Add sha to output
@@ -49,28 +49,28 @@ jobs:
 
       - name: Update local tag releases cache file
         run: |
-          echo "${{ needs.check-sha.outputs.remote_tag }}" > mainline_kernel_tag-cache.txt
+          echo "${{ needs.check-sha.outputs.remote_tag }}" > cache/mainline_kernel_tag-cache.txt
 
       - name: Bump version in kernel control file
         run: |
-          CURRENT_VERSION=$(sed -n '2p' mainline-kernel-control | sed 's/.*://' | xargs) # get current version from control file
+          CURRENT_VERSION=$(sed -n '2p' control-files/mainline-kernel-control | sed 's/.*://' | xargs) # get current version from control file
           NEXTVERSION=$(echo ${CURRENT_VERSION} | awk -F. -v OFS=. '{$NF += 1 ; print}') # bump version
-          sed -i "2s/.*/Version: ${NEXTVERSION}/" mainline-kernel-control # update version in control file
+          sed -i "2s/.*/Version: ${NEXTVERSION}/" control-files/mainline-kernel-control # update version in control file
 
       - name: Bump version in modules control file
         run: |
-          CURRENT_VERSION=$(sed -n '2p' mainline-kernel-modules-control | sed 's/.*://' | xargs) # get current version from control file
+          CURRENT_VERSION=$(sed -n '2p' control-files/mainline-kernel-modules-control | sed 's/.*://' | xargs) # get current version from control file
           NEXTVERSION=$(echo ${CURRENT_VERSION} | awk -F. -v OFS=. '{$NF += 1 ; print}') # bump version
-          sed -i "2s/.*/Version: ${NEXTVERSION}/" mainline-kernel-modules-control # update version in control file
+          sed -i "2s/.*/Version: ${NEXTVERSION}/" control-files/mainline-kernel-modules-control # update version in control file
 
       - name: Bump version in headers control file
         run: |
-          CURRENT_VERSION=$(sed -n '2p' mainline-kernel-headers-control | sed 's/.*://' | xargs) # get current version from control file
+          CURRENT_VERSION=$(sed -n '2p' control-files/mainline-kernel-headers-control | sed 's/.*://' | xargs) # get current version from control file
           NEXTVERSION=$(echo ${CURRENT_VERSION} | awk -F. -v OFS=. '{$NF += 1 ; print}') # bump version
-          sed -i "2s/.*/Version: ${NEXTVERSION}/" mainline-kernel-headers-control # update version in control file
+          sed -i "2s/.*/Version: ${NEXTVERSION}/" control-files/mainline-kernel-headers-control # update version in control file
 
       - name: Packing kernel packages
-        run: bash pack-mainline-kernel.sh
+        run: bash pack-scripts/pack-mainline-kernel.sh
 
       - name: Updating files in main branch
         uses: stefanzweifel/git-auto-commit-action@v4
