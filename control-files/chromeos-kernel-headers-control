@@ -2,7 +2,7 @@ Package: eupnea-chromeos-kernel-headers
 Version: 1.1.1
 Architecture: amd64
 Maintainer: The Eupnea Project
-Requires: eupnea-chromeos-kernel-modules
+Depends: eupnea-chromeos-kernel-modules
 Section: kernel
 Priority: optional
 Description: Eupnea ChromeOS kernel headers

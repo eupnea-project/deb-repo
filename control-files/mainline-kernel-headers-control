@@ -2,7 +2,7 @@ Package: eupnea-mainline-kernel-headers
 Version: 1.1.1
 Architecture: amd64
 Maintainer: The Eupnea Project
-Requires: eupnea-mainline-kernel-modules
+Depends: eupnea-mainline-kernel-modules
 Section: kernel
 Priority: optional
 Description: Eupnea Mainline kernel headers
