@@ -79,7 +79,7 @@ jobs:
           # Defaults to "Apply automatic changes"
           commit_message: Update files in main branch
           # Only include needed files
-          file_pattern: 'chromeos-kernel-control chromeos-kernel-modules-control chromeos-kernel-headers-control chromeos_kernel_tag-cache.txt'
+          file_pattern: 'control-files/chromeos-kernel-control control-files/chromeos-kernel-modules-control control-files/chromeos-kernel-headers-control cache/chromeos_kernel_tag-cache.txt'
 
       - name: Adding util packages
         uses: smeinecke/apt-repo-action@v2.1.1

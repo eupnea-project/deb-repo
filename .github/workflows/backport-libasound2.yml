@@ -82,7 +82,7 @@ jobs:
           # Defaults to "Apply automatic changes"
           commit_message: Update files in main branch
           # Only include needed files
-          file_pattern: 'libasound2-control libasound2_sha-cache.txt'
+          file_pattern: 'control-files/libasound2-control cache/libasound2_sha-cache.txt'
 
       - name: Adding libasound2 packages
         uses: smeinecke/apt-repo-action@v2.1.1

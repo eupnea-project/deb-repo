@@ -79,7 +79,7 @@ jobs:
           # Defaults to "Apply automatic changes"
           commit_message: Update files in main branch
           # Only include needed files
-          file_pattern: 'mainline-kernel-control mainline-kernel-modules-control mainline-kernel-headers-control mainline_kernel_tag-cache.txt'
+          file_pattern: 'control-files/mainline-kernel-control control-files/mainline-kernel-modules-control control-files/mainline-kernel-headers-control cache/mainline_kernel_tag-cache.txt'
 
       - name: Adding util packages
         uses: smeinecke/apt-repo-action@v2.1.1

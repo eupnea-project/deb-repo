@@ -64,7 +64,7 @@ jobs:
           # Defaults to "Apply automatic changes"
           commit_message: Update files in main branch
           # Only include needed files
-          file_pattern: 'system-control system_sha-cache.txt'
+          file_pattern: 'control-files/system-control cache/system_sha-cache.txt'
 
       - name: Deploying system packages
         uses: smeinecke/apt-repo-action@v2.1.1
