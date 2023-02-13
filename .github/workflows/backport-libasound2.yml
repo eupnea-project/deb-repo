@@ -92,6 +92,7 @@ jobs:
             amd64
             i386 #  32 bit systems arent really supported but apt throws a warning otherwise
           repo_supported_version: |
+            kinetic # not really supported, but apt-repo-action throws "ERROR: File version 'kinetic' is not listed in repo supported version list" otherwise
             jammy
             stable
           file: libasound2-eupnea*.deb
