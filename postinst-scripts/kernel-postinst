@@ -1,4 +1,0 @@
-#!/bin/sh
-
-# Flash the kernel
-/usr/lib/eupnea/install-kernel /tmp/eupnea-kernel-update/bzImage
