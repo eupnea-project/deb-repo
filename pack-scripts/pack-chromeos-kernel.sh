@@ -32,7 +32,7 @@ cp control-files/chromeos-kernel-modules-control eupnea-chromeos-kernel-modules/
 cp control-files/chromeos-kernel-headers-control eupnea-chromeos-kernel-headers/DEBIAN/control
 
 # Add postinst script to package
-install -Dm 755 postinst-scripts/chromeos-kernel-postinst postinst-scripts/eupnea-chromeos-kernel/DEBIAN/postinst
+install -Dm 755 postinst-scripts/chromeos-kernel-postinst eupnea-chromeos-kernel/DEBIAN/postinst
 
 # create packages
 # by default dpkg-deb will use zstd compression. The deploy action will fail because the debian tool doesnt support zstd compression in packages.
