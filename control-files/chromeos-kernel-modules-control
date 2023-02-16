@@ -1,5 +1,5 @@
 Package: eupnea-chromeos-kernel-modules
-Version: 1.1.6
+Version: 1.1.7
 Architecture: amd64
 Maintainer: The Eupnea Project
 Section: kernel
