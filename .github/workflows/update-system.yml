@@ -78,7 +78,10 @@ jobs:
             jammy
             stable
           file: eupnea-system*.deb
-          file_target_version: kinetic
+          file_target_version: |
+            kinetic
+            jammy
+            stable
           public_key: ${{ secrets.PUBLIC }}
           private_key: ${{ secrets.PRIVATE }}
           key_passphrase: ""
