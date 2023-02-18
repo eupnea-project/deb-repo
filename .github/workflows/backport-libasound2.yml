@@ -94,11 +94,8 @@ jobs:
           repo_supported_version: | # kinetic is not supported but apt-repo-action throws an error otherwise
             kinetic
             jammy
-            stable
           file: libasound2-eupnea*.deb
-          file_target_version: |
-            jammy
-            stable
+          file_target_version: jammy
           public_key: ${{ secrets.PUBLIC }}
           private_key: ${{ secrets.PRIVATE }}
           key_passphrase: ""
