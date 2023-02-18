@@ -39,9 +39,6 @@ jobs:
     # Only run script when remote sha has changed, aka the results DON'T match
     if: needs.check-sha.outputs.match_results == 'false'
     steps:
-      - name: Waiting for jammy commit to settle
-        run: sleep 60 # wait for jammy commit to settle
-
       - name: Checking out repository code
         uses: actions/checkout@v3
         with:
@@ -105,6 +102,9 @@ jobs:
 
       - name: Creating system deb package
         run: bash pack-scripts/pack-kinetic-system.sh
+
+      - name: Update repo
+        run: git pull
 
       - name: Updating files in main branch
         uses: stefanzweifel/git-auto-commit-action@v4
