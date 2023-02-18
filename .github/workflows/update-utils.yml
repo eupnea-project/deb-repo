@@ -76,7 +76,7 @@ jobs:
           # Only include needed files
           file_pattern: 'control-files/utils-control cache/utils_sha-cache.txt'
 
-      - name: Adding util packages
+      - name: Adding jammy util packages
         uses: smeinecke/apt-repo-action@v2.1.1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -88,10 +88,25 @@ jobs:
             jammy
             stable
           file: eupnea-utils*.deb
-          file_target_version: |
+          file_target_version: jammy
+          public_key: ${{ secrets.PUBLIC }}
+          private_key: ${{ secrets.PRIVATE }}
+          key_passphrase: ""
+          repo_folder: "debian_ubuntu"
+
+      - name: Adding kinetic util packages
+        uses: smeinecke/apt-repo-action@v2.1.1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          repo_supported_arch: |
+            amd64
+            i386 #  32 bit systems arent really supported but apt throws a warning otherwise
+          repo_supported_version: |
             kinetic
             jammy
             stable
+          file: eupnea-utils*.deb
+          file_target_version: kinetic
           public_key: ${{ secrets.PUBLIC }}
           private_key: ${{ secrets.PRIVATE }}
           key_passphrase: ""
