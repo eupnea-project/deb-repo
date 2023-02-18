@@ -39,6 +39,9 @@ jobs:
     # Only run script when remote sha has changed, aka the results DON'T match
     if: needs.check-sha.outputs.match_results == 'false'
     steps:
+      - name: Waiting for jammy commit to settle
+        run: sleep 60 # wait for jammy commit to settle
+
       - name: Checking out repository code
         uses: actions/checkout@v3
         with:
