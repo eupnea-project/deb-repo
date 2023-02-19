@@ -20,7 +20,7 @@ cp system-update/depthboot_updates.py eupnea-system/tmp/eupnea-system-update
 cp -r system-update/configs/* eupnea-system/tmp/eupnea-system-update/configs
 
 # copy debian control files into package
-cp control-files/jammy-system-control eupnea-system/DEBIAN/control
+cp control-files/system-control eupnea-system/DEBIAN/control
 # Add postinst script to package
 install -Dm 755 postinst-scripts/system-postinst eupnea-system/DEBIAN/postinst
 
