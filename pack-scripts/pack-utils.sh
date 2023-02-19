@@ -18,7 +18,7 @@ install -Dm 755 postinstall-scripts/user-scripts/* eupnea-utils/usr/bin
 install -Dm 755 audio-scripts/setup-audio eupnea-utils/usr/bin
 
 # Copy systemd services into package
-cp postinstall-scripts/systemd-services/eupnea-postinstall.service eupnea-utils/etc/systemd/system/
+cp postinstall-scripts/configs/systemd-services/eupnea-postinstall.service eupnea-utils/etc/systemd/system/
 
 # Copy libs into package
 cp postinstall-scripts/system-scripts/* eupnea-utils/usr/lib/eupnea
