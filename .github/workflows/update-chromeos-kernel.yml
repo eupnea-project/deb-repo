@@ -72,15 +72,6 @@ jobs:
       - name: Packing kernel packages
         run: bash pack-scripts/pack-chromeos-kernel.sh
 
-      - name: Updating files in main branch
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          # Optional. Commit message for the created commit.
-          # Defaults to "Apply automatic changes"
-          commit_message: Update files in main branch
-          # Only include needed files
-          file_pattern: 'control-files/chromeos-kernel-control control-files/chromeos-kernel-modules-control control-files/chromeos-kernel-headers-control cache/chromeos_kernel_tag-cache.txt'
-
       - name: Adding jammy chromeos kernel packages
         uses: smeinecke/apt-repo-action@v2.1.1
         with:
@@ -114,3 +105,12 @@ jobs:
           private_key: ${{ secrets.PRIVATE }}
           key_passphrase: ""
           repo_folder: "debian_ubuntu"
+
+      - name: Updating files in main branch
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          # Optional. Commit message for the created commit.
+          # Defaults to "Apply automatic changes"
+          commit_message: Update files in main branch
+          # Only include needed files
+          file_pattern: 'control-files/chromeos-kernel-control control-files/chromeos-kernel-modules-control control-files/chromeos-kernel-headers-control cache/chromeos_kernel_tag-cache.txt'

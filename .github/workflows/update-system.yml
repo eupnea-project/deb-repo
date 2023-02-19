@@ -57,15 +57,6 @@ jobs:
       - name: Creating system deb package
         run: bash pack-scripts/pack-system.sh
 
-      - name: Updating files in main branch
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          # Optional. Commit message for the created commit.
-          # Defaults to "Apply automatic changes"
-          commit_message: Update files in main branch
-          # Only include needed files
-          file_pattern: 'control-files/system-control cache/system_sha-cache.txt'
-
       - name: Deploying jammy system packages
         uses: smeinecke/apt-repo-action@v2.1.1
         with:
@@ -99,3 +90,12 @@ jobs:
           private_key: ${{ secrets.PRIVATE }}
           key_passphrase: ""
           repo_folder: "debian_ubuntu"
+
+      - name: Updating files in main branch
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          # Optional. Commit message for the created commit.
+          # Defaults to "Apply automatic changes"
+          commit_message: Update files in main branch
+          # Only include needed files
+          file_pattern: 'control-files/system-control cache/system_sha-cache.txt'
