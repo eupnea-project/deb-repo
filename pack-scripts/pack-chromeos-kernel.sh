@@ -12,12 +12,12 @@ mkdir -p eupnea-chromeos-kernel-modules/lib/modules
 mkdir -p eupnea-chromeos-kernel-headers/usr/src
 
 # Download kernel files
-#curl --silent -L https://github.com/eupnea-linux/chromeos-kernel/releases/latest/download/bzImage -o bzImage
-#curl --silent -L https://github.com/eupnea-linux/chromeos-kernel/releases/latest/download/headers.tar.xz  -o headers.tar.xz
-#curl --silent -L https://github.com/eupnea-linux/chromeos-kernel/releases/latest/download/modules.tar.xz -o modules.tar.xz
-curl --silent -L https://github.com/eupnea-linux/chromeos-kernel/releases/download/dev-build/bzImage -o bzImage
-curl --silent -L https://github.com/eupnea-linux/chromeos-kernel/releases/download/dev-build/headers.tar.xz -o headers.tar.xz
-curl --silent -L https://github.com/eupnea-linux/chromeos-kernel/releases/download/dev-build/modules.tar.xz -o modules.tar.xz
+#curl --silent -LO https://github.com/eupnea-linux/chromeos-kernel/releases/latest/download/bzImage
+#curl --silent -LO https://github.com/eupnea-linux/chromeos-kernel/releases/latest/download/headers.tar.xz
+#curl --silent -LO https://github.com/eupnea-linux/chromeos-kernel/releases/latest/download/modules.tar.xz
+curl --silent -LO https://github.com/eupnea-linux/chromeos-kernel/releases/download/dev-build/bzImage
+curl --silent -LO https://github.com/eupnea-linux/chromeos-kernel/releases/download/dev-build/headers.tar.xz
+curl --silent -LO https://github.com/eupnea-linux/chromeos-kernel/releases/download/dev-build/modules.tar.xz
 
 # read kernel version
 KERNEL_VERSION=$(file -bL ./bzImage | grep -o 'version [^ ]*' | cut -d ' ' -f 2) # get kernel version from bzImage
