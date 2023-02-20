@@ -19,6 +19,9 @@ curl --silent -L https://github.com/eupnea-linux/mainline-kernel/releases/downlo
 curl --silent -L https://github.com/eupnea-linux/mainline-kernel/releases/download/dev-build/headers.tar.xz -o headers.tar.xz
 curl --silent -L https://github.com/eupnea-linux/mainline-kernel/releases/download/dev-build/modules.tar.xz -o modules.tar.xz
 
+# read kernel version
+KERNEL_VERSION=$(file -bL ./bzImage | grep -o 'version [^ ]*' | cut -d ' ' -f 2) # get kernel version from bzImage
+
 # copy kernel image to /boot
 cp bzImage eupnea-mainline-kernel/boot/vmlinuz-eupnea-mainline
 
@@ -33,6 +36,10 @@ cp control-files/mainline-kernel-headers-control eupnea-mainline-kernel-headers/
 
 # Add postinst script to package
 install -Dm 755 postinst-scripts/mainline-kernel-postinst eupnea-chromeos-kernel/DEBIAN/postinst
+
+# add modules link into headers package
+mkdir -p eupnea-chromeos-kernel-headers/lib/modules/"$KERNEL_VERSION"
+ln -s /usr/src/linux-headers-"$KERNEL_VERSION"/ eupnea-chromeos-kernel-headers/lib/modules/"$KERNEL_VERSION"/build
 
 # create packages
 # by default dpkg-deb will use zstd compression. The deploy action will fail because the debian tool doesnt support zstd compression in packages.
