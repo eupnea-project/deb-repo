@@ -1,7 +1,7 @@
 name: Deploying chromeos kernel packages
 on:
   schedule:
-    - cron: "40 0 * * *" # run at the start of every day
+    - cron: "30 0 * * *" # run at the start of every day
   workflow_dispatch:
 concurrency:
   group: ${{ github.ref }}

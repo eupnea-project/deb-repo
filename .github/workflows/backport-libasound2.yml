@@ -1,7 +1,7 @@
 name: Deploying libasound2 package
 on:
   schedule:
-    - cron: "30 0 * * *" # run at the start of every day
+    - cron: "20 0 * * *" # run at the start of every day
   workflow_dispatch:
 concurrency:
   group: ${{ github.ref }}
