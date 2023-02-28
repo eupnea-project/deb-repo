@@ -2,6 +2,7 @@ Package: eupnea-system
 Version: 1.0.64
 Architecture: amd64
 Maintainer: The Eupnea Project
+Depends: eupnea-utils (>= 1.1.65)
 Section: admin
 Priority: optional
 Description: Eupnea utilities
