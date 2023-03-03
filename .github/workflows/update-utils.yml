@@ -25,7 +25,7 @@ jobs:
         id: check-shas
         run: |
           # Download remote shas
-          postinstall_latest_sha=$(curl -s https://api.github.com/repos/eupnea-linux/postinstall-scripts/commits/main | jq -r '.sha')
+          postinstall_latest_sha=$(curl -s https://api.github.com/repos/eupnea-linux/eupnea-utils/commits/main | jq -r '.sha')
           audio_latest_sha=$(curl -s https://api.github.com/repos/eupnea-linux/audio-scripts/commits/main | jq -r '.sha')
           
           # Check remote shas against cached ones
