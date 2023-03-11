@@ -4,5 +4,5 @@
 groupadd keyd
 
 # Enable and start keyd
-sudo systemctl enable keyd
-sudo systemctl start keyd
+systemctl enable keyd
+systemctl start keyd
