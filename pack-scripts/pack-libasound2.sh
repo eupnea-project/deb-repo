@@ -23,6 +23,7 @@ dpkg-deb -R libasound2-*.deb libasound2-data
 
 # Combine libasound2 and libasound2-data into one package
 cp -r libasound2-normal/usr/* libasound2-eupnea/usr/
+cp -r libasound2-data/usr/* libasound2-eupnea/usr/
 
 # Copy DEBIAN files from normal package
 cp -r libasound2-normal/DEBIAN/shlibs libasound2-eupnea/DEBIAN/shlibs
