@@ -17,7 +17,7 @@ make
 make DESTDIR=../keyd PREFIX='/usr' install
 
 # Add postinst script to package
-install -Dm 755 postinst-scripts/keyd-postinst eupnea-system/DEBIAN/keyd-postinst
+install -Dm 755 postinst-scripts/keyd-postinst eupnea-system/DEBIAN/postinst
 
 # copy debian control file into package
 cp control-files/keyd-control keyd/DEBIAN/control
