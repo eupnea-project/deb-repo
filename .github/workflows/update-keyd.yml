@@ -1,0 +1,108 @@
+name: Deploying keyd package
+on:
+  schedule:
+    - cron: "10 1 * * *"
+  workflow_dispatch:
+concurrency:
+  group: ${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  public_key: ${{ secrets.PUBLIC }}
+  private_key: ${{ secrets.PRIVATE }}
+
+jobs:
+  check-sha:
+    runs-on: ubuntu-latest
+    outputs:
+      match_results: ${{ steps.check-shas.outputs.match_results }}
+      remote_tag: ${{ steps.check-shas.outputs.remote_tag }}
+    steps:
+      - name: Checking out repository code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 1
+
+      - name: Download remote commit shas
+        id: check-shas
+        run: |
+          # Download remote sha
+          latest_tag=$(curl -s https://api.github.com/repos/rvaiya/keyd/releases/latest | jq -r '.tag_name')
+          
+          # Check remote tag against cached one
+          match_results=$([[ "$(cat cache/keyd-cache.txt)" == "$latest_tag" ]] && echo "true" || echo "false")
+          echo "match_results=$match_results" >> $GITHUB_OUTPUT
+          
+          # Add sha to output
+          echo "remote_tag=$latest_tag" >> $GITHUB_OUTPUT
+
+  deploy-repo:
+    runs-on: ubuntu-latest
+    needs: check-sha # needs for the vars from the previous job
+    # Only run script when remote sha has changed, aka the results DON'T match
+    if: needs.check-sha.outputs.match_results == 'false'
+    steps:
+      - name: Checking out repository code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 1
+
+      - name: Update local tag releases cache file
+        run: |
+          echo "${{ needs.check-sha.outputs.remote_tag }}" > cache/keyd-cache.txt
+
+      - name: Replace version in control file
+        run: |
+          NEXTVERSION=$(echo "${{ needs.check-sha.outputs.remote_tag }}") # latest commit version
+          sed -i "2s/.*/Version: ${NEXTVERSION}/" control-files/keyd-control # update version in control file
+
+      - name: Packing keyd packages
+        run: bash pack-scripts/pack-keyd.sh
+
+      - name: Updating files in main branch
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          # Disable setting repo owner as commit author
+          commit_user_name: github-actions[bot]
+          commit_user_email: 41898282+github-actions[bot]@users.noreply.github.com
+          commit_author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
+
+          # Optional. Commit message for the created commit.
+          # Defaults to "Apply automatic changes"
+          commit_message: Update files in main branch
+          # Only include needed files
+          file_pattern: 'control-files/keyd-control cache/keyd-cache.txt'
+
+      - name: Adding jammy keyd packages
+        uses: smeinecke/apt-repo-action@v2.1.1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          repo_supported_arch: |
+            amd64
+            i386 #  32 bit systems arent really supported but apt throws a warning otherwise
+          repo_supported_version: |
+            kinetic
+            jammy
+          file: keyd*.deb
+          file_target_version: jammy
+          public_key: ${{ secrets.PUBLIC }}
+          private_key: ${{ secrets.PRIVATE }}
+          key_passphrase: ""
+          repo_folder: "debian_ubuntu"
+
+      - name: Adding kinetic keyd packages
+        uses: smeinecke/apt-repo-action@v2.1.1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          repo_supported_arch: |
+            amd64
+            i386 #  32 bit systems arent really supported but apt throws a warning otherwise
+          repo_supported_version: |
+            kinetic
+            jammy
+          file: keyd*.deb
+          file_target_version: kinetic
+          public_key: ${{ secrets.PUBLIC }}
+          private_key: ${{ secrets.PRIVATE }}
+          key_passphrase: ""
+          repo_folder: "debian_ubuntu"
