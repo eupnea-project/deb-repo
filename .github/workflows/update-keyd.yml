@@ -53,7 +53,8 @@ jobs:
 
       - name: Replace version in control file
         run: |
-          NEXTVERSION=$(echo "${{ needs.check-sha.outputs.remote_tag }}") # latest commit version
+          # use latest commit version without the v
+          NEXTVERSION=$(echo ${{ needs.check-sha.outputs.remote_tag }} | sed 's/v//')
           sed -i "2s/.*/Version: ${NEXTVERSION}/" control-files/keyd-control # update version in control file
 
       - name: Packing keyd packages
