@@ -1,0 +1,10 @@
+Package: keyd
+Version: 2.4.2
+Architecture: amd64
+Maintainer: The Eupnea Project
+Original-Maintainer: rvaiya@github.com
+Section: utils
+Priority: extra
+Description:  A key remapping daemon for linux.
+ Made by rvaiya and repackaged by the Eupnea Project.
+ Read more about keyd here: https://github.com/rvaiya/keyd

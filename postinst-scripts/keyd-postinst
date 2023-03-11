@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# Add keyd to groups
+groupadd keyd
+
+# Enable and start keyd
+sudo systemctl enable keyd
+sudo systemctl start keyd
