@@ -1,5 +1,5 @@
 Package: libasound2-eupnea
-Version: 1.0.47
+Version: 1.0.48
 Architecture: amd64
 Maintainer: The Eupnea Project
 Original-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>; Debian ALSA Maintainers <pkg-alsa-devel@lists.alioth.debian.org>
