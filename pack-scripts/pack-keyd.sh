@@ -15,6 +15,7 @@ mkdir -p keyd/usr/share/libinput
 cd keyd-remote
 make
 make DESTDIR=../keyd PREFIX='/usr' install
+cd ..
 
 # Add postinst script to package
 install -Dm 755 postinst-scripts/keyd-postinst eupnea-system/DEBIAN/postinst
