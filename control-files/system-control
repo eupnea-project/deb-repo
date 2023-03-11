@@ -5,6 +5,6 @@ Maintainer: The Eupnea Project
 Depends: eupnea-utils (>= 1.1.75)
 Section: admin
 Priority: optional
-Description: Eupnea utilities
+Description: Eupnea system update package
  This package upgrades Depthboot/EupneaOS systems to the latest version.
  Not recommended for use on non-Chromebook devices.
