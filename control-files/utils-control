@@ -1,5 +1,5 @@
 Package: eupnea-utils
-Version: 1.1.79
+Version: 1.1.80
 Architecture: amd64
 Maintainer: The Eupnea Project
 Depends: cgpt, vboot-kernel-utils, parted, fdisk, rsync, git, strace, alsa-utils
