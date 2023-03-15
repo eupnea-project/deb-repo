@@ -1,4 +1,4 @@
 #!/bin/sh
 
 # Enable and start touchscreen fix service if not in a chroot
-if [ -f /proc/mounts ]; then systemctl enable --now touchscreen-fix.service; fi
+if [ -f /proc/mounts ]; then systemctl enable --now touchscreen-fix.service; else systemctl enable touchscreen-fix.service; fi
