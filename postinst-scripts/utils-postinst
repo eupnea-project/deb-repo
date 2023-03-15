@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# Enable and start touchscreen fix service
+systemctl enable --now touchscreen-fix.service
