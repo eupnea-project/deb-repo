@@ -3,7 +3,7 @@
 set -e
 
 # clone keyd repo
-git clone --depth=1 --branch=v2.4.2 https://github.com/rvaiya/keyd.git keyd-remote
+git clone --depth=1 https://github.com/rvaiya/keyd.git keyd-remote
 
 # make dir
 mkdir -p keyd/DEBIAN
