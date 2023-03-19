@@ -1,4 +1,4 @@
 #!/bin/sh
 
 # Flash the kernel
-/usr/lib/eupnea/install-kernel /boot/vmlinuz-eupnea-mainline
+/usr/lib/eupnea/install-kernel --kernel-path /boot/vmlinuz-eupnea-mainline
