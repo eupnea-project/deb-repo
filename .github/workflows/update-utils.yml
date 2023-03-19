@@ -10,7 +10,7 @@ concurrency:
 
 jobs:
   check-sha:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     outputs:
       match_results: ${{ steps.check-shas.outputs.match_results }}
       postinstall_remote_sha: ${{ steps.check-shas.outputs.postinstall_remote_sha }}
@@ -44,7 +44,7 @@ jobs:
           echo "audio_remote_sha=$audio_latest_sha" >> $GITHUB_OUTPUT
 
   deploy-repo:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     needs: check-sha # needs for the vars from the previous job
     # Only run script when remote sha has changed, aka the results DON'T match
     if: needs.check-sha.outputs.match_results == 'false'
