@@ -2,7 +2,7 @@ Package: eupnea-mainline-kernel
 Version: 1.1.23
 Architecture: amd64
 Maintainer: The Eupnea Project
-Depends: eupnea-mainline-kernel-modules, eupnea-mainline-kernel-headers, eupnea-utils (>= 1.1.75)
+Depends: eupnea-mainline-kernel-modules, eupnea-mainline-kernel-headers, eupnea-utils (>= 1.1.89)
 Conflicts: eupnea-chromeos-kernel
 Section: kernel
 Priority: optional
