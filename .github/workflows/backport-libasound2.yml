@@ -9,20 +9,20 @@ concurrency:
 
 
 jobs:
-  check-sha:
+  check-name:
     runs-on: ubuntu-latest
     outputs:
-      match_results: ${{ steps.check-shas.outputs.match_results }}
-      libasound2_normal_match_results: ${{ steps.check-shas.outputs.libasound2_normal_match_results }}
-      libasound2_data_match_results: ${{ steps.check-shas.outputs.libasound2_data_match_results }}
+      match_results: ${{ steps.check-names.outputs.match_results }}
+      libasound2_normal_match_results: ${{ steps.check-names.outputs.libasound2_normal_match_results }}
+      libasound2_data_match_results: ${{ steps.check-names.outputs.libasound2_data_match_results }}
     steps:
       - name: Checking out repository code
         uses: actions/checkout@v3
         with:
           fetch-depth: 1
 
-      - name: Download remote commit shas
-        id: check-shas
+      - name: Check if remote debs were updated
+        id: check-names
         run: |
           # Replace jammy repos with kinetic repos
           sudo sed -i 's/jammy/kinetic/g' /etc/apt/sources.list 
@@ -31,13 +31,13 @@ jobs:
           # Download libasound2 and libasound2-data
           apt-get download libasound2 libasound2-data
           
-          # Calculate package shas
-          libasound2_normal_sha=$(sha256sum libasound2_*.deb | awk '{print $1}')
-          libasound2_data_sha=$(sha256sum libasound2-*.deb | awk '{print $1}')
+          # for some reason the sha256sum changes every time -> use package name instead
+          libasound2_normal_name=$(ls | grep libasound2_*.deb)
+          libasound2_data_name=$(ls | grep libasound2-*.deb)
           
-          # Check remote shas against cached ones
-          libasound2_normal_match_results=$([[ "$(cat cache/libasound2_sha-cache.txt | head -1)" == "$libasound2_normal_sha" ]] && echo "true" || echo "false")
-          libasound2_data_match_results=$([[ "$(cat cache/libasound2_sha-cache.txt | tail -1)" == "$libasound2_data_sha" ]] && echo "true" || echo "false")
+          # Check remote names against cached ones
+          libasound2_normal_match_results=$([[ "$(cat cache/libasound2_names-cache.txt | head -1)" == "$libasound2_normal_name" ]] && echo "true" || echo "false")
+          libasound2_data_match_results=$([[ "$(cat cache/libasound2_names-cache.txt | tail -1)" == "$libasound2_data_name" ]] && echo "true" || echo "false")
           
           # Compare results and determine if any of the packages was updated
           # if [[ "$libasound2_normal_match_results" == "true" && "$libasound2_data_match_results" == "true" ]]; then
@@ -47,24 +47,24 @@ jobs:
           # fi
           echo "match_results=false" >> $GITHUB_OUTPUT
           
-          # Add shas to output
-          echo "libasound2_normal_match_results=$libasound2_normal_sha" >> $GITHUB_OUTPUT
-          echo "libasound2_data_match_results=$libasound2_data_sha" >> $GITHUB_OUTPUT
+          # Add names to output
+          echo "libasound2_normal_match_results=$libasound2_normal_name" >> $GITHUB_OUTPUT
+          echo "libasound2_data_match_results=$libasound2_data_name" >> $GITHUB_OUTPUT
 
   deploy-repo:
     runs-on: ubuntu-latest
-    needs: check-sha # needs for the vars from the previous job
-    # Only run script when remote sha has changed, aka the results DON'T match
-    if: needs.check-sha.outputs.match_results == 'false'
+    needs: check-name # needs for the vars from the previous job
+    # Only run script when a remote name has changed, aka the results DON'T match
+    if: needs.check-name.outputs.match_results == 'false'
     steps:
       - name: Checking out repository code
         uses: actions/checkout@v3
         with:
           fetch-depth: 1
 
-      - name: Update local commits sha file
+      - name: Update local names file
         run: |
-          echo "${{ needs.check-sha.outputs.libasound2_normal_match_results }}"$'\n'"${{ needs.check-sha.outputs.libasound2_data_match_results }}" > cache/libasound2_sha-cache.txt
+          echo "${{ needs.check-name.outputs.libasound2_normal_match_results }}"$'\n'"${{ needs.check-name.outputs.libasound2_data_match_results }}" > cache/libasound2_names-cache.txt
 
       - name: Bump version in system control file
         run: |
@@ -87,7 +87,7 @@ jobs:
           # Defaults to "Apply automatic changes"
           commit_message: Update files in main branch
           # Only include needed files
-          file_pattern: 'control-files/libasound2-control cache/libasound2_sha-cache.txt'
+          file_pattern: 'control-files/libasound2-control cache/libasound2_names-cache.txt'
 
       - name: Adding libasound2 packages
         uses: smeinecke/apt-repo-action@v2.1.1
