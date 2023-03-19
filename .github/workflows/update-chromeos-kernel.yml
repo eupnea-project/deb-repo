@@ -28,6 +28,11 @@ jobs:
         run: |
           # Download remote sha
           latest_tag=$(curl -s https://api.github.com/repos/eupnea-linux/chromeos-kernel/releases/latest | jq -r '.tag_name')
+          # fail if curl result is empty
+          if [[ -z "$latest_tag" ]]; then
+              echo "latest_tag is empty"
+              exit 1
+          fi
           
           # Check remote tag against cached one
           match_results=$([[ "$(cat cache/chromeos_kernel_tag-cache.txt)" == "$latest_tag" ]] && echo "true" || echo "false")
