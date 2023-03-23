@@ -27,7 +27,7 @@ jobs:
         id: check-shas
         run: |
           # Download remote sha
-          latest_sha=$(curl -s https://api.github.com/repos/rvaiya/keyd/commits/main | jq -r '.sha')
+          latest_sha=$(curl -s https://api.github.com/repos/rvaiya/keyd/commits/master | jq -r '.sha')
           # fail if curl result is empty
           if [[ -z "$latest_sha" ]]; then
               echo "latest_tag is empty"
