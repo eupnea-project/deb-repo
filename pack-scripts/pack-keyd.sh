@@ -17,6 +17,9 @@ make
 make DESTDIR=../keyd PREFIX='/usr' install
 cd ..
 
+# add quirks file
+cp configs/keyd.quirks keyd/usr/share/libinput/keyd.quirks
+
 # Add postinst script to package
 install -Dm 755 postinst-scripts/keyd-postinst keyd/DEBIAN/postinst
 
