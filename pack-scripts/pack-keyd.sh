@@ -20,7 +20,7 @@ make DESTDIR=../keyd PREFIX='/usr' install
 cd ..
 
 # add quirks file
-cp configs/keyd.quirks keyd/usr/share/libinput/keyd.quirks
+cp configs/keyd.quirks keyd/usr/share/libinput
 
 # add keyboard configs
 cp -r eupnea-utils/configs/* keyd/usr/share/eupnea/
