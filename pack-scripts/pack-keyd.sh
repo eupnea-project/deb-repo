@@ -2,13 +2,15 @@
 # This script will build & pack keyd into a deb package
 set -e
 
-# clone keyd repo
+# clone repos
 git clone --depth=1 https://github.com/rvaiya/keyd.git keyd-remote
+git clone --depth=1 https://github.com/eupnea-linux/eupnea-utils.git
 
 # make dir
 mkdir -p keyd/DEBIAN
 mkdir -p keyd/usr/lib/systemd/system
 mkdir -p keyd/usr/share/libinput
+mkdir -p keyd/usr/share/eupnea
 # the other dirs are automatically created by make install
 
 # build keyd
@@ -19,6 +21,9 @@ cd ..
 
 # add quirks file
 cp configs/keyd.quirks keyd/usr/share/libinput/keyd.quirks
+
+# add keyboard configs
+cp -r eupnea-utils/configs/* keyd/usr/share/eupnea/
 
 # Add postinst script to package
 install -Dm 755 postinst-scripts/keyd-postinst keyd/DEBIAN/postinst

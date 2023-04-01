@@ -25,7 +25,6 @@ cp remote-eupnea-utils/system-scripts/* eupnea-utils/usr/lib/eupnea
 cp remote-eupnea-utils/functions.py eupnea-utils/usr/lib/eupnea
 
 # Copy configs into package
-cp -r remote-eupnea-utils/configs/* eupnea-utils/etc/eupnea
 cp -r audio-scripts/configs/* eupnea-utils/etc/eupnea
 
 # copy debian control files into package
