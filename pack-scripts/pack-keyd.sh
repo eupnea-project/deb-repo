@@ -23,7 +23,7 @@ cd ..
 cp configs/keyd.quirks keyd/usr/share/libinput
 
 # add keyboard configs
-cp -r eupnea-utils/configs/* keyd/usr/share/eupnea/
+cp -r eupnea-utils/configs/keyboard-layouts keyd/usr/share/eupnea/
 
 # Add postinst script to package
 install -Dm 755 postinst-scripts/keyd-postinst keyd/DEBIAN/postinst
