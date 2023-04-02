@@ -6,6 +6,7 @@ set -e
 mkdir -p eupnea-utils/DEBIAN
 mkdir -p eupnea-utils/usr/bin
 mkdir -p eupnea-utils/usr/lib/eupnea
+mkdir -p eupnea-utils/usr/lib/systemd/system-sleep/
 mkdir -p eupnea-utils/etc/eupnea
 mkdir -p eupnea-utils/etc/systemd/system/
 
@@ -19,6 +20,9 @@ install -Dm 755 audio-scripts/setup-audio eupnea-utils/usr/bin
 
 # Copy systemd services into package
 cp remote-eupnea-utils/systemd-services/* eupnea-utils/etc/systemd/system
+
+# Add sleep trigger
+install -Dm 755 remote-eupnea-utils/configs/fix-touchscreen-on-wakeup.sh eupnea-utils/usr/lib/systemd/system-sleep/fix-touchscreen-on-wakeup.sh
 
 # Copy libs into package
 cp remote-eupnea-utils/system-scripts/* eupnea-utils/usr/lib/eupnea
