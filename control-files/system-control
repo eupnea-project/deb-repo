@@ -2,7 +2,7 @@ Package: eupnea-system
 Version: 1.0.73
 Architecture: amd64
 Maintainer: The Eupnea Project
-Depends: eupnea-utils (>= 1.1.89)
+Depends: eupnea-utils (>= 1.1.112)
 Section: admin
 Priority: optional
 Description: Eupnea system update package
