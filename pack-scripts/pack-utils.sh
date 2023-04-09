@@ -25,11 +25,10 @@ cp remote-eupnea-utils/systemd-services/* eupnea-utils/etc/systemd/system
 install -Dm 755 remote-eupnea-utils/configs/fix-touchscreen-on-wakeup.sh eupnea-utils/usr/lib/systemd/system-sleep/fix-touchscreen-on-wakeup.sh
 
 # Copy libs into package
-cp remote-eupnea-utils/system-scripts/deep_sleep_block.conf eupnea-utils/usr/lib/eupnea/deep_sleep_block.conf # copy deep sleep block config
+cp remote-eupnea-utils/system-scripts/* eupnea-utils/usr/lib/eupnea
 cp remote-eupnea-utils/functions.py eupnea-utils/usr/lib/eupnea
 
 # Copy configs into package
-cp -r remote-eupnea-utils/configs/* eupnea-utils/usr/share/eupnea
 cp -r audio-scripts/configs/* eupnea-utils/usr/share/eupnea
 
 # copy debian control files into package
