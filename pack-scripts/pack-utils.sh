@@ -29,6 +29,7 @@ cp remote-eupnea-utils/system-scripts/* eupnea-utils/usr/lib/eupnea
 cp remote-eupnea-utils/functions.py eupnea-utils/usr/lib/eupnea
 
 # Copy configs into package
+cp -r remote-eupnea-utils/configs/deep_sleep_block.conf eupnea-utils/usr/share/eupnea/deep_sleep_block.conf
 cp -r audio-scripts/configs/* eupnea-utils/usr/share/eupnea
 
 # copy debian control files into package
