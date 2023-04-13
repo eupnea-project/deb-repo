@@ -1,0 +1,111 @@
+name: Deploying logo package
+on:
+  schedule:
+    - cron: "20 1 * * *" # run at the start of every day after keyd package
+  workflow_dispatch:
+concurrency:
+  group: ${{ github.ref }}
+  cancel-in-progress: true
+
+
+jobs:
+  check-sha:
+    runs-on: ubuntu-latest
+    outputs:
+      match_results: ${{ steps.check-shas.outputs.match_results }}
+      remote_sha: ${{ steps.check-shas.outputs.remote_sha }}
+    steps:
+      - name: Checking out repository code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 1
+
+      - name: Download remote commit shas
+        id: check-shas
+        run: |
+          # Download remote sha
+          latest_sha=$(curl -s https://api.github.com/repos/eupnea-linux/logo/commits/main | jq -r '.sha')
+          # fail if curl result is empty
+          if [[ -z "$latest_sha" ]]; then
+              echo "latest_sha is empty"
+              exit 1
+          fi
+          
+          # Check remote sha against cached one
+          match_results=$([[ "$(cat cache/logo-cache.txt)" == "$latest_sha" ]] && echo "true" || echo "false")
+          echo "match_results=$match_results" >> $GITHUB_OUTPUT
+          
+          # Add sha to output
+          echo "remote_sha=$latest_sha" >> $GITHUB_OUTPUT
+
+  deploy-repo:
+    runs-on: ubuntu-latest
+    needs: check-sha # needs for the vars from the previous job
+    # Only run script when remote sha has changed, aka the results DON'T match
+    if: needs.check-sha.outputs.match_results == 'false'
+    steps:
+      - name: Checking out repository code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 1
+
+      - name: Update local commit sha file
+        run: |
+          echo "${{ needs.check-sha.outputs.remote_sha }}" > cache/logo-cache.txt
+
+      - name: Bump version in logo control file
+        run: |
+          CURRENT_VERSION=$(sed -n '2p' control-files/depthboot-logo-control | sed 's/.*://' | xargs) # get current version from control file
+          NEXTVERSION=$(echo ${CURRENT_VERSION} | awk -F. -v OFS=. '{$NF += 1 ; print}') # bump version
+          sed -i "2s/.*/Version: ${NEXTVERSION}/" control-files/depthboot-logo-control # update version in control file
+
+      - name: Creating logo deb package
+        run: bash pack-scripts/pack-depthboot-logo.sh
+
+      - name: Updating files in main branch
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          # Disable setting repo owner as commit author
+          commit_user_name: github-actions[bot]
+          commit_user_email: 41898282+github-actions[bot]@users.noreply.github.com
+          commit_author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
+
+          # Optional. Commit message for the created commit.
+          # Defaults to "Apply automatic changes"
+          commit_message: Update files in main branch
+          # Only include needed files
+          file_pattern: 'control-files/depthboot-logo-control cache/logo-cache.txt'
+
+      - name: Adding jammy logo package
+        uses: smeinecke/apt-repo-action@v2.1.1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          repo_supported_arch: |
+            amd64
+            i386 #  32 bit systems arent really supported but apt throws a warning otherwise
+          repo_supported_version: |
+            kinetic
+            jammy
+          file: depthboot-logo*.deb
+          file_target_version: jammy
+          public_key: ${{ secrets.PUBLIC }}
+          private_key: ${{ secrets.PRIVATE }}
+          key_passphrase: ""
+          repo_folder: "debian_ubuntu"
+
+      - name: Adding kinetic logo package
+        uses: smeinecke/apt-repo-action@v2.1.1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          repo_supported_arch: |
+            amd64
+            i386 #  32 bit systems arent really supported but apt throws a warning otherwise
+          repo_supported_version: |
+            kinetic
+            jammy
+          file: depthboot-logo*.deb
+          file_target_version: kinetic
+          public_key: ${{ secrets.PUBLIC }}
+          private_key: ${{ secrets.PRIVATE }}
+          key_passphrase: ""
+          repo_folder: "debian_ubuntu"

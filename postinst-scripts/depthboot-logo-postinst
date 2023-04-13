@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# Enable depthboot boot splash systemd service
+systemctl enable eupnea-boot-splash.service
