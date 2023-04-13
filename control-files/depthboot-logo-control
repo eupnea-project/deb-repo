@@ -1,0 +1,8 @@
+Package: depthboot-logo
+Version: 1.0.-1
+Architecture: amd64
+Maintainer: The Eupnea Project
+Section: misc
+Priority: extra
+Description:  Alpine busybox-static + depthboot logo
+ Prints a depthboot logo on boot using fbsplash from Alpine Linux's busybox-static package
