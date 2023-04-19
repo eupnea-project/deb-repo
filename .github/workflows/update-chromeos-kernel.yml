@@ -29,7 +29,7 @@ jobs:
           # Download remote sha
           latest_tag=$(curl -s https://api.github.com/repos/eupnea-linux/chromeos-kernel/releases/latest | jq -r '.tag_name')
           # fail if curl result is empty
-          if [[ -z "$latest_tag" ]]; then
+          if [[ "$latest_tag" = "null" ]]; then
               echo "latest_tag is empty"
               exit 1
           fi
