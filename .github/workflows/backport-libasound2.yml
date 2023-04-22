@@ -24,8 +24,8 @@ jobs:
       - name: Check if remote debs were updated
         id: check-names
         run: |
-          # Replace jammy repos with kinetic repos
-          sudo sed -i 's/jammy/kinetic/g' /etc/apt/sources.list 
+          # Replace jammy repos with lunar repos
+          sudo sed -i 's/jammy/lunar/g' /etc/apt/sources.list 
           sudo apt-get update -y
           
           # Download libasound2 and libasound2-data
@@ -95,8 +95,8 @@ jobs:
           repo_supported_arch: |
             amd64
             i386 #  32 bit systems arent really supported but apt throws a warning otherwise
-          repo_supported_version: | # kinetic is not supported but apt-repo-action throws an error otherwise
-            kinetic
+          repo_supported_version: | # lunar is not supported but apt-repo-action throws an error otherwise
+            lunar
             jammy
           file: libasound2-eupnea*.deb
           file_target_version: jammy

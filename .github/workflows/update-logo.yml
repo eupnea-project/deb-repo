@@ -84,7 +84,7 @@ jobs:
             amd64
             i386 #  32 bit systems arent really supported but apt throws a warning otherwise
           repo_supported_version: |
-            kinetic
+            lunar
             jammy
           file: depthboot-logo*.deb
           file_target_version: jammy
@@ -93,7 +93,7 @@ jobs:
           key_passphrase: ""
           repo_folder: "debian_ubuntu"
 
-      - name: Adding kinetic logo package
+      - name: Adding lunar logo package
         uses: smeinecke/apt-repo-action@v2.1.1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -101,10 +101,10 @@ jobs:
             amd64
             i386 #  32 bit systems arent really supported but apt throws a warning otherwise
           repo_supported_version: |
-            kinetic
+            lunar
             jammy
           file: depthboot-logo*.deb
-          file_target_version: kinetic
+          file_target_version: lunar
           public_key: ${{ secrets.PUBLIC }}
           private_key: ${{ secrets.PRIVATE }}
           key_passphrase: ""
