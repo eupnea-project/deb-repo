@@ -99,27 +99,10 @@ jobs:
             amd64
             i386 #  32 bit systems arent really supported but apt throws a warning otherwise
           repo_supported_version: |
-            lunar
             jammy
-          file: eupnea-utils*.deb
-          file_target_version: jammy
-          public_key: ${{ secrets.PUBLIC }}
-          private_key: ${{ secrets.PRIVATE }}
-          key_passphrase: ""
-          repo_folder: "debian_ubuntu"
-
-      - name: Adding lunar util packages
-        uses: smeinecke/apt-repo-action@v2.1.1
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          repo_supported_arch: |
-            amd64
-            i386 #  32 bit systems arent really supported but apt throws a warning otherwise
-          repo_supported_version: |
             lunar
-            jammy
           file: eupnea-utils*.deb
-          file_target_version: lunar
+          file_target_version: jammy lunar
           public_key: ${{ secrets.PUBLIC }}
           private_key: ${{ secrets.PRIVATE }}
           key_passphrase: ""

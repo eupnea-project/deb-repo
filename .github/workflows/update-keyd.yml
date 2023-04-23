@@ -79,7 +79,7 @@ jobs:
           # Only include needed files
           file_pattern: 'control-files/keyd-control cache/keyd-cache.txt'
 
-      - name: Adding jammy keyd packages
+      - name: Adding keyd packages
         uses: smeinecke/apt-repo-action@v2.1.1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -87,27 +87,10 @@ jobs:
             amd64
             i386 #  32 bit systems arent really supported but apt throws a warning otherwise
           repo_supported_version: |
-            lunar
             jammy
-          file: keyd*.deb
-          file_target_version: jammy
-          public_key: ${{ secrets.PUBLIC }}
-          private_key: ${{ secrets.PRIVATE }}
-          key_passphrase: ""
-          repo_folder: "debian_ubuntu"
-
-      - name: Adding lunar keyd packages
-        uses: smeinecke/apt-repo-action@v2.1.1
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          repo_supported_arch: |
-            amd64
-            i386 #  32 bit systems arent really supported but apt throws a warning otherwise
-          repo_supported_version: |
             lunar
-            jammy
           file: keyd*.deb
-          file_target_version: lunar
+          file_target_version: jammy lunar
           public_key: ${{ secrets.PUBLIC }}
           private_key: ${{ secrets.PRIVATE }}
           key_passphrase: ""
