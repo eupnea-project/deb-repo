@@ -84,9 +84,7 @@ jobs:
             amd64
             i386 #  32 bit systems arent really supported but apt throws a warning otherwise
           repo_supported_version: |
-            jammy
-            kinetic
-            lunar
+            jammy kinetic lunar
           file: eupnea-system*.deb
           file_target_version: jammy kinetic lunar
           public_key: ${{ secrets.PUBLIC }}
