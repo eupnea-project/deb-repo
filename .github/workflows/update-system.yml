@@ -88,10 +88,7 @@ jobs:
             kinetic
             lunar
           file: eupnea-system*.deb
-          file_target_version: |
-            jammy
-            kinetic
-            lunar
+          file_target_version: jammy kinetic lunar
           public_key: ${{ secrets.PUBLIC }}
           private_key: ${{ secrets.PRIVATE }}
           key_passphrase: ""
