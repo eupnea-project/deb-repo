@@ -91,7 +91,7 @@ jobs:
           # Only include needed files
           file_pattern: 'control-files/mainline-kernel-control control-files/mainline-kernel-modules-control control-files/mainline-kernel-headers-control cache/mainline_kernel_tag-cache.txt'
 
-      - name: Adding mainline kernel packages
+      - name: Adding jammy mainline kernel packages
         uses: smeinecke/apt-repo-action@v2.1.1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -99,10 +99,27 @@ jobs:
             amd64
             i386 #  32 bit systems arent really supported but apt throws a warning otherwise
           repo_supported_version: |
-            jammy
             lunar
+            jammy
           file: eupnea-mainline-kernel*.deb
-          file_target_version: jammy lunar
+          file_target_version: jammy
+          public_key: ${{ secrets.PUBLIC }}
+          private_key: ${{ secrets.PRIVATE }}
+          key_passphrase: ""
+          repo_folder: "debian_ubuntu"
+
+      - name: Adding lunar mainline kernel packages
+        uses: smeinecke/apt-repo-action@v2.1.1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          repo_supported_arch: |
+            amd64
+            i386 #  32 bit systems arent really supported but apt throws a warning otherwise
+          repo_supported_version: |
+            lunar
+            jammy
+          file: eupnea-mainline-kernel*.deb
+          file_target_version: lunar
           public_key: ${{ secrets.PUBLIC }}
           private_key: ${{ secrets.PRIVATE }}
           key_passphrase: ""
