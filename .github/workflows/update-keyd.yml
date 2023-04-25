@@ -80,7 +80,7 @@ jobs:
           file_pattern: 'control-files/keyd-control cache/keyd-cache.txt'
 
       - name: Adding jammy keyd packages
-        uses: smeinecke/apt-repo-action@v2.1.1
+        uses: smeinecke/apt-repo-action@v2.1.3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           repo_supported_arch: |
@@ -97,7 +97,7 @@ jobs:
           repo_folder: "debian_ubuntu"
 
       - name: Adding lunar keyd packages
-        uses: smeinecke/apt-repo-action@v2.1.1
+        uses: smeinecke/apt-repo-action@v2.1.3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           repo_supported_arch: |
