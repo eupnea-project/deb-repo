@@ -13,6 +13,8 @@ Repo for Debian/Ubuntu/Pop!_OS deb packages. Provides the following packages:
   See [eupnea-chromeos-kernel](https://eupnea-linux.github.io/docs/project/kernels#chromeos-eupnea-kernel)
 * `libasound2-backport`: Repackaged Ubuntu 22.10 libasound2 and libasound2-data packages for Ubuntu 22.04.
 * `keyd`: A key remapping daemon for linux, made by rvaiya. See [keyd](https://github.com/rvaiya/keyd)
+* `depthboot-logo`: [Alpine busybox-static](https://dl-cdn.alpinelinux.org/alpine/v3.17/main/x86_64/busybox-static-1.35.0-r29.apk) +
+  Depthboot logo boot splash systemd service.
 
 # Add to system
 
