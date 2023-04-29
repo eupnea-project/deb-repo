@@ -89,7 +89,7 @@ jobs:
           file_pattern: 'control-files/libasound2-control cache/libasound2_names-cache.txt'
 
       - name: Adding libasound2 packages
-        uses: smeinecke/apt-repo-action@v2.1.3
+        uses: smeinecke/apt-repo-action@v2.1.4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           repo_supported_arch: |
