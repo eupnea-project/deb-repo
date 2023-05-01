@@ -1,5 +1,5 @@
 Package: eupnea-chromeos-kernel-headers
-Version: 1.1.33
+Version: 1.1.34
 Architecture: amd64
 Maintainer: The Eupnea Project
 Depends: eupnea-chromeos-kernel-modules
