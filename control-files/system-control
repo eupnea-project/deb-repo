@@ -1,5 +1,5 @@
 Package: eupnea-system
-Version: 1.0.84
+Version: 1.0.85
 Architecture: amd64
 Maintainer: The Eupnea Project
 Depends: eupnea-utils (>= 1.1.112)
