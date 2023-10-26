@@ -1,4 +1,4 @@
-# apt-repo
+# deb-repo
 
 Repo for Debian/Ubuntu/Pop!_OS deb packages. Provides the following packages:
 
