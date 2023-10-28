@@ -33,10 +33,10 @@ jobs:
           
           # Check remote sha against cached one
           match_results=$([[ "$(cat cache/system_sha-cache.txt)" == "$latest_sha" ]] && echo "true" || echo "false")
-          echo "match_results=$match_results" >> $GITHUB_OUTPUT
+          echo "match_results=$match_results" >> $OUTPUT
           
           # Add sha to output
-          echo "remote_sha=$latest_sha" >> $GITHUB_OUTPUT
+          echo "remote_sha=$latest_sha" >> $OUTPUT
 
   deploy-repo:
     runs-on: ubuntu-latest
@@ -79,7 +79,7 @@ jobs:
       - name: Deploying jammy system packages
         uses: smeinecke/apt-repo-action@v2.1.4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.TOKEN }}
           repo_supported_arch: |
             amd64
             i386 #  32 bit systems arent really supported but apt throws a warning otherwise
@@ -97,7 +97,7 @@ jobs:
       - name: Deploying kinetic system packages
         uses: smeinecke/apt-repo-action@v2.1.4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.TOKEN }}
           repo_supported_arch: |
             amd64
             i386 #  32 bit systems arent really supported but apt throws a warning otherwise
@@ -115,7 +115,7 @@ jobs:
       - name: Deploying lunar system packages
         uses: smeinecke/apt-repo-action@v2.1.4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.TOKEN }}
           repo_supported_arch: |
             amd64
             i386 #  32 bit systems arent really supported but apt throws a warning otherwise
