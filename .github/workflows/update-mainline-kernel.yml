@@ -36,10 +36,10 @@ jobs:
           
           # Check remote tag against cached one
           match_results=$([[ "$(cat cache/mainline_kernel_tag-cache.txt)" == "$latest_tag" ]] && echo "true" || echo "false")
-          echo "match_results=$match_results" >> $GITHUB_OUTPUT
+          echo "match_results=$match_results" >> $OUTPUT
           
           # Add sha to output
-          echo "remote_tag=$latest_tag" >> $GITHUB_OUTPUT
+          echo "remote_tag=$latest_tag" >> $OUTPUT
 
   deploy-repo:
     runs-on: ubuntu-latest
@@ -94,7 +94,7 @@ jobs:
       - name: Adding jammy mainline kernel packages
         uses: smeinecke/apt-repo-action@v2.1.4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.TOKEN }}
           repo_supported_arch: |
             amd64
             i386 #  32 bit systems arent really supported but apt throws a warning otherwise
@@ -111,7 +111,7 @@ jobs:
       - name: Adding lunar mainline kernel packages
         uses: smeinecke/apt-repo-action@v2.1.4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.TOKEN }}
           repo_supported_arch: |
             amd64
             i386 #  32 bit systems arent really supported but apt throws a warning otherwise
