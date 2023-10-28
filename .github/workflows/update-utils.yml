@@ -25,13 +25,13 @@ jobs:
         id: check-shas
         run: |
           # Download remote shas
-          postinstall_latest_sha=$(curl -s https://api.github.com/repos/eupnea-linux/eupnea-utils/commits/main | jq -r '.sha')
+          postinstall_latest_sha=$(curl -s https://api.github.com/repos/eupnea-project/eupnea-utils/commits/main | jq -r '.sha')
           # fail if curl result is empty
           if [[ "$postinstall_latest_sha" = "null" ]]; then
               echo "latest_tag is empty"
               exit 1
           fi
-          audio_latest_sha=$(curl -s https://api.github.com/repos/eupnea-linux/audio-scripts/commits/main | jq -r '.sha')
+          audio_latest_sha=$(curl -s https://api.github.com/repos/eupnea-project/audio-scripts/commits/main | jq -r '.sha')
           # fail if curl result is empty
           if [[ "$audio_latest_sha" = "null" ]]; then
               echo "latest_tag is empty"
