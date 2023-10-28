@@ -24,7 +24,7 @@ jobs:
         id: check-shas
         run: |
           # Download remote sha
-          latest_sha=$(curl -s https://api.github.com/repos/eupnea-linux/logo/commits/main | jq -r '.sha')
+          latest_sha=$(curl -s https://api.github.com/repos/eupnea-project/logo/commits/main | jq -r '.sha')
           # fail if curl result is empty
           if [[ "$latest_sha" = "null" ]]; then
               echo "latest_sha is empty"
