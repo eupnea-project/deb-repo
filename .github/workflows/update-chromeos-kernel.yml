@@ -36,10 +36,10 @@ jobs:
           
           # Check remote tag against cached one
           match_results=$([[ "$(cat cache/chromeos_kernel_tag-cache.txt)" == "$latest_tag" ]] && echo "true" || echo "false")
-          echo "match_results=$match_results" >> $OUTPUT
+          echo "match_results=$match_results" >> $GITHUB_OUTPUT
           
           # Add sha to output
-          echo "remote_tag=$latest_tag" >> $OUTPUT
+          echo "remote_tag=$latest_tag" >> $GITHUB_OUTPUT
 
   deploy-repo:
     runs-on: ubuntu-latest

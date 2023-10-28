@@ -33,10 +33,10 @@ jobs:
           
           # Check remote sha against cached one
           match_results=$([[ "$(cat cache/system_sha-cache.txt)" == "$latest_sha" ]] && echo "true" || echo "false")
-          echo "match_results=$match_results" >> $OUTPUT
+          echo "match_results=$match_results" >> $GITHUB_OUTPUT
           
           # Add sha to output
-          echo "remote_sha=$latest_sha" >> $OUTPUT
+          echo "remote_sha=$latest_sha" >> $GITHUB_OUTPUT
 
   deploy-repo:
     runs-on: ubuntu-latest
