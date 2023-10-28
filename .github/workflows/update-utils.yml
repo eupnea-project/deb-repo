@@ -44,14 +44,14 @@ jobs:
           
           # Compare results and determine if there was an update in any of the repos
           if [[ "$postinstall_match_results" == "true" && "$audio_match_results" == "true" ]]; then
-            echo "match_results=true" >> $GITHUB_OUTPUT
+            echo "match_results=true" >> $OUTPUT
           else
-            echo "match_results=false" >> $GITHUB_OUTPUT
+            echo "match_results=false" >> $OUTPUT
           fi
           
           # Add shas to output
-          echo "postinstall_remote_sha=$postinstall_latest_sha" >> $GITHUB_OUTPUT
-          echo "audio_remote_sha=$audio_latest_sha" >> $GITHUB_OUTPUT
+          echo "postinstall_remote_sha=$postinstall_latest_sha" >> $OUTPUT
+          echo "audio_remote_sha=$audio_latest_sha" >> $OUTPUT
 
   deploy-repo:
     runs-on: ubuntu-latest
@@ -94,7 +94,7 @@ jobs:
       - name: Adding jammy util packages
         uses: smeinecke/apt-repo-action@v2.1.4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.TOKEN }}
           repo_supported_arch: |
             amd64
             i386 #  32 bit systems arent really supported but apt throws a warning otherwise
@@ -111,7 +111,7 @@ jobs:
       - name: Adding lunar util packages
         uses: smeinecke/apt-repo-action@v2.1.4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.TOKEN }}
           repo_supported_arch: |
             amd64
             i386 #  32 bit systems arent really supported but apt throws a warning otherwise
