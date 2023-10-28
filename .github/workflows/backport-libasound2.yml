@@ -41,14 +41,14 @@ jobs:
           
           # Compare results and determine if any of the packages was updated
           if [[ "$libasound2_normal_match_results" == "true" && "$libasound2_data_match_results" == "true" ]]; then
-            echo "match_results=true" >> $GITHUB_OUTPUT
+            echo "match_results=true" >> $OUTPUT
           else
-            echo "match_results=false" >> $GITHUB_OUTPUT
+            echo "match_results=false" >> $OUTPUT
           fi
           
           # Add names to output
-          echo "libasound2_normal_match_results=$libasound2_normal_name" >> $GITHUB_OUTPUT
-          echo "libasound2_data_match_results=$libasound2_data_name" >> $GITHUB_OUTPUT
+          echo "libasound2_normal_match_results=$libasound2_normal_name" >> $OUTPUT
+          echo "libasound2_data_match_results=$libasound2_data_name" >> $OUTPUT
 
   deploy-repo:
     runs-on: ubuntu-latest
