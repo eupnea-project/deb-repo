@@ -1,2 +1,2 @@
-libasound2_1.2.8-1build1_amd64.deb
-libasound2-data_1.2.8-1build1_all.deb
+libasound2_1.2.9-2_amd64.deb
+libasound2-data_1.2.9-2_all.deb
