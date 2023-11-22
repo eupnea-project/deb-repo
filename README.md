@@ -1,3 +1,6 @@
+# DO NOT USE THIS REPOSITORY
+### This repository is not yet ready to be used. Please do NOT add it to your package manager!
+
 # apt-repo
 
 Repo for Debian/Ubuntu/Pop!_OS deb packages. Provides the following packages:
