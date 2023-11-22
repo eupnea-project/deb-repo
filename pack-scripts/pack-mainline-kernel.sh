@@ -12,9 +12,9 @@ mkdir -p eupnea-mainline-kernel-modules/lib/modules
 mkdir -p eupnea-mainline-kernel-headers/usr/src
 
 # Download kernel files
-curl --silent -LO https://github.com/eupnea-project/mainline-kernel/releases/latest/download/bzImage
-curl --silent -LO https://github.com/eupnea-project/mainline-kernel/releases/latest/download/headers.tar.xz
-curl --silent -LO https://github.com/eupnea-project/mainline-kernel/releases/latest/download/modules.tar.xz
+curl --silent -LO https://github.com/eupnea-project/linux-kernels/releases/download/latest-mainline/bzImage
+curl --silent -LO https://github.com/eupnea-project/linux-kernels/releases/download/latest-mainline/modules.tar.xz
+curl --silent -LO https://github.com/eupnea-project/linux-kernels/releases/download/latest-mainline/headers.tar.xz
 
 # read kernel version
 KERNEL_VERSION=$(file -bL ./bzImage | grep -o 'version [^ ]*' | cut -d ' ' -f 2) # get kernel version from bzImage
