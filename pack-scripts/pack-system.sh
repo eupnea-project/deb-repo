@@ -8,7 +8,7 @@ mkdir -p eupnea-system/DEBIAN
 mkdir -p eupnea-system/usr/lib/eupnea-system-update/configs
 
 # Clone system-update repo
-git clone --depth=1 https://github.com/eupnea-linux/system-update.git
+git clone --depth=1 https://github.com/eupnea-project/system-update.git
 
 # Copy the update scripts and functions.py
 install -Dm 755 system-update/system-update.py eupnea-system/usr/lib/eupnea-system-update

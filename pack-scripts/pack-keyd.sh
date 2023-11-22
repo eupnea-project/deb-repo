@@ -4,7 +4,7 @@ set -e
 
 # clone repos
 git clone --depth=1 https://github.com/rvaiya/keyd.git keyd-remote
-git clone --depth=1 https://github.com/eupnea-linux/eupnea-utils.git
+git clone --depth=1 https://github.com/eupnea-project/eupnea-utils.git
 
 # make dir
 mkdir -p keyd/DEBIAN

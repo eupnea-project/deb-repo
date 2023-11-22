@@ -11,7 +11,7 @@ mkdir -p eupnea-utils/usr/share/eupnea
 mkdir -p eupnea-utils/etc/systemd/system/
 
 # Clone utils repo
-git clone --depth=1 https://github.com/eupnea-linux/eupnea-utils.git remote-eupnea-utils
+git clone --depth=1 https://github.com/eupnea-project/eupnea-utils.git remote-eupnea-utils
 
 # Copy scripts into package
 install -Dm 755 remote-eupnea-utils/user-scripts/* eupnea-utils/usr/bin
