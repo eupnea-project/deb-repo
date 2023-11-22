@@ -10,13 +10,11 @@ mkdir -p eupnea-utils/usr/lib/systemd/system-sleep/
 mkdir -p eupnea-utils/usr/share/eupnea
 mkdir -p eupnea-utils/etc/systemd/system/
 
-# Clone postinstall + audio repo
+# Clone utils repo
 git clone --depth=1 https://github.com/eupnea-linux/eupnea-utils.git remote-eupnea-utils
-git clone --depth=1 https://github.com/eupnea-linux/audio-scripts.git
 
 # Copy scripts into package
 install -Dm 755 remote-eupnea-utils/user-scripts/* eupnea-utils/usr/bin
-install -Dm 755 audio-scripts/setup-audio eupnea-utils/usr/bin
 
 # Copy systemd services into package
 cp remote-eupnea-utils/systemd-services/* eupnea-utils/etc/systemd/system
@@ -30,7 +28,6 @@ cp remote-eupnea-utils/functions.py eupnea-utils/usr/lib/eupnea
 
 # Copy configs into package
 cp -r remote-eupnea-utils/configs/deep_sleep_block.conf eupnea-utils/usr/share/eupnea/deep_sleep_block.conf
-cp -r audio-scripts/configs/* eupnea-utils/usr/share/eupnea
 
 # copy debian control files into package
 cp control-files/utils-control eupnea-utils/DEBIAN/control
