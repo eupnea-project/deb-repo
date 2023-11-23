@@ -20,11 +20,6 @@ jobs:
         with:
           fetch-depth: 1
 
-      - name: Echo public key
-        run: | 
-          echo "${{ secrets.PUBLIC }}"
-          exit 55
-
       - name: Download remote commit shas
         id: check-shas
         run: |
