@@ -12,3 +12,50 @@ MD5sum: 08978cd13f8ab56ae8c60d166d47204c
 Description:  Alpine busybox-static + depthboot logo boot splash
  Prints a depthboot logo on boot using fbsplash from Alpine Linux's busybox-static package
 
+Package: eupnea-chromeos-kernel
+Version: 1.1.41
+Architecture: amd64
+Maintainer: The Eupnea Project
+Depends: eupnea-chromeos-kernel-modules, eupnea-chromeos-kernel-headers, eupnea-utils (>= 1.1.89)
+Conflicts: eupnea-mainline-kernel
+Priority: optional
+Section: kernel
+Filename: pool/main/e/eupnea-chromeos-kernel/eupnea-chromeos-kernel_1.1.41_amd64.deb
+Size: 36728536
+SHA256: 6b6978e8063c019318ae4a8d4435befe2b2a08ff83ee561c37dc93326de67898
+SHA1: c3037bd4b8615569a12def149f7fc693e77fda73
+MD5sum: 2260c1a5d18bb93875112ae24485aa92
+Description: Eupnea ChromeOS kernel
+ WARNING: This package will overwrite the first partition of your current drive!
+ Only use it on Chromebooks running Eupnea systems!
+ This package contains the Eupnea ChromeOS kernel. It is only compatible with x86_64 Chromebooks.
+
+Package: eupnea-chromeos-kernel-headers
+Version: 1.1.41
+Architecture: amd64
+Maintainer: The Eupnea Project
+Depends: eupnea-chromeos-kernel-modules
+Priority: optional
+Section: kernel
+Filename: pool/main/e/eupnea-chromeos-kernel-headers/eupnea-chromeos-kernel-headers_1.1.41_amd64.deb
+Size: 9786448
+SHA256: 487216045088df82767d569d800e8e988a8153d92ff21613b031994a094ff2d1
+SHA1: 960788d7dedc727e6dedece17e7920569227da07
+MD5sum: 6966ab2c3facb7ac2318b086d2ee4fd0
+Description: Eupnea ChromeOS kernel headers
+ This package contains the Eupnea ChromeOS kernel headers. It is only compatible with Eupnea ChromeOS kernels.
+
+Package: eupnea-chromeos-kernel-modules
+Version: 1.1.41
+Architecture: amd64
+Maintainer: The Eupnea Project
+Priority: optional
+Section: kernel
+Filename: pool/main/e/eupnea-chromeos-kernel-modules/eupnea-chromeos-kernel-modules_1.1.41_amd64.deb
+Size: 56773448
+SHA256: ca32a6a04029597f66636e9f3ccef8a7a440a7e3711c7273f008947b5fb0bc15
+SHA1: 7d0317d145b6924a87b25bce043ceace266d68ec
+MD5sum: ebe813e254afb36627929467b79219ac
+Description: Eupnea ChromeOS kernel modules
+ This package contains the Eupnea ChromeOS kernel modules. It is only compatible with Eupnea ChromeOS kernels.
+
