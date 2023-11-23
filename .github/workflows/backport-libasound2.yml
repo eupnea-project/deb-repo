@@ -91,7 +91,7 @@ jobs:
       - name: Adding libasound2 packages
         uses: smeinecke/apt-repo-action@v2.1.4
         with:
-          github_token: ${{ secrets.TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           repo_supported_arch: |
             amd64
             i386 #  32 bit systems arent really supported but apt throws a warning otherwise
