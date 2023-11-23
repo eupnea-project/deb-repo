@@ -59,3 +59,20 @@ MD5sum: ebe813e254afb36627929467b79219ac
 Description: Eupnea ChromeOS kernel modules
  This package contains the Eupnea ChromeOS kernel modules. It is only compatible with Eupnea ChromeOS kernels.
 
+Package: keyd
+Version: 10.0.48
+Architecture: amd64
+Maintainer: The Eupnea Project
+Original-Maintainer: rvaiya@github.com
+Priority: extra
+Section: utils
+Filename: pool/main/k/keyd/keyd_10.0.48_amd64.deb
+Size: 116024
+SHA256: ce45d21566c8ba60aeb17698320a4afcb21f6cd11fc976c4577d39f897c11536
+SHA1: 2923f8b88b8db14f3cebf1c8967f0025d4155abb
+MD5sum: db319e069bc36a7fa2eb2e7535a3fadb
+Description:  A key remapping daemon for linux.
+ Made by rvaiya and repackaged by the Eupnea Project.
+ Read more about keyd here: https://github.com/rvaiya/keyd
+ Pulls from the master branch instead of using latest release.
+
