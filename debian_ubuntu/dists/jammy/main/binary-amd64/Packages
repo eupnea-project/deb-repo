@@ -59,6 +59,53 @@ MD5sum: ebe813e254afb36627929467b79219ac
 Description: Eupnea ChromeOS kernel modules
  This package contains the Eupnea ChromeOS kernel modules. It is only compatible with Eupnea ChromeOS kernels.
 
+Package: eupnea-mainline-kernel
+Version: 1.1.38
+Architecture: amd64
+Maintainer: The Eupnea Project
+Depends: eupnea-mainline-kernel-modules, eupnea-mainline-kernel-headers, eupnea-utils (>= 1.1.89)
+Conflicts: eupnea-chromeos-kernel
+Priority: optional
+Section: kernel
+Filename: pool/main/e/eupnea-mainline-kernel/eupnea-mainline-kernel_1.1.38_amd64.deb
+Size: 43726884
+SHA256: dbb53a78f5ad3e2e38edf1dafe337a0e45c3449484a7b615fff208c32da4d68d
+SHA1: 27471378221369b424aeab8c147983adb22391ca
+MD5sum: c05bf7036e328ad05f7f35e451399d60
+Description: Eupnea Mainline kernel
+ WARNING: This package will overwrite the first partition of your current drive!
+ Only use it on Chromebooks running Eupnea systems!
+ This package contains the Eupnea Mainline kernel. It is only compatible with x86_64 Chromebooks.
+
+Package: eupnea-mainline-kernel-headers
+Version: 1.1.38
+Architecture: amd64
+Maintainer: The Eupnea Project
+Depends: eupnea-mainline-kernel-modules
+Priority: optional
+Section: kernel
+Filename: pool/main/e/eupnea-mainline-kernel-headers/eupnea-mainline-kernel-headers_1.1.38_amd64.deb
+Size: 11036944
+SHA256: 31b7327c6d83aaf88a806e26ad0f75858b1f1a1926fd39d8e2ce348d52846777
+SHA1: 84e563baef107041ec8b5209a57d723350363d8c
+MD5sum: 2b199e74886dc77772cd05180a70de05
+Description: Eupnea Mainline kernel headers
+ This package contains the Eupnea Mainline kernel headers. It is only compatible with Eupnea mainline kernels.
+
+Package: eupnea-mainline-kernel-modules
+Version: 1.1.38
+Architecture: amd64
+Maintainer: The Eupnea Project
+Priority: optional
+Section: kernel
+Filename: pool/main/e/eupnea-mainline-kernel-modules/eupnea-mainline-kernel-modules_1.1.38_amd64.deb
+Size: 84487952
+SHA256: 1aa6b3020dc5be0644be27d4941c381af043a2292d707c3042302cb9fdddc230
+SHA1: 99a3dc91b52c9d4e76906311b8a826eda15d7f35
+MD5sum: eff8aee15f3cc781602507ad366b1a45
+Description: Eupnea Mainline kernel modules
+ This package contains the Eupnea Mainline kernel modules. It is only compatible with Eupnea Mainline kernels.
+
 Package: keyd
 Version: 10.0.48
 Architecture: amd64
