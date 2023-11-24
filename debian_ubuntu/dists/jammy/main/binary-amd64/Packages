@@ -106,6 +106,22 @@ MD5sum: eff8aee15f3cc781602507ad366b1a45
 Description: Eupnea Mainline kernel modules
  This package contains the Eupnea Mainline kernel modules. It is only compatible with Eupnea Mainline kernels.
 
+Package: eupnea-system
+Version: 1.0.87
+Architecture: amd64
+Maintainer: The Eupnea Project
+Depends: eupnea-utils (>= 1.1.112)
+Priority: optional
+Section: admin
+Filename: pool/main/e/eupnea-system/eupnea-system_1.0.87_amd64.deb
+Size: 10212
+SHA256: 8ea0828a326d259f137eab6025ced9c5c4697303bd958c22c8301e737d59d665
+SHA1: e7eab6545e464d0c701564a268f7205a3fb859ad
+MD5sum: bc3a0ae16039aee6f61c74db50a89dd1
+Description: Eupnea system update package
+ This package upgrades Depthboot/EupneaOS systems to the latest version.
+ Not recommended for use on non-Chromebook devices.
+
 Package: eupnea-utils
 Version: 1.1.146
 Architecture: amd64
