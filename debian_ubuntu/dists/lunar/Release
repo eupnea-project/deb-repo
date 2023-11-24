@@ -1,25 +1,25 @@
 Codename: lunar
-Date: Fri, 24 Nov 2023 00:58:14 UTC
+Date: Fri, 24 Nov 2023 00:58:21 UTC
 Architectures: amd64 i386
 Components: main
 Description: eupnea-project/deb-repo
 MD5Sum:
- 33ea47bb2b9f6724ff56b1fd91fdd21e 5089 main/binary-amd64/Packages
- d9a1bb7620cfb7b83883198838f87bd0 1647 main/binary-amd64/Packages.gz
+ f34c7b86bf9873aa2a58db470cb9aa86 5699 main/binary-amd64/Packages
+ c77bdac337587ff6e0380407964ce9de 1883 main/binary-amd64/Packages.gz
  efad6aa3cf24972036776d789bd70c2f 73 main/binary-amd64/Release
  d41d8cd98f00b204e9800998ecf8427e 0 main/binary-i386/Packages
  7029066c27ac6f5ef18d660d5741979a 20 main/binary-i386/Packages.gz
  5b01f05a0d5e2f926bfcf14c1d33a219 72 main/binary-i386/Release
 SHA1:
- 6daf30fcea0b65b5e86cdb9d55c54c3683cb94f1 5089 main/binary-amd64/Packages
- 687ec09c54c350eef4d0f533f5d34c7302a24eb8 1647 main/binary-amd64/Packages.gz
+ ca543b04c01130cc416ce54089ec32e3a99ab313 5699 main/binary-amd64/Packages
+ 46cd48d4ccab895190909796466d3fab53802902 1883 main/binary-amd64/Packages.gz
  41787cb37c061d7f28423d186f8657a0c9797f53 73 main/binary-amd64/Release
  da39a3ee5e6b4b0d3255bfef95601890afd80709 0 main/binary-i386/Packages
  46c6643f07aa7f6bfe7118de926b86defc5087c4 20 main/binary-i386/Packages.gz
  42dcedab7a9fc4e9a7f540d0f388fa04b8cc11e4 72 main/binary-i386/Release
 SHA256:
- 911d718564709a96d918314e4cb961e182773f79687e0d2b75898783e4730181 5089 main/binary-amd64/Packages
- 401d25ae8aef576b5e38eb84ef2559e6213e4cdd2f1a52bef776cf24c3660d83 1647 main/binary-amd64/Packages.gz
+ f5d96923815bff38272938ce5e807460c98f15e735e4ebf3b4ede06a13396a8f 5699 main/binary-amd64/Packages
+ e8b2115f988f4a27f5385dc3788321d234103ed625530b47663f2a421046cb5b 1883 main/binary-amd64/Packages.gz
  884fd275fb031b3048cfe3012f0c1e38bbc2d66abd2ee1511dbd84583eea279e 73 main/binary-amd64/Release
  e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0 main/binary-i386/Packages
  59869db34853933b239f1e2219cf7d431da006aa919635478511fabbfc8849d2 20 main/binary-i386/Packages.gz
