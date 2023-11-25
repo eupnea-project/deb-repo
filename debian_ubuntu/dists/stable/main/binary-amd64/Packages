@@ -1,0 +1,15 @@
+Package: eupnea-stable-keyring
+Version: 1.0.1
+Architecture: all
+Maintainer: The Eupnea Project
+Priority: important
+Section: misc
+Filename: pool/main/e/eupnea-stable-keyring/eupnea-stable-keyring_1.0.1_all.deb
+Size: 1064
+SHA256: 4a0917f1573acf9ccddd5b6f007d2fb0a4834e2b0c973ed785e90132b7c69f01
+SHA1: 140f7a57a62852903be2833a6489e2ecd791ab3e
+MD5sum: 648d37af4d0febdb39f95e7d7826a977
+Description: GnuPG keys of the eupnea deb repo for debian stable
+ The Eupnea Project digitally signs its Release files. This package
+ contains the archive keys used for that.
+
