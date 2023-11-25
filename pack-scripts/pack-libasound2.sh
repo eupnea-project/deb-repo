@@ -10,8 +10,8 @@ set -e
 mkdir -p libasound2-eupnea/DEBIAN
 mkdir -p libasound2-eupnea/usr
 
-# Replace jammy repos with lunar repos
-sudo sed -i 's/jammy/lunar/g' /etc/apt/sources.list
+# Replace jammy repos with mantic repos
+sudo sed -i 's/jammy/mantic/g' /etc/apt/sources.list
 sudo apt-get update -y
 
 # Download libasound2 and libasound2-data

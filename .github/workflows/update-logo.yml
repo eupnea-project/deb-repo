@@ -83,7 +83,7 @@ jobs:
             amd64
             i386 #  32 bit systems arent really supported but apt throws a warning otherwise
           repo_supported_version: |
-            lunar
+            mantic
             jammy
           file: depthboot-logo*.deb
           file_target_version: jammy
@@ -92,7 +92,7 @@ jobs:
           key_passphrase: ""
           repo_folder: "debian_ubuntu"
 
-      - name: Adding lunar logo package
+      - name: Adding mantic logo package
         uses: smeinecke/apt-repo-action@v2.1.4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -100,10 +100,10 @@ jobs:
             amd64
             i386 #  32 bit systems arent really supported but apt throws a warning otherwise
           repo_supported_version: |
-            lunar
+            mantic
             jammy
           file: depthboot-logo*.deb
-          file_target_version: lunar
+          file_target_version: mantic
           public_key: ${{ secrets.PUBLIC }}
           private_key: ${{ secrets.PRIVATE }}
           key_passphrase: ""

@@ -24,7 +24,7 @@ Repo for Debian/Ubuntu/Pop!_OS deb packages. Provides the following packages:
 ```
 mkdir -p /usr/local/share/keyrings
 wget -O /usr/local/share/keyrings/eupnea.key https://eupnea-project.github.io/apt-repo/public.key
-echo 'deb [signed-by=/usr/local/share/keyrings/eupnea.key] https://eupnea-project.github.io/apt-repo/debian_ubuntu lunar main' > /etc/apt/sources.list.d/eupnea.list
+echo 'deb [signed-by=/usr/local/share/keyrings/eupnea.key] https://eupnea-project.github.io/apt-repo/debian_ubuntu mantic main' > /etc/apt/sources.list.d/eupnea.list
 apt update
 apt install eupnea-system eupnea-utils
 ```
