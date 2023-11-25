@@ -121,6 +121,22 @@ Description: GnuPG keys of the eupnea deb repo for ubuntu mantic
  The Eupnea Project digitally signs its Release files. This package
  contains the archive keys used for that.
 
+Package: eupnea-system
+Version: 1.0.89
+Architecture: amd64
+Maintainer: The Eupnea Project
+Depends: eupnea-utils (>= 1.1.112)
+Priority: optional
+Section: admin
+Filename: pool/main/e/eupnea-system/eupnea-system_1.0.89_amd64.deb
+Size: 10212
+SHA256: d97ae3139ec351cc4b9947224fceb8b27cb222f96e2bc4d3a1cc18c2dc8e53cd
+SHA1: fddfcd0a843dabbeed2e5a6e8f013458a3ab2805
+MD5sum: 47d46579ccad2e2448469198030f17b7
+Description: Eupnea system update package
+ This package upgrades Depthboot/EupneaOS systems to the latest version.
+ Not recommended for use on non-Chromebook devices.
+
 Package: keyd
 Version: 10.0.49
 Architecture: amd64
