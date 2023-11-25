@@ -60,16 +60,16 @@ Description: Eupnea ChromeOS kernel modules
  This package contains the Eupnea ChromeOS kernel modules. It is only compatible with Eupnea ChromeOS kernels.
 
 Package: eupnea-jammy-keyring
-Version: 1.0.3
+Version: 1.0.4
 Architecture: all
 Maintainer: The Eupnea Project
 Priority: important
 Section: misc
-Filename: pool/main/e/eupnea-jammy-keyring/eupnea-jammy-keyring_1.0.3_all.deb
-Size: 2108
-SHA256: 5cadf1033ddea797f214b3d56f91161e42cab26607cc5f146c89ce172a57dbb7
-SHA1: 973d8821ac9682ad0f55fd4efb0566be6902339c
-MD5sum: 0c41e2d02b904add13b543d89d65bc0a
+Filename: pool/main/e/eupnea-jammy-keyring/eupnea-jammy-keyring_1.0.4_all.deb
+Size: 2260
+SHA256: 5a5b39db69e4f236e0be4560f45de85165965272a66a86eb7dee5dc79aa69ed6
+SHA1: 10bcff057b0a2e931dd9bb3a15c794e13ae8e499
+MD5sum: faa533717bdec019b8db760dfd7056f6
 Description: GnuPG keys of the eupnea deb repo for ubuntu/popos jammy
  The Eupnea Project digitally signs its Release files. This package
  contains the archive keys used for that.
