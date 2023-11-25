@@ -1,5 +1,5 @@
 Package: eupnea-mainline-kernel-modules
-Version: 1.1.38
+Version: 1.1.39
 Architecture: amd64
 Maintainer: The Eupnea Project
 Section: kernel
