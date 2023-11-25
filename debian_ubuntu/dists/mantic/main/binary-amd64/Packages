@@ -1,14 +1,14 @@
 Package: eupnea-mantic-keyring
-Version: 1.0.3
+Version: 1.0.4
 Architecture: all
 Maintainer: The Eupnea Project
 Priority: important
 Section: misc
-Filename: pool/main/e/eupnea-mantic-keyring/eupnea-mantic-keyring_1.0.3_all.deb
-Size: 2104
-SHA256: 002eabff1db6b244db74f41166d24f86035c06e6f957557e6fa56a0e981e8f74
-SHA1: 0ea7a4f577967f16e3b22ba43f81747b4ebc83d3
-MD5sum: 9fc7cdc1a3c1940ac34fbb7be76cf54a
+Filename: pool/main/e/eupnea-mantic-keyring/eupnea-mantic-keyring_1.0.4_all.deb
+Size: 2252
+SHA256: 964931e70f8d509c6490e41a621f1d14f00ec3425cfbe18ea3f57288ed5fb8c0
+SHA1: 4d79bbb6e329107521ec41f52f2a966b3251eb90
+MD5sum: 53fcbddd7394a46725e4bae8d3de824f
 Description: GnuPG keys of the eupnea deb repo for ubuntu mantic
  The Eupnea Project digitally signs its Release files. This package
  contains the archive keys used for that.
