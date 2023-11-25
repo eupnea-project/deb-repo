@@ -96,16 +96,15 @@ jobs:
       - name: Deploying kinetic system packages
         uses: smeinecke/apt-repo-action@v2.1.4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           repo_supported_arch: |
             amd64
             i386 #  32 bit systems arent really supported but apt throws a warning otherwise
           repo_supported_version: |
-            kinetic
             mantic
             jammy
           file: eupnea-system*.deb
-          file_target_version: kinetic
+          file_target_version: jammy
           public_key: ${{ secrets.PUBLIC }}
           private_key: ${{ secrets.PRIVATE }}
           key_passphrase: ""
@@ -114,13 +113,11 @@ jobs:
       - name: Deploying mantic system packages
         uses: smeinecke/apt-repo-action@v2.1.4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           repo_supported_arch: |
             amd64
             i386 #  32 bit systems arent really supported but apt throws a warning otherwise
           repo_supported_version: |
-            kinetic
-            mantic
             mantic
             jammy
           file: eupnea-system*.deb
