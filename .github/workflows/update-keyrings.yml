@@ -1,0 +1,127 @@
+name: Deploying keyring packages
+on:
+  workflow_dispatch:
+concurrency:
+  group: ${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  deploy-repo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checking out repository code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 1
+
+      - name: Bump version in jammy control file
+        run: |
+          CURRENT_VERSION=$(sed -n '2p' control-files/keyring-jammy-control | sed 's/.*://' | xargs) # get current version from control file
+          NEXTVERSION=$(echo ${CURRENT_VERSION} | awk -F. -v OFS=. '{$NF += 1 ; print}') # bump version
+          sed -i "2s/.*/Version: ${NEXTVERSION}/" control-files/keyring-jammy-control # update version in control file
+
+      - name: Bump version in stable control file
+        run: |
+          CURRENT_VERSION=$(sed -n '2p' control-files/keyring-stable-control | sed 's/.*://' | xargs) # get current version from control file
+          NEXTVERSION=$(echo ${CURRENT_VERSION} | awk -F. -v OFS=. '{$NF += 1 ; print}') # bump version
+          sed -i "2s/.*/Version: ${NEXTVERSION}/" control-files/keyring-stable-control # update version in control file
+
+      - name: Bump version in mantic control file
+        run: |
+          CURRENT_VERSION=$(sed -n '2p' control-files/keyring-mantic-control | sed 's/.*://' | xargs) # get current version from control file
+          NEXTVERSION=$(echo ${CURRENT_VERSION} | awk -F. -v OFS=. '{$NF += 1 ; print}') # bump version
+          sed -i "2s/.*/Version: ${NEXTVERSION}/" control-files/keyring-mantic-control # update version in control file
+
+      - name: Packing keyring packages
+        run: bash pack-scripts/pack-keyrings.sh
+
+      - name: Updating files in main branch
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          # Disable setting repo owner as commit author
+          commit_user_name: github-actions[bot]
+          commit_user_email: 41898282+github-actions[bot]@users.noreply.github.com
+          commit_author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
+
+          # Optional. Commit message for the created commit.
+          # Defaults to "Apply automatic changes"
+          commit_message: Update files in main branch
+          # Only include needed files
+          file_pattern: 'control-files/keyring-*-control'
+
+      - name: Adding jammy keyring package
+        uses: smeinecke/apt-repo-action@v2.1.4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          repo_supported_arch: |
+            amd64
+            i386 #  32 bit systems arent really supported but apt throws a warning otherwise
+          repo_supported_version: |
+            jammy
+            stable
+            mantic
+          file: eupnea-jammy-keyring*.deb
+          file_target_version: jammy
+          public_key: ${{ secrets.PUBLIC }}
+          private_key: ${{ secrets.PRIVATE }}
+          key_passphrase: ""
+          repo_folder: "debian_ubuntu"
+
+      - name: Adding debian stable keyring package
+        uses: smeinecke/apt-repo-action@v2.1.4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          repo_supported_arch: |
+            amd64
+            i386 #  32 bit systems arent really supported but apt throws a warning otherwise
+          repo_supported_version: |
+            jammy
+            stable
+            mantic
+          file: eupnea-stable-keyring*.deb
+          file_target_version: stable
+          public_key: ${{ secrets.PUBLIC }}
+          private_key: ${{ secrets.PRIVATE }}
+          key_passphrase: ""
+          repo_folder: "debian_ubuntu"
+
+      - name: Adding mantic keyring package
+        uses: smeinecke/apt-repo-action@v2.1.4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          repo_supported_arch: |
+            amd64
+            i386 #  32 bit systems arent really supported but apt throws a warning otherwise
+          repo_supported_version: |
+            jammy
+            stable
+            mantic
+          file: eupnea-mantic-keyring*.deb
+          file_target_version: mantic
+          public_key: ${{ secrets.PUBLIC }}
+          private_key: ${{ secrets.PRIVATE }}
+          key_passphrase: ""
+          repo_folder: "debian_ubuntu"
+
+      - name: Generating release tag
+        id: tag
+        run: |
+          echo "::set-output name=release_tag::$(date +"%Y.%m.%d_%H-%M")"
+
+      - name: Rename keyring packages
+        run: | 
+          mv ./eupnea-jammy-keyring*.deb ./eupnea-jammy-keyring.deb
+          mv ./eupnea-stable-keyring*.deb ./eupnea-stable-keyring.deb
+          mv ./eupnea-mantic-keyring*.deb ./eupnea-mantic-keyring.deb
+
+      - name: Creating new release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ steps.tag.outputs.release_tag }}
+          name: Automated keyring packages creation - ${{ steps.tag.outputs.release_tag }}
+          body: |
+            These are keyring packages for ubuntu, popos and debian.
+          files: |
+            ./eupnea-jammy-keyring.deb
+            ./eupnea-stable-keyring.deb
+            ./eupnea-mantic-keyring.deb

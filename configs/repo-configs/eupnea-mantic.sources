@@ -1,0 +1,7 @@
+X-Repolib-Name: Eupnea mantic packages
+Enabled: yes
+Types: deb
+URIs: https://eupnea-project.github.io/deb-repo/debian_ubuntu/
+Suites: mantic
+Components: main
+Signed-By: /usr/share/keyrings/eupnea-keyring.gpg
