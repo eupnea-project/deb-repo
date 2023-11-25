@@ -2,44 +2,44 @@
 Hash: SHA512
 
 Codename: stable
-Date: Sat, 25 Nov 2023 15:54:16 UTC
+Date: Sat, 25 Nov 2023 15:54:24 UTC
 Architectures: amd64 i386
 Components: main
 Description: eupnea-project/deb-repo
 MD5Sum:
- ab98f994a36c55e11b6a850262d75845 557 main/binary-amd64/Packages
- e558256d21ea3cd75526bbdebeecdd35 379 main/binary-amd64/Packages.gz
+ f646043ce2d2ef06fd22e2a5d07fdd75 557 main/binary-amd64/Packages
+ 18ba4e9f4a6d4e500f93944ac4938d97 377 main/binary-amd64/Packages.gz
  efad6aa3cf24972036776d789bd70c2f 73 main/binary-amd64/Release
- ab98f994a36c55e11b6a850262d75845 557 main/binary-i386/Packages
- e558256d21ea3cd75526bbdebeecdd35 379 main/binary-i386/Packages.gz
+ f646043ce2d2ef06fd22e2a5d07fdd75 557 main/binary-i386/Packages
+ 18ba4e9f4a6d4e500f93944ac4938d97 377 main/binary-i386/Packages.gz
  5b01f05a0d5e2f926bfcf14c1d33a219 72 main/binary-i386/Release
 SHA1:
- fea6b115cda32446076ef237249bd8b3817f2027 557 main/binary-amd64/Packages
- 4ff18fc5e58225f9a37002ef86dca98428ef08a4 379 main/binary-amd64/Packages.gz
+ 3e15a6bd0510c2d2415eb04b7ae5d978b159ac38 557 main/binary-amd64/Packages
+ a37c94690ba866e389db4a69d16c49625262f4d6 377 main/binary-amd64/Packages.gz
  41787cb37c061d7f28423d186f8657a0c9797f53 73 main/binary-amd64/Release
- fea6b115cda32446076ef237249bd8b3817f2027 557 main/binary-i386/Packages
- 4ff18fc5e58225f9a37002ef86dca98428ef08a4 379 main/binary-i386/Packages.gz
+ 3e15a6bd0510c2d2415eb04b7ae5d978b159ac38 557 main/binary-i386/Packages
+ a37c94690ba866e389db4a69d16c49625262f4d6 377 main/binary-i386/Packages.gz
  42dcedab7a9fc4e9a7f540d0f388fa04b8cc11e4 72 main/binary-i386/Release
 SHA256:
- e1fcebed1c5baaa56317f9ff30df1efbbfb8541cd7166dee256dc081bb76cca8 557 main/binary-amd64/Packages
- ff5e628455b6691e2477bdc3266ff148b2b2829ce50eef220fbd54962ff34a76 379 main/binary-amd64/Packages.gz
+ 0af9ec99d4227e9acbb34a2557e9d2d480da05fd641bc3cefb03180b3b63e8d7 557 main/binary-amd64/Packages
+ 0dcb56620e7af0d8b2c0357c2c7d1d504d73e14dfda4bdf981236b1e6e04cc66 377 main/binary-amd64/Packages.gz
  884fd275fb031b3048cfe3012f0c1e38bbc2d66abd2ee1511dbd84583eea279e 73 main/binary-amd64/Release
- e1fcebed1c5baaa56317f9ff30df1efbbfb8541cd7166dee256dc081bb76cca8 557 main/binary-i386/Packages
- ff5e628455b6691e2477bdc3266ff148b2b2829ce50eef220fbd54962ff34a76 379 main/binary-i386/Packages.gz
+ 0af9ec99d4227e9acbb34a2557e9d2d480da05fd641bc3cefb03180b3b63e8d7 557 main/binary-i386/Packages
+ 0dcb56620e7af0d8b2c0357c2c7d1d504d73e14dfda4bdf981236b1e6e04cc66 377 main/binary-i386/Packages.gz
  94de4ffce5f6f690fe5548127e3d61b6d0feff8c185bc6ec1c7ddbba87dac38e 72 main/binary-i386/Release
 -----BEGIN PGP SIGNATURE-----
 
-iQIzBAEBCgAdFiEEXOcb6Maw+FIXiWLzd46Zt34V1pgFAmViGKgACgkQd46Zt34V
-1piFoRAAhRKoNuOnbn7b4CTQMGZFr8l5/dwkNEeuubn5Uzac0tNOU2M3qMyFMPJu
-BQpXpPZCprX9gmPWH1Q/pDdib5LalO98lj6k0zgqTrdGbolcqPKDsGl5m6T51CNT
-d0sE7wGO2X9fjk+Bh+xdW7w3tywyW19ExIw1jvmv6jfZO9aH1YplCi42Yesw5Mfd
-wYirnB004+p4JRb33yGcZtMAqt2bVn3PnWgdyV9grMo1jecdze9h3LelS1hGAjhD
-fQ4vccAc4RI6cOtrjjaKxaRgAba9YSmr9X3xHBWm3+NT26RzLR28zWJae6tgrnXt
-voiFC+yc96oluNdO/E5PYAT7pqt/7ZAq1++2hCBHaIXuRGy2wkDXrHRSRQYcmdmC
-+er7tSsQM64bbJbT8qYoZ3maKFyA1Auy8cfobC2sziXDv77khN2UFIF4T7t3wImi
-1hg1NVCaQtrOkpw/uCYl8UCLQkQAfk87FaTeO0hOylh3LphwCePKXCLB9F3XoNxs
-rtWyG66kL9SWZ7PTNvfaSiDqFRxC2pOhBHBre6wWKRNGKC6U4ENDxOGK3TdatJ9G
-t5++T78uqDBASLXdw2/W5TRbb25pQZDEgBvNjIFs3j2mbqKUY+NxExCzmDFlnCZB
-X1KbP9vHmkPxKXb8vL9LoseGZ84JR10JjHTGhelFOBRPYimn+Cc=
-=d3E9
+iQIzBAEBCgAdFiEEXOcb6Maw+FIXiWLzd46Zt34V1pgFAmViGLAACgkQd46Zt34V
+1piZHBAAr8JZWMNcVkwo++pSSKmPeGhXnbNv+0SSW9klh04oZy4/Ie6nqMn04Psn
+aLR8WuaBOAmsggHGgwEZSt2giWrqC45KpOtcBThUc9YL9e5GNXHluXSh1eeAnA1J
+1zggI8g2G0s4JziM5vIGUhnMNBRfkZXpCI3b1ruooQAJoa5/1QnWsDSpHIeR9RU4
+q502jy55Ueca8ZZ8rXFrF9CXJQNuFK0m73VwUSxn1V/V4hEIZkj03clsuDtr1MXt
+w0qsRHFZGirNqvNhZ+CleTOb8RZHqR4uDGXNkXJznYpOHsOus9NTIpRJqMLCOFSB
+Oy7Mh5bOTEUlujiRuL8CwpuUy8ahljVfdDHpvYRzaR7Du0ztlxKATVwYVbjZyIZW
+jqbaBVAPJl2rxFay5x9HZQgSahJm+2NbAGDnqLL1ryYnqRqTdXZR/7Hy/xg9RI/V
+pzD4OWR6aHfE/AFcH/RlrdgfrJxPUHJDp9ZSu09m8NpCsW6tZLmNdJDf5mFUcn3Z
+XbdAOY40BzwKVBJa9HbR0xkQsoaT7OxVfpnijeZXvBtjPAc8hA/bOU/Lp/QmivNR
+p63ue+TJOm6onhyDgLox7jWTsoEah/gv9ooyeEE64leQyk7S/jrHQLXz172hfdmJ
+d4LepJLfsSUzLXQzLg7pgKYrlJJezMZ1tr/zq5mpfiegEEIONmc=
+=ue0f
 -----END PGP SIGNATURE-----
