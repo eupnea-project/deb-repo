@@ -1,3 +1,50 @@
+Package: eupnea-chromeos-kernel
+Version: 1.1.42
+Architecture: amd64
+Maintainer: The Eupnea Project
+Depends: eupnea-chromeos-kernel-modules, eupnea-chromeos-kernel-headers, eupnea-utils (>= 1.1.89)
+Conflicts: eupnea-mainline-kernel
+Priority: optional
+Section: kernel
+Filename: pool/main/e/eupnea-chromeos-kernel/eupnea-chromeos-kernel_1.1.42_amd64.deb
+Size: 36728548
+SHA256: fbe5069261b47848993701a93535c29393b6408682dbac297a340abe3619994e
+SHA1: cc4b12c85c307a48cf5518e485bf2c72301ff977
+MD5sum: b28f746b98194178fc24ca9eba4adeba
+Description: Eupnea ChromeOS kernel
+ WARNING: This package will overwrite the first partition of your current drive!
+ Only use it on Chromebooks running Eupnea systems!
+ This package contains the Eupnea ChromeOS kernel. It is only compatible with x86_64 Chromebooks.
+
+Package: eupnea-chromeos-kernel-headers
+Version: 1.1.42
+Architecture: amd64
+Maintainer: The Eupnea Project
+Depends: eupnea-chromeos-kernel-modules
+Priority: optional
+Section: kernel
+Filename: pool/main/e/eupnea-chromeos-kernel-headers/eupnea-chromeos-kernel-headers_1.1.42_amd64.deb
+Size: 9787980
+SHA256: 99e729f0fe25bb2805dec759c7c646f838c68b6b65de7bfb51cba0cf643aa21a
+SHA1: b7399f4603429518c470b4ba86df505d7f88ddb5
+MD5sum: b33cb03361dd006fe8cbcdc8b819d1de
+Description: Eupnea ChromeOS kernel headers
+ This package contains the Eupnea ChromeOS kernel headers. It is only compatible with Eupnea ChromeOS kernels.
+
+Package: eupnea-chromeos-kernel-modules
+Version: 1.1.42
+Architecture: amd64
+Maintainer: The Eupnea Project
+Priority: optional
+Section: kernel
+Filename: pool/main/e/eupnea-chromeos-kernel-modules/eupnea-chromeos-kernel-modules_1.1.42_amd64.deb
+Size: 56771652
+SHA256: 3292a72ac28393c2a8f8b6231d571d876989e2e70ab73ffeeb3496882a018d42
+SHA1: e9913edb63151f7e2652f66f7efe4a1158a7b902
+MD5sum: 7a4ff4967431ccd90f48776b361c9bde
+Description: Eupnea ChromeOS kernel modules
+ This package contains the Eupnea ChromeOS kernel modules. It is only compatible with Eupnea ChromeOS kernels.
+
 Package: eupnea-mantic-keyring
 Version: 1.0.4
 Architecture: all
