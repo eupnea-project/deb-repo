@@ -2,44 +2,44 @@
 Hash: SHA512
 
 Codename: jammy
-Date: Fri, 24 Nov 2023 01:21:38 UTC
+Date: Sat, 25 Nov 2023 15:49:03 UTC
 Architectures: amd64 i386
 Components: main
 Description: eupnea-project/deb-repo
 MD5Sum:
- 3d459e3bc72375ed1a2f31797fc9661f 7211 main/binary-amd64/Packages
- 1a85fb17bbb2db48217e13a59a910521 2419 main/binary-amd64/Packages.gz
+ ea15b478289a6e18a21b51663e58d652 7770 main/binary-amd64/Packages
+ 36e75dc8bf652d4bccf59b73e2788efc 2644 main/binary-amd64/Packages.gz
  efad6aa3cf24972036776d789bd70c2f 73 main/binary-amd64/Release
- d41d8cd98f00b204e9800998ecf8427e 0 main/binary-i386/Packages
- 7029066c27ac6f5ef18d660d5741979a 20 main/binary-i386/Packages.gz
+ e74f0a0122c071eeb3018aabab2c8d0c 559 main/binary-i386/Packages
+ acbcc0c6871fdece652aa9e200b707ab 383 main/binary-i386/Packages.gz
  5b01f05a0d5e2f926bfcf14c1d33a219 72 main/binary-i386/Release
 SHA1:
- 8a72f8e0436bb0e948014e3d0c469e87458f0689 7211 main/binary-amd64/Packages
- 7556281be49a84ccc94d7e74b1d5430ce3229976 2419 main/binary-amd64/Packages.gz
+ c5510fafed186e282f69835c83778fb3022f43df 7770 main/binary-amd64/Packages
+ 83f4a01101b55087b4311051642f05f491e3ccb5 2644 main/binary-amd64/Packages.gz
  41787cb37c061d7f28423d186f8657a0c9797f53 73 main/binary-amd64/Release
- da39a3ee5e6b4b0d3255bfef95601890afd80709 0 main/binary-i386/Packages
- 46c6643f07aa7f6bfe7118de926b86defc5087c4 20 main/binary-i386/Packages.gz
+ aa97400bf9b3b84a9dcf693c886940e5cb5a5744 559 main/binary-i386/Packages
+ b60013e26529a18970d87ab702d4b2365951d7c1 383 main/binary-i386/Packages.gz
  42dcedab7a9fc4e9a7f540d0f388fa04b8cc11e4 72 main/binary-i386/Release
 SHA256:
- 8a03a0145f9021193c0f2556810d2c0030f1b485b8e861c7b91cb06ced0831c8 7211 main/binary-amd64/Packages
- 7d3b0954cda4b38ccc0e88124149e61b5875ee7577ed730c6d37634731a4b047 2419 main/binary-amd64/Packages.gz
+ e1e013c7659eab50b74174874778b116b93861cd57e97a46f2cd674c3b47d043 7770 main/binary-amd64/Packages
+ 6d1d621bf35ade7d7d8e33886619a90e6fc5dc8291b2497b0f94b6a13137aa87 2644 main/binary-amd64/Packages.gz
  884fd275fb031b3048cfe3012f0c1e38bbc2d66abd2ee1511dbd84583eea279e 73 main/binary-amd64/Release
- e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0 main/binary-i386/Packages
- 59869db34853933b239f1e2219cf7d431da006aa919635478511fabbfc8849d2 20 main/binary-i386/Packages.gz
+ 54520063cf5d25ec82ead0c02e1b538f6fd2aabb23921ab7dad558c9ec4bcf07 559 main/binary-i386/Packages
+ f1ea485ef73aa1225bfee5bf8f0bd432e89cf3c2c744ec71d000b290aae474ba 383 main/binary-i386/Packages.gz
  94de4ffce5f6f690fe5548127e3d61b6d0feff8c185bc6ec1c7ddbba87dac38e 72 main/binary-i386/Release
 -----BEGIN PGP SIGNATURE-----
 
-iQIzBAEBCgAdFiEEXOcb6Maw+FIXiWLzd46Zt34V1pgFAmVf+qIACgkQd46Zt34V
-1pjb9A//aWnjGX9zblS37nEcZ00WJkIo+2wKdPaszDEw5SDkJzbyVupaZBBrf7m7
-NsNDn3n8Wcvkb+W8NXIojJbraH30vZWYSU9xSwi2FnsfvIUGoF43kCANTP4ddsmW
-TNTqOrKTA+FYaR1MY8ElYUeDsolY6oXQ0JzFFgW3NEpm50O6ZmPmDl1dAws9N/3/
-HTSaBZiY32kFcUJAd7LFztrhd1dP27G+T5XLm0/3GldaSCwj/lcabOb7Zyl2I+HB
-uWuWJdRL0Xnv3JrrA8VxZVp4MCj98dfvHhGCkqm0DTjthv7AfcI+mWTGQ6J6mmKz
-CUocXmgcmvqirJDz2YrWfOY66LkJRtaWSs63PYU0fd286Ie0iby3KNeEAQew0J/W
-yBnhzjjFD7JQ5DfsTyU6+BfI5hTXWsL7em20JOoaq7EJmFN52jCtOvVUJCfnNly7
-xQ3QSmq5ip/k7ruq7DUo3lpvoAPMjsf0aC3AYHlX/VjuiTYoirYADLV9yd9IYH54
-28W3l5O6gOEaVdKVWFJ2e89NSzdTNXE+z1nV68sL2y9fMx2vAnfUSE3xa6WvgN8V
-oxhY5KdcBnYeX7Zg1wtV+s+EspP43mNlE++rGWcJCUBAbBqN/cUaiWcZVvoHo0Bk
-FbAHWL/JVb3rW7p2NAj2deR1EskcmCFt1T8AeqzYn2PHkkkfTWk=
-=QOww
+iQIzBAEBCgAdFiEEXOcb6Maw+FIXiWLzd46Zt34V1pgFAmViF28ACgkQd46Zt34V
+1piPPBAAvq877H8keVggBNyIwKHNfGbhvagrIYy4YmPiE4QUc80o0vIz4aTMS09t
+aZE7gVh3Ar6qooS+W3F33w3Q22EjGQhaTsyJY39UdVKueon304lFBgFlBbcpCQNx
+4U3SHDpOmRpP10tHNSxnKMqa3/JVAHPCOAo2/yaKUY4ZqqrAl0VzC3DddbpnJdaF
+DOXyv4cqrGS9UwL+VA1zH6D8vRFRs19PiKU/qem0KzRKwi4rFwwL+xrLFlAK/XE4
+KR7yCg3z5iTFYvNOEEQggwMbThinD9SwsiI+LompoKZpKbG6RcplywpElCkRu6Yy
+7hKFEqPOQ01xiTxbCYelkg0AQ6vlGV1K9levesaNPfvev43qN/AgD/j34BRuRwwd
+R9nBmVEXgPhA8h7wDlgTVDFmTdhHtxs58p1vax07+gJDWjbDbrEsKniAV93Crcxu
+onXDNPi2y/MzSuWVX0kH7RDz8ZUP0l8zYvoR54qKug22gti5rLTHpW6sAI9xkss+
+WG9FJIBPYje6JAb/C7vuLQY1aSonjheA8Y5zCFD6kQ9HZUYDWT0HfSSAuXI6fIsO
+MqwQIYs4VG3T+/QCCFODArGnpXFQ3NAnRM+mEb29dXDx+ZhyPyujCim990o/hBoz
+n9eWiWx+xRWu1P60iJuWpOxcH89TFyKQrNN8sdMiRgEk7FVU6mo=
+=CAbl
 -----END PGP SIGNATURE-----

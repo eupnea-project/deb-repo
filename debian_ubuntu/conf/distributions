@@ -1,19 +1,19 @@
 Description: eupnea-project/deb-repo
-Codename: kinetic
-Architectures: amd64 i386 #  32 bit systems arent really supported but apt throws a warning otherwise
-Components: main
-SignWith: 5CE71BE8C6B0F852178962F3778E99B77E15D698
-
-
-Description: eupnea-project/deb-repo
-Codename: lunar
-Architectures: amd64 i386 #  32 bit systems arent really supported but apt throws a warning otherwise
-Components: main
-SignWith: 5CE71BE8C6B0F852178962F3778E99B77E15D698
-
-
-Description: eupnea-project/deb-repo
 Codename: jammy
+Architectures: amd64 i386 #  32 bit systems arent really supported but apt throws a warning otherwise
+Components: main
+SignWith: 5CE71BE8C6B0F852178962F3778E99B77E15D698
+
+
+Description: eupnea-project/deb-repo
+Codename: stable
+Architectures: amd64 i386 #  32 bit systems arent really supported but apt throws a warning otherwise
+Components: main
+SignWith: 5CE71BE8C6B0F852178962F3778E99B77E15D698
+
+
+Description: eupnea-project/deb-repo
+Codename: mantic
 Architectures: amd64 i386 #  32 bit systems arent really supported but apt throws a warning otherwise
 Components: main
 SignWith: 5CE71BE8C6B0F852178962F3778E99B77E15D698

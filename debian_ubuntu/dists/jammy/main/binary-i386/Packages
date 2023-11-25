@@ -1,0 +1,15 @@
+Package: eupnea-jammy-keyring
+Version: 1.0.1
+Architecture: all
+Maintainer: The Eupnea Project
+Priority: important
+Section: misc
+Filename: pool/main/e/eupnea-jammy-keyring/eupnea-jammy-keyring_1.0.1_all.deb
+Size: 2108
+SHA256: 358648e8d142943278f19ed1aa7a0836d2482b6de730423ca3a0c65e3ba15aba
+SHA1: ab0d743b6a2b7ee214a9646b0b2c7b77ed892426
+MD5sum: d2b422ffbd1d1aa982fa686234f905d4
+Description: GnuPG keys of the eupnea deb repo for ubuntu/popos jammy
+ The Eupnea Project digitally signs its Release files. This package
+ contains the archive keys used for that.
+
