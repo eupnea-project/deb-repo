@@ -22,9 +22,9 @@ cp control-files/keyring-stable-control eupnea-stable-keyring/DEBIAN/control
 cp control-files/keyring-mantic-control eupnea-mantic-keyring/DEBIAN/control
 
 # copy repo config files into packages
-cp configs/repo-configs/eupnea-jammy.list eupnea-jammy-keyring/etc/apt/sources.list.d/eupnea-jammy.list
-cp configs/repo-configs/eupnea-stable.list eupnea-stable-keyring/etc/apt/sources.list.d/eupnea-stable.list
-cp configs/repo-configs/eupnea-mantic.list eupnea-mantic-keyring/etc/apt/sources.list.d/eupnea-mantic.list
+cp configs/repo-configs/eupnea-jammy.sources eupnea-jammy-keyring/etc/apt/sources.list.d/eupnea-jammy.sources
+cp configs/repo-configs/eupnea-stable.sources eupnea-stable-keyring/etc/apt/sources.list.d/eupnea-stable.sources
+cp configs/repo-configs/eupnea-mantic.sources eupnea-mantic-keyring/etc/apt/sources.list.d/eupnea-mantic.sources
 
 # create packages
 # by default dpkg-deb will use zstd compression. The deploy action will fail because the debian tool doesnt support zstd compression in packages.
