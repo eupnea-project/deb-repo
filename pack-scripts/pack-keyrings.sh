@@ -19,8 +19,8 @@ mkdir -p eupnea-mantic-keyring/etc/apt/sources.list.d
 
 # Add eupnea public key to packages
 cp configs/eupnea-keyring.gpg eupnea-jammy-keyring/usr/share/keyrings/eupnea-keyring.gpg
-cp configs/eupnea-keyring.gpg eupnea-jammy-keyring/usr/share/keyrings/eupnea-keyring.gpg
-cp configs/eupnea-keyring.gpg eupnea-jammy-keyring/usr/share/keyrings/eupnea-keyring.gpg
+cp configs/eupnea-keyring.gpg eupnea-stable-keyring/usr/share/keyrings/eupnea-keyring.gpg
+cp configs/eupnea-keyring.gpg eupnea-mantic-keyring/usr/share/keyrings/eupnea-keyring.gpg
 
 # copy debian control files into packages
 cp control-files/keyring-jammy-control eupnea-jammy-keyring/DEBIAN/control
