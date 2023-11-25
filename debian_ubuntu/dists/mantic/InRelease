@@ -2,44 +2,44 @@
 Hash: SHA512
 
 Codename: mantic
-Date: Sat, 25 Nov 2023 15:49:10 UTC
+Date: Sat, 25 Nov 2023 15:49:17 UTC
 Architectures: amd64 i386
 Components: main
 Description: eupnea-project/deb-repo
 MD5Sum:
- d41d8cd98f00b204e9800998ecf8427e 0 main/binary-amd64/Packages
- 7029066c27ac6f5ef18d660d5741979a 20 main/binary-amd64/Packages.gz
+ 291f8eb48f09b211207fac13a9441644 557 main/binary-amd64/Packages
+ da582bfae906b15e7e5472c4139ed668 380 main/binary-amd64/Packages.gz
  efad6aa3cf24972036776d789bd70c2f 73 main/binary-amd64/Release
- d41d8cd98f00b204e9800998ecf8427e 0 main/binary-i386/Packages
- 7029066c27ac6f5ef18d660d5741979a 20 main/binary-i386/Packages.gz
+ 291f8eb48f09b211207fac13a9441644 557 main/binary-i386/Packages
+ da582bfae906b15e7e5472c4139ed668 380 main/binary-i386/Packages.gz
  5b01f05a0d5e2f926bfcf14c1d33a219 72 main/binary-i386/Release
 SHA1:
- da39a3ee5e6b4b0d3255bfef95601890afd80709 0 main/binary-amd64/Packages
- 46c6643f07aa7f6bfe7118de926b86defc5087c4 20 main/binary-amd64/Packages.gz
+ 816d37041b1e0d69aa21ca85991b80f74a03f109 557 main/binary-amd64/Packages
+ 7a6d82a9586a8706eb4f75a2d2171cc2a713f63d 380 main/binary-amd64/Packages.gz
  41787cb37c061d7f28423d186f8657a0c9797f53 73 main/binary-amd64/Release
- da39a3ee5e6b4b0d3255bfef95601890afd80709 0 main/binary-i386/Packages
- 46c6643f07aa7f6bfe7118de926b86defc5087c4 20 main/binary-i386/Packages.gz
+ 816d37041b1e0d69aa21ca85991b80f74a03f109 557 main/binary-i386/Packages
+ 7a6d82a9586a8706eb4f75a2d2171cc2a713f63d 380 main/binary-i386/Packages.gz
  42dcedab7a9fc4e9a7f540d0f388fa04b8cc11e4 72 main/binary-i386/Release
 SHA256:
- e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0 main/binary-amd64/Packages
- 59869db34853933b239f1e2219cf7d431da006aa919635478511fabbfc8849d2 20 main/binary-amd64/Packages.gz
+ 28562a2a7a469cba2e7857c8e37110f061bb2279e3f67c4caeb6aa06d5257d3c 557 main/binary-amd64/Packages
+ 1cd4e3c0dc59c25cc0ab275cd34f6895f250c78ed0722f38f7b5f6194ab610c5 380 main/binary-amd64/Packages.gz
  884fd275fb031b3048cfe3012f0c1e38bbc2d66abd2ee1511dbd84583eea279e 73 main/binary-amd64/Release
- e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0 main/binary-i386/Packages
- 59869db34853933b239f1e2219cf7d431da006aa919635478511fabbfc8849d2 20 main/binary-i386/Packages.gz
+ 28562a2a7a469cba2e7857c8e37110f061bb2279e3f67c4caeb6aa06d5257d3c 557 main/binary-i386/Packages
+ 1cd4e3c0dc59c25cc0ab275cd34f6895f250c78ed0722f38f7b5f6194ab610c5 380 main/binary-i386/Packages.gz
  94de4ffce5f6f690fe5548127e3d61b6d0feff8c185bc6ec1c7ddbba87dac38e 72 main/binary-i386/Release
 -----BEGIN PGP SIGNATURE-----
 
-iQIzBAEBCgAdFiEEXOcb6Maw+FIXiWLzd46Zt34V1pgFAmViF3YACgkQd46Zt34V
-1phCXw//aA0WfgvmXg8AvJxpJMT6tzA21OYcubuHOxUL+FokXCXjbp+GL3G4BmfE
-acA0wIs+pkakOyfR4IGVxXMadROuMC6P75/nIqi4IyxKRqT6FxaXn0PCCc7hWXUl
-quBk7MUxxIXVioZjBmPsCy9P55wiHqA4q7czfRZZbGwGTfU5f3zExCRO+Z74uDmk
-rFyuqyo92KXnPmJlyO6vBLbw+BPXi5vnkyjKo+8iEzS8TIsZkdtOX4sypTX63maq
-S0vtA1h094cCeKXKSYMVEOLyj1JKj+P8IIIMy88QLKR2I1HBzTRXufr4llXaIaCl
-sATxjUw4eQoEZOFKbFuscLRbxtCTo51S5k2CPriH7JmbtlTqLFMfg0/94UWY1ApC
-UFVuNr3IrfzNSEQjDFUp98L9CvfLqhAVInaa3Bo0hlvNy9T1X/W3Qr95CIZPmDHT
-tvGW6l3Kjg2D1ZSLZouneF7pgLl1yn3SpQVXE5h00Y7CDsByvmR9FuFwP0P1ZL1S
-OSVskLF2PoG/cu185tr+EuS5tDsPTf25x8e3+a10y2Yp8JpSKOruRnYWeOcS/Djr
-3GVYZ7CJ0FtfNr6kh3vxMsZeW8500Pm8d4wIBiP4T0wwZ96S4r0emxT+ysS5B6V+
-DG4Qrl+BMOL8SbVznl37KIlQszf7Crby0ZE333ilfo56KPcWTe4=
-=FQm2
+iQIzBAEBCgAdFiEEXOcb6Maw+FIXiWLzd46Zt34V1pgFAmViF30ACgkQd46Zt34V
+1piLoQ//R8Ob7oyNbdJ16I3CGnCCgVA7lgWqjJnLBiNbYzEBiLD1SPuy2JFkSUaP
+ltjN/IrYvcBIYfhdR77VsLTRsgrsqVM634rCDipCGCmCmlIgAyGfrGqSZfbGtbHo
+HfWkVOYjZcWWkJvCvZ9QM4uwQC5PLVoRv1VaZFEhDNVeaATo4lqSDKLvp9gGjvt8
+ygvBdxz+146o/YGFixkxShc7LSbNpCeuFTKOE+xWrN+yF2o93US4Xrd4lE52VmPP
+0NhVy69i1OjNo/xjg2w8VcL3+Ze50UV/ciZ/yAU460cZPkunTObD8boJ1R3CpWEI
+Qzn80twwDvyQT2a3eRZS14oH5DrISzG7jiq6/u6rTFvv9jnalaNMEDA9KJeuMjML
+PA9qcqt/1TN0eDbR8FtzjmQBnHo47eZsV13+frC//JwL3bhD6zhKURWf72ALMwy1
+1raEEHhE6vqOVe9TfsOI2x54Y6BJ0N1vzOOQ43GxQ+L1v3OKwZDhIbCulD7DMnY3
+6ZDsgzUQ351kgGVh9Cv2GTfit/SyurdcM/yzEH5R6OJ05Ken/I1TFa0Tzd4TFx0j
+ASIcgLgDWyJacfoOQJH/JAvePQ3H0C4Z/SAmXeW97X8cpzoLI64aDnyI8lhp3hki
+5IE/dcxX2M6CYB0Rk6KXdX+efSn5Zv29Uza084ygWz0//DFZBYw=
+=hYUA
 -----END PGP SIGNATURE-----
