@@ -7,9 +7,15 @@ mkdir -p eupnea-jammy-keyring/DEBIAN
 mkdir -p eupnea-stable-keyring/DEBIAN
 mkdir -p eupnea-mantic-keyring/DEBIAN
 
+# create keyring dirs
 mkdir -p eupnea-jammy-keyring/usr/share/keyrings
 mkdir -p eupnea-stable-keyring/usr/share/keyrings
 mkdir -p eupnea-mantic-keyring/usr/share/keyrings
+
+# create sources.list.d dirs
+mkdir -p eupnea-jammy-keyring/etc/apt/sources.list.d
+mkdir -p eupnea-stable-keyring/etc/apt/sources.list.d
+mkdir -p eupnea-mantic-keyring/etc/apt/sources.list.d
 
 # Add eupnea public key to packages
 cp configs/eupnea-keyring.gpg eupnea-jammy-keyring/usr/share/keyrings/eupnea-keyring.gpg
