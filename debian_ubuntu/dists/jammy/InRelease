@@ -2,44 +2,44 @@
 Hash: SHA512
 
 Codename: jammy
-Date: Sat, 25 Nov 2023 15:51:32 UTC
+Date: Sat, 25 Nov 2023 15:54:16 UTC
 Architectures: amd64 i386
 Components: main
 Description: eupnea-project/deb-repo
 MD5Sum:
- 5432e6901e8a775db6ef9d9ab1eaeb7b 7770 main/binary-amd64/Packages
- 2adec1a3e05639d4a7d1c2de8dabff44 2644 main/binary-amd64/Packages.gz
+ 7fd4fa16d9f1ae35d9429a8a872da709 7770 main/binary-amd64/Packages
+ 48a1f861435b24e21383e2cb63141f07 2644 main/binary-amd64/Packages.gz
  efad6aa3cf24972036776d789bd70c2f 73 main/binary-amd64/Release
- 42009cfbcb6e0c50e5b29f3910edd284 559 main/binary-i386/Packages
- eba955d9e89e0ded57fcaa70ad50ecea 382 main/binary-i386/Packages.gz
+ ff2bfe5fad1728e6d4f43a58f6bc9b81 559 main/binary-i386/Packages
+ 8df83b0dad31445bfa0bdb46ff1214ff 385 main/binary-i386/Packages.gz
  5b01f05a0d5e2f926bfcf14c1d33a219 72 main/binary-i386/Release
 SHA1:
- 76fe068d5ddd0c53933ea5088c00f8894e57839a 7770 main/binary-amd64/Packages
- 4010a1761294d8f9de3c3a7bf9edfb1d1398bf9c 2644 main/binary-amd64/Packages.gz
+ aed0bc642545f4c29affee29274c2a09bd37b3cc 7770 main/binary-amd64/Packages
+ 925113f8d67d1618bc6e1d035bad8518e99f8a50 2644 main/binary-amd64/Packages.gz
  41787cb37c061d7f28423d186f8657a0c9797f53 73 main/binary-amd64/Release
- 98f157fef44bf610d584125d2dce72a6c6b973e7 559 main/binary-i386/Packages
- d126c6b307c6a25f476587c5ba63076167db7449 382 main/binary-i386/Packages.gz
+ c4bad6d2a8814514aa7d3856e91eeebc1b218870 559 main/binary-i386/Packages
+ b421cfe09ceee0e69ffbc98fdca1a09a3793bf09 385 main/binary-i386/Packages.gz
  42dcedab7a9fc4e9a7f540d0f388fa04b8cc11e4 72 main/binary-i386/Release
 SHA256:
- 153db91e18d4454087ad56f5b504260142f077e38229d90c9389873492dad00e 7770 main/binary-amd64/Packages
- 06cc7cf58069eeba30197e2248ddfe9c953ae020dbc0c1af79a8d0070d3e98d4 2644 main/binary-amd64/Packages.gz
+ a974b329ba3174d98089547551c8b0613967f31cd7e38572b5bf161d8ce99e82 7770 main/binary-amd64/Packages
+ 36ea6c3c513d26786072ecd542246dce871317371af497faf8bb727c0415f99b 2644 main/binary-amd64/Packages.gz
  884fd275fb031b3048cfe3012f0c1e38bbc2d66abd2ee1511dbd84583eea279e 73 main/binary-amd64/Release
- 98186bb92df75dca70841a2045cc9e66233b9f471a4ddb06a67343c98104dbee 559 main/binary-i386/Packages
- d43392736edab60fadeab38aa6946b77b59a2bf08cb9cf349ea6e49184dda8f2 382 main/binary-i386/Packages.gz
+ 024146a1eac8ed9c0517060661d8b7c426f2ed77bfdba729b0c1152876e4e1c5 559 main/binary-i386/Packages
+ ca8272157df5ebb8856be29c67397a24a7810cef674e2ba61faa6b75fae64195 385 main/binary-i386/Packages.gz
  94de4ffce5f6f690fe5548127e3d61b6d0feff8c185bc6ec1c7ddbba87dac38e 72 main/binary-i386/Release
 -----BEGIN PGP SIGNATURE-----
 
-iQIzBAEBCgAdFiEEXOcb6Maw+FIXiWLzd46Zt34V1pgFAmViGAQACgkQd46Zt34V
-1ph7ghAAmUh14Cn7ulT27FkssZo8Nna2RjfcJRV3EMcyFnzGG6bB+ZrkL/bsaBik
-QLHSqLuY0bBzNDaIK/iB9Vj1J4HF4vb6xlnXCJIkDBO5Yt82lwVh2s4dbyjdmmDO
-x+SsSm4aLqvODaw8wutrJvcdG9cFn+EL0Vxdat4Ml+zcdx45juK2/7AOZAuE7539
-Ew7wyq8leiciwOf/cjq8DEjMYvDSs2Zsbgy28d/JrN1ZVUei8wVKpdFawccrb4ac
-Difr0ybVTUnjUAwuTs5YRhvKEUdv/DdNmqYJHIW/+W6Hh3WE68aY++wIO6d2sk4m
-Jmimf5vlXMey1woIUv98C4c9+GQHktNhFhSzXfVXtBn3S6Dy9yedktbCMriv+S7Q
-UhxamYOJmCeooKA35pFxChpeUy0KtgWvRaqtDFprhvbn7g5K4dHsYUkWtSMXPXwE
-xkzUBCZWokNrPmM+4KqMDJG4ykaJDzEs9uKSIVxF7vtolbkx20jLL+3iknV9fWgV
-FlExH68WFqTvBtvTpnxXb9wwapLmZL3IDTQ0enT8MKo092QRcZaC/gL0eRqejUYu
-Qon7hXQouFzo77Ykm/ZgbNCI4lngZj2GeKqF65P7gQ8WHBA0JFK7Y9Yw2ultG2t6
-zI0NijzMIVfPxPeT/bj8dobmWcvJZ9kpDAGv1nNQGniVQd/jalY=
-=TZpJ
+iQIzBAEBCgAdFiEEXOcb6Maw+FIXiWLzd46Zt34V1pgFAmViGKgACgkQd46Zt34V
+1phmAQ/9GSpKrxQio61jjPWwlmYQ+fQOcp5hKaYXOxjVDVq3sepA2Vn0rSr04/mh
+L5l2q1o8teGkEn7z1+wC8zi1ibwkUdJEAaSYgsErFXz2zhNc2rMIzpcaz7NFLuNJ
+RCa3ZuvSOL7Zb+D0Q18SKnZWwDJCrdgXjlGrI64+/TT9R73qSwZjoTALo7tqkUkJ
+OH7oCpqZOybXidIsxG6JEuYvE1fQTyQmBOoSpAY3J0pnTlYktjzWFYd6na0j7ESo
+OcI1DI1R2EVMn1t4rg40fQiblOmJwUP0dS/3KonrTo86AKGDq8Fr076Fi45B64e/
+iziWqIZbVJN/EugPfyxIAd7HY03MwFZsZ7IXxdcGcwUg/VaUoOj1kOHtbNzV2Kb2
+1fDSYcr2xqG2SFsWNGMktCRWYTvenJ+IvFQPrPEtBe9uW94RVNzDB4GaIgJxT3hl
+TVFsmi0vdzq6HB6HwSueTVdWWCDRcbg+cOYwwds36PahOKs2DkZfy9QCapPjkZ/q
+kymrpD7sMueWUDUzLthet/xS19zesSDN4btDBYQk+RfPhwaPoTbJmx2uwB13ZUIG
+8Fdo8AOCYR2j5UeR9ghSw2FYZyNCBGBmBQ7MBtBr/HLo8fN9exeemdCFSG1YbhCo
+R9v8KEaPYgdeZFr2p+FmtC18PngIED1mrXNpqGJpWtfTjX9jqao=
+=dkbJ
 -----END PGP SIGNATURE-----
