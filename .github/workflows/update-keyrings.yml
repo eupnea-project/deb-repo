@@ -108,12 +108,6 @@ jobs:
         run: |
           echo "::set-output name=release_tag::$(date +"%Y.%m.%d_%H-%M")"
 
-      - name: Rename keyring packages
-        run: | 
-          mv ./eupnea-jammy-keyring*.deb ./eupnea-jammy-keyring.deb
-          mv ./eupnea-stable-keyring*.deb ./eupnea-stable-keyring.deb
-          mv ./eupnea-mantic-keyring*.deb ./eupnea-mantic-keyring.deb
-
       - name: Creating new release
         uses: softprops/action-gh-release@v1
         with:
