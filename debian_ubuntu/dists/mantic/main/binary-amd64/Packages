@@ -60,3 +60,20 @@ Description: GnuPG keys of the eupnea deb repo for ubuntu mantic
  The Eupnea Project digitally signs its Release files. This package
  contains the archive keys used for that.
 
+Package: keyd
+Version: 10.0.49
+Architecture: amd64
+Maintainer: The Eupnea Project
+Original-Maintainer: rvaiya@github.com
+Priority: extra
+Section: utils
+Filename: pool/main/k/keyd/keyd_10.0.49_amd64.deb
+Size: 117800
+SHA256: 6ba2a86806dbcab6853c81a0ec455178299610b3fda9d7d9daf751cfdade0ad4
+SHA1: c9bc8690397d2e628bf20364971727474df9b977
+MD5sum: 224fe1882ad4b54825c65f52399dd640
+Description:  A key remapping daemon for linux.
+ Made by rvaiya and repackaged by the Eupnea Project.
+ Read more about keyd here: https://github.com/rvaiya/keyd
+ Pulls from the master branch instead of using latest release.
+
