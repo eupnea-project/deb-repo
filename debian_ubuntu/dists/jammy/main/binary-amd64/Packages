@@ -171,7 +171,7 @@ Description:  A key remapping daemon for linux.
  Pulls from the master branch instead of using latest release.
 
 Package: libasound2-eupnea
-Version: 1.0.67
+Version: 1.0.68
 Architecture: amd64
 Maintainer: The Eupnea Project
 Original-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>; Debian ALSA Maintainers <pkg-alsa-devel@lists.alioth.debian.org>
@@ -183,11 +183,11 @@ Suggests: libasound2-plugins (>= 1.0.24), alsa-utils
 Breaks: alsa-utils (<< 1.2.1)
 Priority: optional
 Section: libs
-Filename: pool/main/liba/libasound2-eupnea/libasound2-eupnea_1.0.67_amd64.deb
-Size: 375760
-SHA256: be08faf387978d6fe30f8c0dc5ed48dc8163fc458f4db4f956861ac0db2050ff
-SHA1: ca13d55021519406076ac4ec8e7690794b6af256
-MD5sum: eb80cdd46e7484ed8087c7ad3392f627
+Filename: pool/main/liba/libasound2-eupnea/libasound2-eupnea_1.0.68_amd64.deb
+Size: 378136
+SHA256: 0bbce494c75757476f9c1beade1a5105c92da1c84f9ef8ebf47010611f050c7f
+SHA1: cf2901169e2151ed2a894b0f45e272b8eeed2157
+MD5sum: 783672bdaeae24f40c10afa2bb6e7e52
 Description: Libasound2 + libasound2-data backports from Ubuntu 22.10.
  This package contains libasound2 and libasound2-data backported from Ubuntu 22.10 and repacked into a single package.
 
