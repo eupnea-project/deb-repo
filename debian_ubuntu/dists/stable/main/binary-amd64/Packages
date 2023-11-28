@@ -137,6 +137,22 @@ Description: Eupnea system update package
  This package upgrades Depthboot/EupneaOS systems to the latest version.
  Not recommended for use on non-Chromebook devices.
 
+Package: eupnea-utils
+Version: 1.1.148
+Architecture: amd64
+Maintainer: The Eupnea Project
+Depends: cgpt, vboot-kernel-utils, parted, fdisk, rsync, git, strace, alsa-utils
+Priority: optional
+Section: admin
+Filename: pool/main/e/eupnea-utils/eupnea-utils_1.1.148_amd64.deb
+Size: 14268
+SHA256: 6ca18ba09c6379302d5d0f99e304c305dd19e2bdce9ad1f28f31138ab34a216e
+SHA1: b5c27634da08bcce19804c49fffe095afd52d602
+MD5sum: be5e2887d5adbd3fe7b58cef6f9333f2
+Description: Eupnea utilities
+ This package contains a set of tools to interact with EupneaOS/Depthboot systems.
+ Not recommended for use on non-Chromebook devices.
+
 Package: keyd
 Version: 10.0.50
 Architecture: amd64
