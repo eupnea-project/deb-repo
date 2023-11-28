@@ -49,24 +49,6 @@ jobs:
           # Only include needed files
           file_pattern: 'control-files/keyring-*-control'
 
-      - name: Adding jammy keyring package
-        uses: smeinecke/apt-repo-action@v2.1.4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          repo_supported_arch: |
-            amd64
-            i386 #  32 bit systems arent really supported but apt throws a warning otherwise
-          repo_supported_version: |
-            jammy
-            stable
-            mantic
-          file: eupnea-jammy-keyring*.deb
-          file_target_version: jammy
-          public_key: ${{ secrets.PUBLIC }}
-          private_key: ${{ secrets.PRIVATE }}
-          key_passphrase: ""
-          repo_folder: "debian_ubuntu"
-
       - name: Adding debian stable keyring package
         uses: smeinecke/apt-repo-action@v2.1.4
         with:
@@ -75,11 +57,29 @@ jobs:
             amd64
             i386 #  32 bit systems arent really supported but apt throws a warning otherwise
           repo_supported_version: |
+            mantic
             jammy
             stable
-            mantic
           file: eupnea-stable-keyring*.deb
           file_target_version: stable
+          public_key: ${{ secrets.PUBLIC }}
+          private_key: ${{ secrets.PRIVATE }}
+          key_passphrase: ""
+          repo_folder: "debian_ubuntu"
+
+      - name: Adding jammy keyring package
+        uses: smeinecke/apt-repo-action@v2.1.4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          repo_supported_arch: |
+            amd64
+            i386 #  32 bit systems arent really supported but apt throws a warning otherwise
+          repo_supported_version: |
+            mantic
+            jammy
+            stable
+          file: eupnea-jammy-keyring*.deb
+          file_target_version: jammy
           public_key: ${{ secrets.PUBLIC }}
           private_key: ${{ secrets.PRIVATE }}
           key_passphrase: ""
@@ -93,9 +93,9 @@ jobs:
             amd64
             i386 #  32 bit systems arent really supported but apt throws a warning otherwise
           repo_supported_version: |
+            mantic
             jammy
             stable
-            mantic
           file: eupnea-mantic-keyring*.deb
           file_target_version: mantic
           public_key: ${{ secrets.PUBLIC }}
