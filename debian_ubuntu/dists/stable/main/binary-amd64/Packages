@@ -46,16 +46,16 @@ Description: Eupnea ChromeOS kernel modules
  This package contains the Eupnea ChromeOS kernel modules. It is only compatible with Eupnea ChromeOS kernels.
 
 Package: eupnea-stable-keyring
-Version: 1.0.4
+Version: 1.0.5
 Architecture: all
 Maintainer: The Eupnea Project
 Priority: important
 Section: misc
-Filename: pool/main/e/eupnea-stable-keyring/eupnea-stable-keyring_1.0.4_all.deb
-Size: 2260
-SHA256: 3408c60dd35dd31c1a570b92edc6fbb8b832a21aa900181f507c173202475ddf
-SHA1: 1b459052941bd8b4779ff2fd23fc461b9a117bf0
-MD5sum: 78c38a15e539803b426606754b777645
+Filename: pool/main/e/eupnea-stable-keyring/eupnea-stable-keyring_1.0.5_all.deb
+Size: 2256
+SHA256: 6549efa20658dd259006f78c8d504e7c209ced184c6e4061e54ae1ed0ad01cd8
+SHA1: 30e150a60f152a86cb17080ca1a37f770e866091
+MD5sum: a99675c9d8cc70fd7f6e4089a67b6d91
 Description: GnuPG keys of the eupnea deb repo for debian stable
  The Eupnea Project digitally signs its Release files. This package
  contains the archive keys used for that.
