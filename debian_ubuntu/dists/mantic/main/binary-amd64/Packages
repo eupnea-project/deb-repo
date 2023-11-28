@@ -1,14 +1,14 @@
 Package: depthboot-logo
-Version: 1.0.7
+Version: 1.0.8
 Architecture: amd64
 Maintainer: The Eupnea Project
 Priority: extra
 Section: misc
-Filename: pool/main/d/depthboot-logo/depthboot-logo_1.0.7_amd64.deb
-Size: 560132
-SHA256: b33dab458d624e1f86e81cbc717adb2d97f6ddd62dbdde3aacacd072185b2a70
-SHA1: 37e407c1ce509aa04997fa92d6ee10d069629752
-MD5sum: 0f0d19c27413ad995b2a706cfce86c02
+Filename: pool/main/d/depthboot-logo/depthboot-logo_1.0.8_amd64.deb
+Size: 560072
+SHA256: 6a516c2c8e3534ab71fb97df48872649c669b18556da36eda964aaaa226a011a
+SHA1: 307bef6ac57a9998b806b357c1a9eee7fbb89d1f
+MD5sum: 59f5e0aa23931556cee79ae45c3b6971
 Description:  Alpine busybox-static + depthboot logo boot splash
  Prints a depthboot logo on boot using fbsplash from Alpine Linux's busybox-static package
 
