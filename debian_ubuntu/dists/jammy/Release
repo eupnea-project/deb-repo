@@ -1,26 +1,26 @@
 Codename: jammy
-Date: Tue, 28 Nov 2023 21:12:46 UTC
+Date: Tue, 28 Nov 2023 21:13:06 UTC
 Architectures: amd64 i386
 Components: main
 Description: eupnea-project/deb-repo
 MD5Sum:
- 9bdb28229a3b1859409892e6e6eba5bf 7770 main/binary-amd64/Packages
- 602c5b8205bbde6a244df0a2b712572e 2647 main/binary-amd64/Packages.gz
+ 92bc1d33df8ded11806962d22c81b6a1 7770 main/binary-amd64/Packages
+ 098441ecad7c69569b114c629d988148 2646 main/binary-amd64/Packages.gz
  efad6aa3cf24972036776d789bd70c2f 73 main/binary-amd64/Release
- e355b832e897ac39098661621654a328 559 main/binary-i386/Packages
- 2de76829d80c29af8390fed67a29c6d6 384 main/binary-i386/Packages.gz
+ abedd18a092180d39ea30937437d3b6e 559 main/binary-i386/Packages
+ 175aca6331f82b67950b153f460b5df6 384 main/binary-i386/Packages.gz
  5b01f05a0d5e2f926bfcf14c1d33a219 72 main/binary-i386/Release
 SHA1:
- 6d94aa05b50e25446e7ad6cd582b8c358eec822e 7770 main/binary-amd64/Packages
- 6ce73eabcdeb26b9fb185bcd3409072b9ff83539 2647 main/binary-amd64/Packages.gz
+ 915d0312500b21c3a0282cf2a8f8e182210bd264 7770 main/binary-amd64/Packages
+ a76ae7e1a4abd5b39d2544b683f9d8f6c1eca6f9 2646 main/binary-amd64/Packages.gz
  41787cb37c061d7f28423d186f8657a0c9797f53 73 main/binary-amd64/Release
- c6f136a9045e52b39efdea17fef2e7aa44c1709b 559 main/binary-i386/Packages
- 64ee1f985f3c12ab7046757b035e96b6d0e014e2 384 main/binary-i386/Packages.gz
+ ce1064b562a06b4caec9645cdf6cc07164a13387 559 main/binary-i386/Packages
+ e8312f0f9f0bce3c4c87a17e61276062cbb15b50 384 main/binary-i386/Packages.gz
  42dcedab7a9fc4e9a7f540d0f388fa04b8cc11e4 72 main/binary-i386/Release
 SHA256:
- bcc45f4df272c1c3353c2fffdbaaa057514d88f76dded7b6b5af44e39ed3d9e4 7770 main/binary-amd64/Packages
- 36530eefe7221ffdbb2ee9ca8b79bf25cd59c67c76a86cd7c48a251ca7ba454d 2647 main/binary-amd64/Packages.gz
+ bd4ada84f1a00ee3eb672af3c12c0aeeb245ecf9ed699299b271eb82a4b06d7d 7770 main/binary-amd64/Packages
+ 82a7ed359c88ed6884f7e0cc62fb78f242ef7d84f90ef19bf0e776415060f6b1 2646 main/binary-amd64/Packages.gz
  884fd275fb031b3048cfe3012f0c1e38bbc2d66abd2ee1511dbd84583eea279e 73 main/binary-amd64/Release
- 39875edac1d863bd35329fd3a45548db31243abf2ffb4c18d17ee9befe00cdc3 559 main/binary-i386/Packages
- 850222324340d4178a8a9723160eabc217156f9f16221673b81da4fd3cffcb54 384 main/binary-i386/Packages.gz
+ f5f0071f7092f126c9906a89fd9b3ed3d85d8edacd7ffea97537bf320f6abefa 559 main/binary-i386/Packages
+ 26b16902a84e3e6f3372032314672284e52081784a41b54208dfe5e344055225 384 main/binary-i386/Packages.gz
  94de4ffce5f6f690fe5548127e3d61b6d0feff8c185bc6ec1c7ddbba87dac38e 72 main/binary-i386/Release
