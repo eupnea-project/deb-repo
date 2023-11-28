@@ -75,49 +75,49 @@ Description: GnuPG keys of the eupnea deb repo for ubuntu/popos jammy
  contains the archive keys used for that.
 
 Package: eupnea-mainline-kernel
-Version: 1.1.39
+Version: 1.1.40
 Architecture: amd64
 Maintainer: The Eupnea Project
 Depends: eupnea-mainline-kernel-modules, eupnea-mainline-kernel-headers, eupnea-utils (>= 1.1.89)
 Conflicts: eupnea-chromeos-kernel
 Priority: optional
 Section: kernel
-Filename: pool/main/e/eupnea-mainline-kernel/eupnea-mainline-kernel_1.1.39_amd64.deb
-Size: 43726876
-SHA256: 783aa0978c159c91e5a905bc7e334cf001077684017ca8f3e3e7465f6dad98f5
-SHA1: d9fa085d483896c47d729120f7e526fa4866cdc7
-MD5sum: 87c9168c69b15c38c16b70b888ce5caa
+Filename: pool/main/e/eupnea-mainline-kernel/eupnea-mainline-kernel_1.1.40_amd64.deb
+Size: 43726880
+SHA256: ca0d23b8dd252757a3b0185513106a3d56a560d780e588641f7fbbf3bc43bee7
+SHA1: b5aca3a30351e7c51e792e47c058e50f05851545
+MD5sum: db1357615e6bd41458f7124e4de345c8
 Description: Eupnea Mainline kernel
  WARNING: This package will overwrite the first partition of your current drive!
  Only use it on Chromebooks running Eupnea systems!
  This package contains the Eupnea Mainline kernel. It is only compatible with x86_64 Chromebooks.
 
 Package: eupnea-mainline-kernel-headers
-Version: 1.1.39
+Version: 1.1.40
 Architecture: amd64
 Maintainer: The Eupnea Project
 Depends: eupnea-mainline-kernel-modules
 Priority: optional
 Section: kernel
-Filename: pool/main/e/eupnea-mainline-kernel-headers/eupnea-mainline-kernel-headers_1.1.39_amd64.deb
-Size: 11037192
-SHA256: 52d42db16b34ca6ce43912019189ea11ecff79a5e1ca4252e3a989f0cafff84c
-SHA1: 1afa085a21c76caa8ddea39bc3f9f2111ca353e9
-MD5sum: 349ce2c343bf31c45308dd74898366f9
+Filename: pool/main/e/eupnea-mainline-kernel-headers/eupnea-mainline-kernel-headers_1.1.40_amd64.deb
+Size: 11037080
+SHA256: 8fe2908c80cfcfb59ceddd9763594346ed1abbcc2d6ab9cb938a6cb9725bf08c
+SHA1: 72e95b6e24a33837e4f28660548dd14ba790446e
+MD5sum: 886d2e79e5a30f3c5000877b3967b8c5
 Description: Eupnea Mainline kernel headers
  This package contains the Eupnea Mainline kernel headers. It is only compatible with Eupnea mainline kernels.
 
 Package: eupnea-mainline-kernel-modules
-Version: 1.1.39
+Version: 1.1.40
 Architecture: amd64
 Maintainer: The Eupnea Project
 Priority: optional
 Section: kernel
-Filename: pool/main/e/eupnea-mainline-kernel-modules/eupnea-mainline-kernel-modules_1.1.39_amd64.deb
-Size: 84487948
-SHA256: 9c3f16c9d1bda4e8a8b5c86b51bc2d11f205d35d9bc4fd04cd8ed736590fbcc6
-SHA1: 2dbe06bf32934fc7aef51edb989c21a03725f2c7
-MD5sum: 6f4b00e515dfc1bc66088fa0ec6af72a
+Filename: pool/main/e/eupnea-mainline-kernel-modules/eupnea-mainline-kernel-modules_1.1.40_amd64.deb
+Size: 84487956
+SHA256: b2b264b1de44bb79b935da4e555a0ade43749bdba74656b589f27e6e024e0d8b
+SHA1: 5d01f2271ebfb9be9da65a263084339a2f72eb2f
+MD5sum: a77f2ce99317738d1446ff4877aab6a5
 Description: Eupnea Mainline kernel modules
  This package contains the Eupnea Mainline kernel modules. It is only compatible with Eupnea Mainline kernels.
 
