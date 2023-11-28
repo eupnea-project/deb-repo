@@ -1,25 +1,25 @@
 Codename: mantic
-Date: Tue, 28 Nov 2023 20:56:28 UTC
+Date: Tue, 28 Nov 2023 20:57:09 UTC
 Architectures: amd64 i386
 Components: main
 Description: eupnea-project/deb-repo
 MD5Sum:
- e0442655798b6287c6f28556e7d06d7b 6823 main/binary-amd64/Packages
- f9414936fe4efbf83e4ced5dc539d680 2270 main/binary-amd64/Packages.gz
+ cd554b9e980f7928a139d35a502d2c04 6823 main/binary-amd64/Packages
+ f6a19b1a811621a0edf7e234fb18ce40 2268 main/binary-amd64/Packages.gz
  efad6aa3cf24972036776d789bd70c2f 73 main/binary-amd64/Release
  20c593b767002222de68ca7952592ead 557 main/binary-i386/Packages
  12bbf3527bc86e1005796b24b7d6958b 380 main/binary-i386/Packages.gz
  5b01f05a0d5e2f926bfcf14c1d33a219 72 main/binary-i386/Release
 SHA1:
- 1d66cb770237aec0170542963b96983e764019aa 6823 main/binary-amd64/Packages
- 18d404432d1303598519f02aa6787b85810fd5c1 2270 main/binary-amd64/Packages.gz
+ a3b33d09936cc607d34fd97725a921d606ca9f47 6823 main/binary-amd64/Packages
+ 1cc51459f097644e17b646ed109309ae1efb88e8 2268 main/binary-amd64/Packages.gz
  41787cb37c061d7f28423d186f8657a0c9797f53 73 main/binary-amd64/Release
  4602ca85e5f250f44bfae718dc131b4651ac3102 557 main/binary-i386/Packages
  436723c3cb4a34f68bd0121e67537d7b1777d1bf 380 main/binary-i386/Packages.gz
  42dcedab7a9fc4e9a7f540d0f388fa04b8cc11e4 72 main/binary-i386/Release
 SHA256:
- 268be733d71ff651db73e875523daf70d46a16adef0912792b1aeba71c80fc16 6823 main/binary-amd64/Packages
- fd697db1a73c511bcf55e90ee75dabb965c046096651a5938812b967d1a82947 2270 main/binary-amd64/Packages.gz
+ 606132a8db05b038131aa56aa58e5091e3820b03b06b84d129fc0d98404ecc3f 6823 main/binary-amd64/Packages
+ 5be4d1eb314683bf6c8d18b30cf825c6cf0841cf1b4dcdf0350e29695e10df2d 2268 main/binary-amd64/Packages.gz
  884fd275fb031b3048cfe3012f0c1e38bbc2d66abd2ee1511dbd84583eea279e 73 main/binary-amd64/Release
  660c2b3e652237fbb0c568bf97604e695e76e3a4840d441a91fa13f1d96875a5 557 main/binary-i386/Packages
  fb13432880e467b8a00dc2f0fe7ae24fb6fbdd9b5f96de546b7c1286d5e7adeb 380 main/binary-i386/Packages.gz

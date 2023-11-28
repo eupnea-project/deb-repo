@@ -13,49 +13,49 @@ Description:  Alpine busybox-static + depthboot logo boot splash
  Prints a depthboot logo on boot using fbsplash from Alpine Linux's busybox-static package
 
 Package: eupnea-chromeos-kernel
-Version: 1.1.42
+Version: 1.1.43
 Architecture: amd64
 Maintainer: The Eupnea Project
 Depends: eupnea-chromeos-kernel-modules, eupnea-chromeos-kernel-headers, eupnea-utils (>= 1.1.89)
 Conflicts: eupnea-mainline-kernel
 Priority: optional
 Section: kernel
-Filename: pool/main/e/eupnea-chromeos-kernel/eupnea-chromeos-kernel_1.1.42_amd64.deb
-Size: 36728548
-SHA256: fbe5069261b47848993701a93535c29393b6408682dbac297a340abe3619994e
-SHA1: cc4b12c85c307a48cf5518e485bf2c72301ff977
-MD5sum: b28f746b98194178fc24ca9eba4adeba
+Filename: pool/main/e/eupnea-chromeos-kernel/eupnea-chromeos-kernel_1.1.43_amd64.deb
+Size: 36728544
+SHA256: 1f81a006821a39758191cc860ed7bab9d820fc20dfbc619517c6406f78d3ec36
+SHA1: 62f78a3bb6d68723033eb142e264775b4cdbe01a
+MD5sum: 1327bd68a6c6d21290dbb0039adc63b6
 Description: Eupnea ChromeOS kernel
  WARNING: This package will overwrite the first partition of your current drive!
  Only use it on Chromebooks running Eupnea systems!
  This package contains the Eupnea ChromeOS kernel. It is only compatible with x86_64 Chromebooks.
 
 Package: eupnea-chromeos-kernel-headers
-Version: 1.1.42
+Version: 1.1.43
 Architecture: amd64
 Maintainer: The Eupnea Project
 Depends: eupnea-chromeos-kernel-modules
 Priority: optional
 Section: kernel
-Filename: pool/main/e/eupnea-chromeos-kernel-headers/eupnea-chromeos-kernel-headers_1.1.42_amd64.deb
-Size: 9787980
-SHA256: 99e729f0fe25bb2805dec759c7c646f838c68b6b65de7bfb51cba0cf643aa21a
-SHA1: b7399f4603429518c470b4ba86df505d7f88ddb5
-MD5sum: b33cb03361dd006fe8cbcdc8b819d1de
+Filename: pool/main/e/eupnea-chromeos-kernel-headers/eupnea-chromeos-kernel-headers_1.1.43_amd64.deb
+Size: 9785468
+SHA256: 24a021d85e0babae36abdd69c19d5845589c75a4a027ae6cedef09df7837c86b
+SHA1: d9cd69124a12ab018ebf9db2945a63453deaf478
+MD5sum: e38b69b2c0f0fd78955b9ef058b3f3cf
 Description: Eupnea ChromeOS kernel headers
  This package contains the Eupnea ChromeOS kernel headers. It is only compatible with Eupnea ChromeOS kernels.
 
 Package: eupnea-chromeos-kernel-modules
-Version: 1.1.42
+Version: 1.1.43
 Architecture: amd64
 Maintainer: The Eupnea Project
 Priority: optional
 Section: kernel
-Filename: pool/main/e/eupnea-chromeos-kernel-modules/eupnea-chromeos-kernel-modules_1.1.42_amd64.deb
-Size: 56771652
-SHA256: 3292a72ac28393c2a8f8b6231d571d876989e2e70ab73ffeeb3496882a018d42
-SHA1: e9913edb63151f7e2652f66f7efe4a1158a7b902
-MD5sum: 7a4ff4967431ccd90f48776b361c9bde
+Filename: pool/main/e/eupnea-chromeos-kernel-modules/eupnea-chromeos-kernel-modules_1.1.43_amd64.deb
+Size: 56776192
+SHA256: 79f814a0e7b62670cd61ad7de77b78dcb8eebab444d817f403e809a72b10c5e4
+SHA1: 57cd4a394e7b8fe3a50ecffdfd6b9c9798f6bd98
+MD5sum: d7cd773c1eedcad054ab91d0cd41ed2d
 Description: Eupnea ChromeOS kernel modules
  This package contains the Eupnea ChromeOS kernel modules. It is only compatible with Eupnea ChromeOS kernels.
 
