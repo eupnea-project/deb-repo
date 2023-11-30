@@ -2,7 +2,7 @@ Package: eupnea-system
 Version: 1.0.90
 Architecture: amd64
 Maintainer: The Eupnea Project
-Depends: eupnea-utils (>= 1.1.112)
+Depends: eupnea-utils (>= 1.1.112), python3 (>= 3.10.0)
 Section: admin
 Priority: optional
 Description: Eupnea system update package
