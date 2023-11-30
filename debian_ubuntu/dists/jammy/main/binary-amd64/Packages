@@ -138,17 +138,17 @@ Description: Eupnea system update package
  Not recommended for use on non-Chromebook devices.
 
 Package: eupnea-utils
-Version: 1.1.148
+Version: 1.1.149
 Architecture: amd64
 Maintainer: The Eupnea Project
-Depends: cgpt, vboot-kernel-utils, parted, fdisk, rsync, git, strace, alsa-utils
+Depends: cgpt, vboot-kernel-utils, parted, fdisk, rsync, git, strace, alsa-utils, python3 (>= 3.10.0)
 Priority: optional
 Section: admin
-Filename: pool/main/e/eupnea-utils/eupnea-utils_1.1.148_amd64.deb
-Size: 14268
-SHA256: 6ca18ba09c6379302d5d0f99e304c305dd19e2bdce9ad1f28f31138ab34a216e
-SHA1: b5c27634da08bcce19804c49fffe095afd52d602
-MD5sum: be5e2887d5adbd3fe7b58cef6f9333f2
+Filename: pool/main/e/eupnea-utils/eupnea-utils_1.1.149_amd64.deb
+Size: 14296
+SHA256: 41d87f10874677bc2e4bb071028f687ef38b88e4c78866e6148a113d5dbcfb5e
+SHA1: d0196c04da255305ec5120b9a4ff9b3448d0d95e
+MD5sum: 7fffcd04efe87fb02b44438a0b33f90b
 Description: Eupnea utilities
  This package contains a set of tools to interact with EupneaOS/Depthboot systems.
  Not recommended for use on non-Chromebook devices.
