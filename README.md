@@ -17,10 +17,15 @@ Repo for Debian/Ubuntu/Pop!_OS deb packages. Provides the following packages:
 
 # Add to system
 
+#### Step 1:
+
+* Ubuntu 22.04: `curl -LO https://github.com/eupnea-project/deb-repo/releases/latest/download/eupnea-jammy-keyring.deb`
+* Ubuntu 23.10: `curl -LO https://github.com/eupnea-project/deb-repo/releases/latest/download/eupnea-mantic-keyring.deb`
+* Debian stable:`curl -LO https://github.com/eupnea-project/deb-repo/releases/latest/download/eupnea-jammy-keyring.deb`
+
+#### Step 2 (for all distros):
+
 ```
-mkdir -p /usr/local/share/keyrings
-wget -O /usr/local/share/keyrings/eupnea.key https://eupnea-project.github.io/apt-repo/public.key
-echo 'deb [signed-by=/usr/local/share/keyrings/eupnea.key] https://eupnea-project.github.io/apt-repo/debian_ubuntu mantic main' > /etc/apt/sources.list.d/eupnea.list
-apt update
-apt install eupnea-system eupnea-utils
+sudo apt install ./eupnea-*-keyring.deb
+sudo apt update -y
 ```
