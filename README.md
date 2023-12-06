@@ -19,9 +19,11 @@ Repo for Debian/Ubuntu/Pop!_OS deb packages. Provides the following packages:
 
 #### Step 1:
 
-* Ubuntu 22.04: `curl -LO https://github.com/eupnea-project/deb-repo/releases/latest/download/eupnea-jammy-keyring.deb`
+* Ubuntu 22.04 / Pop!_
+  OS: `curl -LO https://github.com/eupnea-project/deb-repo/releases/latest/download/eupnea-jammy-keyring.deb`
 * Ubuntu 23.10: `curl -LO https://github.com/eupnea-project/deb-repo/releases/latest/download/eupnea-mantic-keyring.deb`
-* Debian stable:`curl -LO https://github.com/eupnea-project/deb-repo/releases/latest/download/eupnea-jammy-keyring.deb`
+* Debian
+  stable/bookworm/12:`curl -LO https://github.com/eupnea-project/deb-repo/releases/latest/download/eupnea-jammy-keyring.deb`
 
 #### Step 2 (for all distros):
 
