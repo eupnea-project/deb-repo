@@ -29,3 +29,15 @@ Repo for Debian/Ubuntu/Pop!_OS deb packages. Provides the following packages:
 sudo apt install ./eupnea-*-keyring.deb
 sudo apt update -y
 ```
+
+# Forking this repo
+
+1. Fork only the main branch.
+2. Create your own public/private key pair for signing packages with gpg: `gpg --full-gen-key`. This repo uses an
+   rsa4096 key, but you can probably use whatever you want. Make sure the key doesn't expire.
+3. Export your public key: `gpg --export --armor <key-id>` and add it as a secret variable called `PUBLIC` to your repo.
+4. Export your private key: `gpg ---export-secret-keys --armor <key-id>` and add it as a secret variable
+   called `PRIVATE` to your repo.
+5. Run any action.`
+6. Set up pages in the repo settings. Select from branch: `gh-pages` and folder: `/(root)`.
+7. Wait for GitHub to finish deploying the page.
