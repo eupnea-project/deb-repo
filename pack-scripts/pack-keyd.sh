@@ -27,7 +27,7 @@ cp configs/keyd.quirks keyd/usr/share/libinput
 cp -r eupnea-utils/configs/keyboard-layouts keyd/usr/share/eupnea/
 
 # add generations json
-cp weirdtreething/chromebook-linux-audio/boards.json keyd/usr/share/eupnea/board-generations.json
+cp chromebook-linux-audio/conf/boards.json keyd/usr/share/eupnea/board-generations.json
 
 # Add postinst script to package
 install -Dm 755 postinst-scripts/keyd-postinst keyd/DEBIAN/postinst
