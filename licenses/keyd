@@ -1,0 +1,12 @@
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: Keyd
+Source: https://github.com/rvaiya/keyd
+
+Files: *
+License: GPL-3
+
+Files: /usr/*
+License: MIT
+
+Files: /usr/share/eupnea/board-generations.json
+License: BSD-3-Clause
