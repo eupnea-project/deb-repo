@@ -1,25 +1,25 @@
 Codename: stable
-Date: Fri, 08 Dec 2023 23:13:48 UTC
+Date: Sat, 09 Dec 2023 00:59:20 UTC
 Architectures: amd64 i386
 Components: main
 Description: eupnea-project/deb-repo
 MD5Sum:
- 33fa74c9501e7c7a74491084f3bc4544 6865 main/binary-amd64/Packages
- 001f68f630abd26e34d30002bca79779 2284 main/binary-amd64/Packages.gz
+ d49780cce601d0935718fe46bb340d2d 6865 main/binary-amd64/Packages
+ 239cacc20c66fc6478906c62e2d20dcd 2284 main/binary-amd64/Packages.gz
  efad6aa3cf24972036776d789bd70c2f 73 main/binary-amd64/Release
  00c561a326f8f5ccf69b8c0891d2d715 557 main/binary-i386/Packages
  1910813a2edd9340475fa9be91b5d4f3 378 main/binary-i386/Packages.gz
  5b01f05a0d5e2f926bfcf14c1d33a219 72 main/binary-i386/Release
 SHA1:
- b126aa6b2ef1a37c70a022bb4c05ede2c7439e6d 6865 main/binary-amd64/Packages
- e5d4aa8e9ab7727fc944d8e17688435d9bfeae60 2284 main/binary-amd64/Packages.gz
+ f3fbef0e62b1f8145c1c3c76d41cf3f7c04349c4 6865 main/binary-amd64/Packages
+ 7e37bc6d3f8f25d4f3a3cbdb4e2eb15fb4c277a6 2284 main/binary-amd64/Packages.gz
  41787cb37c061d7f28423d186f8657a0c9797f53 73 main/binary-amd64/Release
  682d1e196df58a619180b33a59923da9f2b85422 557 main/binary-i386/Packages
  5f618c733d1460c1455439a8cd950a30515c2d1d 378 main/binary-i386/Packages.gz
  42dcedab7a9fc4e9a7f540d0f388fa04b8cc11e4 72 main/binary-i386/Release
 SHA256:
- f9cf3c9e5e849b22e092f6afebcfbe8f2084feb041b01470f368f3409749c787 6865 main/binary-amd64/Packages
- 6bc0e5ab16a0eb51461e6c2804f134787e55d13c4ff9b9c65a784b1fecd060d8 2284 main/binary-amd64/Packages.gz
+ 7c56a47a944675b116db791d4ebe5a6f3155561773850f5f43a1cdd9c45b6a7c 6865 main/binary-amd64/Packages
+ 22dc2ca71f26fd6a0fe5b545a2fd0da992a3a4d0e785284f422c8bbc80572e8a 2284 main/binary-amd64/Packages.gz
  884fd275fb031b3048cfe3012f0c1e38bbc2d66abd2ee1511dbd84583eea279e 73 main/binary-amd64/Release
  abef2acd54b9769325e31c0c0c6dc65ae0ca10c84fe923e9744d85d7facf1b61 557 main/binary-i386/Packages
  350db63776f0aacfff1c0e62c074666e1012797edbe4e98498aef1dc94736e97 378 main/binary-i386/Packages.gz
