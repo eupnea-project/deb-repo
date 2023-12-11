@@ -2,44 +2,44 @@
 Hash: SHA512
 
 Codename: stable
-Date: Sat, 09 Dec 2023 00:59:42 UTC
+Date: Mon, 11 Dec 2023 07:21:31 UTC
 Architectures: amd64 i386
 Components: main
 Description: eupnea-project/deb-repo
 MD5Sum:
- d49780cce601d0935718fe46bb340d2d 6865 main/binary-amd64/Packages
- 239cacc20c66fc6478906c62e2d20dcd 2284 main/binary-amd64/Packages.gz
+ b79b1c425c8262d6ecc9f979a30e7416 6865 main/binary-amd64/Packages
+ 50778b9db2e6801d21bff216a925af00 2284 main/binary-amd64/Packages.gz
  efad6aa3cf24972036776d789bd70c2f 73 main/binary-amd64/Release
  00c561a326f8f5ccf69b8c0891d2d715 557 main/binary-i386/Packages
  1910813a2edd9340475fa9be91b5d4f3 378 main/binary-i386/Packages.gz
  5b01f05a0d5e2f926bfcf14c1d33a219 72 main/binary-i386/Release
 SHA1:
- f3fbef0e62b1f8145c1c3c76d41cf3f7c04349c4 6865 main/binary-amd64/Packages
- 7e37bc6d3f8f25d4f3a3cbdb4e2eb15fb4c277a6 2284 main/binary-amd64/Packages.gz
+ 0e29ec31898ee3db8d4a53c0fc5b58db3efaf396 6865 main/binary-amd64/Packages
+ 8dfcdafdaecb76bb6f9f7ccde2d4dd6dc8887e4f 2284 main/binary-amd64/Packages.gz
  41787cb37c061d7f28423d186f8657a0c9797f53 73 main/binary-amd64/Release
  682d1e196df58a619180b33a59923da9f2b85422 557 main/binary-i386/Packages
  5f618c733d1460c1455439a8cd950a30515c2d1d 378 main/binary-i386/Packages.gz
  42dcedab7a9fc4e9a7f540d0f388fa04b8cc11e4 72 main/binary-i386/Release
 SHA256:
- 7c56a47a944675b116db791d4ebe5a6f3155561773850f5f43a1cdd9c45b6a7c 6865 main/binary-amd64/Packages
- 22dc2ca71f26fd6a0fe5b545a2fd0da992a3a4d0e785284f422c8bbc80572e8a 2284 main/binary-amd64/Packages.gz
+ 03a73fb977f909261ec672a5c9b8713ae2185bd16232447906a87a81e6f70cc6 6865 main/binary-amd64/Packages
+ 075bcee3d685f64092c2a35427203e0c565391591add617e5c246086a2647f9c 2284 main/binary-amd64/Packages.gz
  884fd275fb031b3048cfe3012f0c1e38bbc2d66abd2ee1511dbd84583eea279e 73 main/binary-amd64/Release
  abef2acd54b9769325e31c0c0c6dc65ae0ca10c84fe923e9744d85d7facf1b61 557 main/binary-i386/Packages
  350db63776f0aacfff1c0e62c074666e1012797edbe4e98498aef1dc94736e97 378 main/binary-i386/Packages.gz
  94de4ffce5f6f690fe5548127e3d61b6d0feff8c185bc6ec1c7ddbba87dac38e 72 main/binary-i386/Release
 -----BEGIN PGP SIGNATURE-----
 
-iQIzBAEBCgAdFiEEXOcb6Maw+FIXiWLzd46Zt34V1pgFAmVzu/4ACgkQd46Zt34V
-1piuihAAy4Ne3WAJ6OpgjSnnKqZdCNjHkontY9F1juF8npunbfIRdS6cVp8R6Uku
-CNkwdiOYltJTa42wI1F6IQsLF4pRDEvyGETm0nBQTVIqM+5Ak4Am9gwMY43OlJlr
-2WB45LUnXrYWRYNMQSVIEGpbH/lcSWmlsXGQNF+loI9lpArwvL1K5Q/5sxrhALrF
-Ba83AAA9ouy+mNZ/sBgOrIuFNQzxMKJL/5GAL3IFwIS3ZvOJE+5d1Q4+sXX7nWy2
-kuEwWmyo4cEu4sYiYlJJL4k2Cw44NUNNdJR92yAX+Ip4O/sfCLO+KItuKlaDQ5DF
-VcUUyfTc+XHvkhmtLhoQ+NLQx1jKlclb+ppBgkQ4veelqLyElWn4E17M4CHDZskt
-+TS/b1c2Eeon2nRw1xSz+rvMEgrDniIh7bCSXBcH4dy09uWsXNi+nJL803UDv2V8
-1vCD1fhiM2UsTRdgvYHajH+VTHd+uq+rGrB3q3fsRH2AAtcmbntXx16ibJrIId0G
-GQiEUvsaXa1L6Ge5CRGuEQ3tDC3H4mwD6wReBF/5AAffsVIgguLp8lpSGzYrSB1o
-zm6ZtfsZHPsySTBPrTEeCD1rvbiu1F9V5zqJgvZFxQCEZgliAPw22JKrB4A3FyaA
-bw23/nKOF0z5Bp6yF0ZIOErP1O/qlTCJI/02kZm5DZs5NPrymP4=
-=4gNR
+iQIzBAEBCgAdFiEEXOcb6Maw+FIXiWLzd46Zt34V1pgFAmV2uHsACgkQd46Zt34V
+1pjd/A//QGP36iFqYaje+yXL16wafZ9Xh5T9xYFx4tfEyOiBEw4RBL5HsKbx8Ckr
+vG3LJHJd13AOkQlGNjK1ZjkLYeE3lEjuXvB41SwIZBiCsZiyeNA5KpnjJByPfl0d
++//HgazGWQ1/xENrsceiUIdu8iP6dmVHcIeCjGQzZSCKQ+2o4B0ifDc6r7yrxaIP
+zgxPLNPRwQK8XaO9byaywA58j/39GDYzHu2OLyR/bGGSBWMPct+cYsj1hxvR0nwD
+yjHqTtj6Ch+CBeaMRlaah7mJeXE6z3t4vA/rFzySgXYnR4nyACVavKWPK6JCLo2w
+HLZ5Si9CYtQbGXX30YnAjEdr7naRVJV4QPSy2KUYIdq4c8VvQgl0OM1wHhzUDn5q
+mNvVhMXedCcJNVLuKiCYiMJQ7kSgemHq0c3PNSS2vuFQOiYpxXZOYCB4geL4ST3Q
+gT3seKRpYlYfNQzhzRx3cRSm7Nirnn7uA6ExjhaRpzSEYC/G537SbuaJVi5IryPW
+2B/4ZwhEvtqIzqn43CywU3+zaP0eEqV2howGwuEtSp1fe7/9FunVrNb/SAkatNf0
+Rewbz7XWU356NHPgm7bpCx89lqcZJ9bUJ11SUKXI1wzdO38IFwA8KM7nVULAW5Oe
+Cw8YSJnag4wimIBrqI62bvMERHkuVc+P1l8Ajeoqm3QUrRSNFd8=
+=3xPu
 -----END PGP SIGNATURE-----
