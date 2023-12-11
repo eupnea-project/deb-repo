@@ -2,44 +2,44 @@
 Hash: SHA512
 
 Codename: mantic
-Date: Mon, 11 Dec 2023 07:21:43 UTC
+Date: Mon, 11 Dec 2023 07:21:55 UTC
 Architectures: amd64 i386
 Components: main
 Description: eupnea-project/deb-repo
 MD5Sum:
- 3d2318b528351fca9d03944ed401a7ab 6865 main/binary-amd64/Packages
- 1480ac68c683567e7dfc338e0123f715 2289 main/binary-amd64/Packages.gz
+ e874f8b2e99aa99a68977f753d38000c 6865 main/binary-amd64/Packages
+ 5bfd84742ad4b6f7b48bf5c823c170e4 2290 main/binary-amd64/Packages.gz
  efad6aa3cf24972036776d789bd70c2f 73 main/binary-amd64/Release
  0f36756a2c90262ffc216328461909e7 557 main/binary-i386/Packages
  b084ca81996eb9ff64ed87ad3ef86b25 380 main/binary-i386/Packages.gz
  5b01f05a0d5e2f926bfcf14c1d33a219 72 main/binary-i386/Release
 SHA1:
- 9affbdf81dd7c77278d8390457507677c4beb08b 6865 main/binary-amd64/Packages
- d05f4c53250cf1a4ad7baa881bd2fd14ebffa846 2289 main/binary-amd64/Packages.gz
+ 517b1580e6d990ce4dc341917acc89edd1e94a21 6865 main/binary-amd64/Packages
+ afeeb9169b787a101b7099bfe17aed67e2b503d4 2290 main/binary-amd64/Packages.gz
  41787cb37c061d7f28423d186f8657a0c9797f53 73 main/binary-amd64/Release
  012ed163fd967ea3647c5f9c61d655c89f21c7ae 557 main/binary-i386/Packages
  24d6bc528ab4700fa4e9acd3ef35dd368724fd55 380 main/binary-i386/Packages.gz
  42dcedab7a9fc4e9a7f540d0f388fa04b8cc11e4 72 main/binary-i386/Release
 SHA256:
- f2c67d9a7f3a05554e9dff4305f2e251ed0fcabd7615426555b13918a583aa7a 6865 main/binary-amd64/Packages
- d9e62f2d3e72a7a57f7fae80302c3f5cb867c8a3a783c4d5c92f65d436cde171 2289 main/binary-amd64/Packages.gz
+ 75c3ccb57d95d98b88ab5bc122eb56ba092d6993d509089198582a7badc96757 6865 main/binary-amd64/Packages
+ 8674a764385baabd8520508c0a2cd0628543f5b529b8bacadd6ae593391af73c 2290 main/binary-amd64/Packages.gz
  884fd275fb031b3048cfe3012f0c1e38bbc2d66abd2ee1511dbd84583eea279e 73 main/binary-amd64/Release
  d9642f6a26569fe1a5f62339032ed5c82ff51e59496643c168ca0bbc394f4717 557 main/binary-i386/Packages
  6c6cf47fe3dbc7c934a969aa786c42ec71aae1ca4ddef6545960569ebad34006 380 main/binary-i386/Packages.gz
  94de4ffce5f6f690fe5548127e3d61b6d0feff8c185bc6ec1c7ddbba87dac38e 72 main/binary-i386/Release
 -----BEGIN PGP SIGNATURE-----
 
-iQIzBAEBCgAdFiEEXOcb6Maw+FIXiWLzd46Zt34V1pgFAmV2uIcACgkQd46Zt34V
-1pgPoQ//aq3g+X2ramhZWQUeNsSFCXIff4fEy1f0Rk3RnZntlYxvQhYy3rBRfuE2
-W2fRDXQJ3gMp8c+CPSseyFJIbXNpUrOYr8iskRcsCXynAkYKPrzYn3DKt3sA8xT4
-6SdVdudcLlmbNPkVHhM3mCOvWwTuc17BmEwJj08F2j25gIukMc2zSoYHrf5UUJ3F
-KL7LgawzzW/KliWquZMH12QvHIulwduY7BsHXv7RvVNQBi+NyOlH/MDGSMWLgbL/
-Z/yAqladyVhdobTZqCjtO2slYtuU8X6Ae041uULF2g3j+/U1IBg0WLHsRa/cLf/y
-+jC0sq0hcQbd7u/rLKwu0RopTeoX+PFP9MX+Kxo/ElMGAM5OqXLKYQncN/wdqQq1
-hNYSkCTKj9wY6fv56hCNuR27vn9iiD3VzWTXtdLdptq0cs/LVgEGo1GXiqaoJ2MD
-fhUGrdtIdaezkGUDElXtX9W3/98bhcpKUFh1qOhyNTVv5tZOT6mEAg+XwZfoZkCY
-xtrF6inIqHFEQ2USgHKoXC6RIVDyCfs13qWauPB8kY6X7qOimtDEMP1cTQnu95fQ
-CLy1axdDCSB6ELFH9MA70Hvka8h4U/VVMs/kbh9Ej9V8orNrNslrTmBAlc1dFOe6
-3UTy9f0o5/MOIZ3TyLha2KRNwTKW/+Zf7xxdsQ79iA/LtFnrMmk=
-=b+65
+iQIzBAEBCgAdFiEEXOcb6Maw+FIXiWLzd46Zt34V1pgFAmV2uJMACgkQd46Zt34V
+1pjkOBAAncRQQofpt1Koe54yWZBLiRNro2bjDHxmdVUhrWmBogRk9ZPP5LrNjiZg
+NsswV4h1icVBgRCldoofNGXVemxmlteflSrQYPXxy5AhTrHJ6OKmvpZTgP7qif1K
+uovaGPeNLMkxbHJKcfBvvX4C0tWuKaQoFrurXn8YaxEaaEdiTqSlihlYp7qn/nfQ
+us7kac9kYmmrky4ZaD77Pk9urDr4lhRgAh+o3V7mXAQJlrVNtIYf6/5IAXZFmthl
+u4LBlbkhbTQSmwxbTdQTTBpi/iRFpjGHAikm/wxVjCPEMwHrFcqD3KJ5VIEIZRvR
+vXE8ZUwgGgUfjvHjgfbSclM+iS5nnzG0cWTnES7OSYeES3M6w7gqbV4TrW+Z4urw
+0YbZXzkkX8jnbnYfzfdLLkk+HVBvN5VyeQgDTmuEzd7RVf9IpSwxCWrk763JGvpi
+obN8L2LzUD9KAg0K0F56JnmHLOYZZzlUhOUMEEynCcOOx35Uf+avhxB3rCKS/oNd
+EYwDnAgjzkG0v7T1VaAAH/6hZ52f/GjJZgrolOurxGXMeL/7hz0OF0AMVFpRy19r
+gtyv778C6Iy7m/geFMJ5zgJVhHKfeNF5AT5ZpWT30IfKJJ+3CdfkZLdG8raEzBX9
+MJfj8VImQ7P7W767Lv9XriG5FSFk75hcSQ0olFMjHswOqxgHoLQ=
+=hFsf
 -----END PGP SIGNATURE-----
