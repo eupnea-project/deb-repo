@@ -2,8 +2,11 @@
 # This script will pack depthboot-logo into a deb package
 set -e
 
-# Download the alpine busybox-static package
-curl -LO https://dl-cdn.alpinelinux.org/alpine/v3.17/main/x86_64/busybox-static-1.35.0-r29.apk
+# Determine the latest alpine static busybox package name
+package_name=$(curl -L https://dl-cdn.alpinelinux.org/alpine/latest-stable/main/x86_64/ | grep busybox-static-  | awk -F'>' '{print $2}' | awk -F'<' '{print $1}')
+# download the latest alpine busybox package
+curl -LO https://dl-cdn.alpinelinux.org/alpine/latest-stable/main/x86_64/$package_name
+
 # clone the eupnea logo repo
 git clone --depth=1 https://github.com/eupnea-project/logo.git
 
@@ -15,7 +18,7 @@ mkdir -p depthboot-logo/usr/lib/systemd/system
 mkdir -p depthboot-logo/DEBIAN
 
 # Extract the alpine package
-tar xfpz busybox-static-1.35.0-r29.apk --warning=no-unknown-keyword -C busybox-extracted
+tar xfpz $package_name --warning=no-unknown-keyword -C busybox-extracted
 # copy busybox binary into the package
 install -Dm755 busybox-extracted/bin/busybox.static depthboot-logo/usr/bin/busybox-alpine.static
 
