@@ -154,17 +154,17 @@ Description: Eupnea utilities
  Not recommended for use on non-Chromebook devices.
 
 Package: keyd
-Version: 10.0.53
+Version: 10.0.54
 Architecture: amd64
 Maintainer: The Eupnea Project
 Original-Maintainer: rvaiya@github.com
 Priority: extra
 Section: utils
-Filename: pool/main/k/keyd/keyd_10.0.53_amd64.deb
-Size: 125008
-SHA256: 940fea65f1557ace818ef4b9e9c78a232be22a2a73674e7c0bd6be2aa2cda4bc
-SHA1: ded2db1a5dc28ef7f251582136f04d39046e2477
-MD5sum: 351a619ca635789b61e7cec0c7907a41
+Filename: pool/main/k/keyd/keyd_10.0.54_amd64.deb
+Size: 125788
+SHA256: f20aee382a2a7a470ee386fff31b05642e39c2a6bf5dbbce8b70454050bb4471
+SHA1: 3d1420506eccda119b8a016713353b041fa17099
+MD5sum: f1e29edeffa708edcc14f43d9670b015
 Description:  A key remapping daemon for linux.
  Made by rvaiya and repackaged by the Eupnea Project.
  Read more about keyd here: https://github.com/rvaiya/keyd

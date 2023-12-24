@@ -2,7 +2,7 @@
 Hash: SHA512
 
 Codename: mantic
-Date: Tue, 19 Dec 2023 02:02:09 UTC
+Date: Sun, 24 Dec 2023 02:02:19 UTC
 Architectures: amd64 i386
 Components: main
 Description: eupnea-project/deb-repo
@@ -29,17 +29,17 @@ SHA256:
  94de4ffce5f6f690fe5548127e3d61b6d0feff8c185bc6ec1c7ddbba87dac38e 72 main/binary-i386/Release
 -----BEGIN PGP SIGNATURE-----
 
-iQIzBAEBCgAdFiEEXOcb6Maw+FIXiWLzd46Zt34V1pgFAmWA+aEACgkQd46Zt34V
-1pivQxAAlnn0g7mNIERNb3+pjEkKeo32eb7WwRQuLDptjlzI+9I8JPUHuCP9Cfoq
-HDYmvh8fmDSYe+6vpDtzspumqh/smOvvgCTAPfgarRi3DhoZVrbRGfBK9pMPixOl
-Z478ASKCPFQwnFugUe6qL9lmHB2F3/flRCUIz+mlL/ordAfgiF1t+aSH3NwK+sBs
-j4DmOf+rX+O2PoBfxtfL0zjD3NowkFVbDPS0iz9F15H3j2wUfXU66XoY280mOu7w
-r7qgQpFCLKb2te1pRD1is7eTmAz2x0BfEsVYUPAHmpXRccq8N/DiQwUpOYRVNn7m
-i7VCM3H8W3i4EsvwJ90HtsM1V47qTLQk1rFf51RQO0WR+NIC/imuACYkGVQz8Hhz
-AZ1dyejsi5PIfhr5kpH+XGVmlxkVInQVW1rkIDOfV2adEunAV868lq4fKI0xirHC
-fKJN4YpnW+R+ECtkfVSdoYvOs8e8ep3quZ00yIyapaE/oenzd2MHSflt49fdnso9
-6zKI2W55DRW0RPWzGQnpEGujm47PGoGmfHP13xZk5huYSYe8mezVLp2kuajdbPIF
-FlsjIhA9AFpfLh2WniR0cZnLIg4e+MH5L1jg7jKFZtPEFxbpzwP2eTiKVsUVv7Ne
-YC0jNOTJV5r/fNMik/yEpzgwktQypG1KSzuMLgvVeTcNDgtxqbI=
-=9JgF
+iQIzBAEBCgAdFiEEXOcb6Maw+FIXiWLzd46Zt34V1pgFAmWHkSsACgkQd46Zt34V
+1pguUA//f+A0bIdXIUPxPnjyu9wm8C4SguXktGa32nF5O0Ah4amgqf7CrTt5ObsU
+SYWzYfBUO1DHBIINmeKrEuSsbkfCscbRN1jSsrYleSeOcYf0WQ8WI3HZ/l6AnNd4
+4a4oGHdVbBDXFoO85+v8lk1+O80JYfmjQ7zLCmj8sokr8G9zP6efhCzu4ZSVkRJg
+/787pEUaggm20lkxVS400+psXV4FpdmAcV69/CjF2NtGD6JzFvtvU+rRZNqXJ6qs
+djAWpB6MlrQr9b2I/jrjD2QIQYmJuo4yplBMrNF2o67XfqMoZczn3pCGsBQzhlxq
+kEfaRg4yputB4FqEC+ZXQ2k0ttwVY6pJl+thUbf8z9zd9TqB8c8YGh/Zwh0BJLYd
+oTVYi9RyJaFtv+oB8pl/RFYymRv1/RXzDTNqmc3ddLt3osPDKHlRri7AiTyE77qc
+XnJ9jXIbuJJ/VyvXIo1TCkiFrEnBH5FEYoY67yBnpm/Ca2Sf4ZrTJcJN4r1f0ZgS
+tHUficxxuxNIKfpopQ1dF3Rv/o2y9DNJ2Rv6ODHDoa9MhTK3a2gonuOrDT/7L+5n
+gMXdlKlpBQHhrW5Hbw8ugZLFghZwObTvKbjbeUPnLVGyqJ3F2RwsfW3qI8RBJJ3s
+o7cTHiuRArfKjZyLCGQN8iJfsuj+zaMo4W3uQggnwgjJzCh0Kvc=
+=Ogu4
 -----END PGP SIGNATURE-----
