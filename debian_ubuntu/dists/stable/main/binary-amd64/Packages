@@ -122,17 +122,17 @@ Description: GnuPG keys of the eupnea deb repo for debian stable
  contains the archive keys used for that.
 
 Package: eupnea-system
-Version: 1.0.92
+Version: 1.0.93
 Architecture: amd64
 Maintainer: The Eupnea Project
 Depends: eupnea-utils (>= 1.1.112), python3 (>= 3.10.0)
 Priority: optional
 Section: admin
-Filename: pool/main/e/eupnea-system/eupnea-system_1.0.92_amd64.deb
-Size: 10244
-SHA256: 0ed195e9a8e46b7e8bebef43b4fc16090579925bb3bbcd763c53168c4c1d0c7b
-SHA1: 707171067d5cd3dd2c50998054329bdd169b7be1
-MD5sum: cba3b8cc26f70ff844045b98e2c45afe
+Filename: pool/main/e/eupnea-system/eupnea-system_1.0.93_amd64.deb
+Size: 10248
+SHA256: 8aaade635b9d23a34fb4e1b91fb4c7fe04ea4286b5cc73fc0e48ef295fd47fd3
+SHA1: b91e99efa3d663891d3f00303b5b21755f398b48
+MD5sum: e81b15d61c67fdaee2430490158769a8
 Description: Eupnea system update package
  This package upgrades Depthboot/EupneaOS systems to the latest version.
  Not recommended for use on non-Chromebook devices.
